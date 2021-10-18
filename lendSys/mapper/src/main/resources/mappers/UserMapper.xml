@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lendSys.dao.UserDao">
+
+    <resultMap id="userMap" type="User">
+        <id column="userId" property="userId" />
+        <id column="userName" property="userName" />
+        <id column="userPwd" property="userPwd" />
+        <id column="userImg" property="userImg" />
+
+    </resultMap>
+
+    <select id="searchUserByName" resultMap="userMap">
+        select userId,userName,userImg,userPwd
+        from users where userName=#{name}
+    </select>
+</mapper>
