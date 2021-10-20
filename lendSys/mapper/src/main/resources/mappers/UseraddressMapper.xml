@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lendSys.dao.UseraddressMapper">
+  <resultMap id="BaseResultMap" type="com.lendSys.entity.Useraddress">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="addrId" jdbcType="INTEGER" property="addrid" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="receiver_name" jdbcType="VARCHAR" property="receiverName" />
+    <result column="receiver_mobile" jdbcType="VARCHAR" property="receiverMobile" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="postcode" jdbcType="VARCHAR" property="postcode" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="default_address" jdbcType="VARCHAR" property="defaultAddress" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+</mapper>

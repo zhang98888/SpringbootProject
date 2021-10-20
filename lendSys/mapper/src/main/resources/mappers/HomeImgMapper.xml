@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lendSys.dao.HomeImgMapper">
+  <resultMap id="BaseResultMap" type="com.lendSys.entity.HomeImg">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="img_id" jdbcType="INTEGER" property="imgId" />
+    <result column="img_url" jdbcType="INTEGER" property="imgUrl" />
+    <result column="prod_id" jdbcType="INTEGER" property="prodId" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="index_type" jdbcType="INTEGER" property="indexType" />
+    <result column="img_bg_color" jdbcType="VARCHAR" property="imgBgColor" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+  </resultMap>
+</mapper>

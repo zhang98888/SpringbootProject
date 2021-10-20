@@ -2,24 +2,27 @@ package com.lendSys.controller;
 
 import com.lendSys.service.UserService;
 import com.lendSys.vo.ResultVo;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import io.swagger.annotations.Api;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping("/user")
+@Api(value = "User Management",tags = "User Management")
+@CrossOrigin
 public class UserController {
-
     @Resource
     private UserService userService;
 
-    @RequestMapping(value="/login",method = RequestMethod.GET)
-    public ResultVo login(String name, String pwd){
-
+    @GetMapping(value="/login")
+    public ResultVo login(@RequestParam(value = "userName") String name,
+                          @RequestParam(value = "pwd") String pwd){
         return userService.checkLogin(name,pwd);
+    }
+
+    @PostMapping(value="/regist")
+    public ResultVo register(int userId,String userName, String pwd){
+        return userService.userRegist(userId,userName,pwd);
     }
 }
