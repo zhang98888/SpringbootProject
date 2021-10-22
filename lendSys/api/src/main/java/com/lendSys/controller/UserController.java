@@ -8,21 +8,15 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/")
 @Api(value = "User Management",tags = "User Management")
 @CrossOrigin
 public class UserController {
     @Resource
     private UserService userService;
 
-    @GetMapping(value="/login")
-    public ResultVo login(@RequestParam(value = "userName") String name,
-                          @RequestParam(value = "pwd") String pwd){
-        return userService.checkLogin(name,pwd);
-    }
-
-    @PostMapping(value="/regist")
-    public ResultVo register(int userId,String userName, String pwd){
-        return userService.userRegist(userId,userName,pwd);
+    @PostMapping(value="/login")
+    public ResultVo login(String userid, String pwd){
+        return userService.checkLogin(userid,pwd);
     }
 }

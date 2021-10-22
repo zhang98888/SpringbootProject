@@ -19,41 +19,14 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UsersMapper usersMapper;
-    @Transactional
-    public ResultVo userRegist(int userId,String name, String pwd) {
-        synchronized (this) {
-            // check the user name has been register or not
-            Example example= new Example(Users.class);
-            Example.Criteria criteria = example.createCriteria();
-            criteria.andEqualTo("username", name);
-            List<Users> usersList = usersMapper.selectByExample(example);
-            // if not, need to save
-            if (usersList.size() == 0) {
-                String md5Pwd = MD5.md5(pwd);
-                Users updateUser = new Users();
-                updateUser.setUserid(userId);
-                updateUser.setUsername(name);
-                updateUser.setUserpwd(md5Pwd);
-                updateUser.setUserRegtime(new Date());
-                updateUser.setUserModtime(new Date());
-                int check = usersMapper.insert(updateUser);
-                if (check > 0) {
-                    return new ResultVo(1000, "Success!", null);
-                } else {
-                    return new ResultVo(1001, "Fail to register", null);
-                }
-            } else {
-                return new ResultVo(1001, "User has been register", null);
-            }
-        }
-    }
 
     @Override
-    public ResultVo checkLogin(String userName, String pwd) {
+    public ResultVo checkLogin(String id, String pwd) {
         // based on the User to get the user info
+        int userid = Integer.parseInt(id);
         Example example= new Example(Users.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("username", userName);
+        criteria.andEqualTo("userid", userid);
         List<Users> usersList = usersMapper.selectByExample(example);
 
         // check if user exit or not
@@ -75,4 +48,6 @@ public class UserServiceImpl implements UserService {
 
         }
     }
+
+
 }

@@ -16,5 +16,6 @@
     <result column="user_birth" jdbcType="DATE" property="userBirth" />
     <result column="user_regtime" jdbcType="TIMESTAMP" property="userRegtime" />
     <result column="user_modtime" jdbcType="TIMESTAMP" property="userModtime" />
+    <result column="departmentId" jdbcType="INTEGER" property="departmentid" />
   </resultMap>
 </mapper>

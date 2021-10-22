@@ -15,7 +15,7 @@ public class ResultVo {
 
     // The code will response to the front-end
     @ApiModelProperty(value = "Reply code")
-    private int code;
+    private int status;
     // The msg will response to the front-end
     @ApiModelProperty(value = "Reply message")
     private String msg;
