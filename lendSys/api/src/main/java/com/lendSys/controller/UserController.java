@@ -1,11 +1,13 @@
 package com.lendSys.controller;
 
+import com.lendSys.entity.Users;
 import com.lendSys.service.UserService;
 import com.lendSys.vo.ResultVo;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/")
@@ -16,7 +18,12 @@ public class UserController {
     private UserService userService;
 
     @PostMapping(value="/login")
-    public ResultVo login(String userid, String pwd){
-        return userService.checkLogin(userid,pwd);
+    public ResultVo login(@RequestBody HashMap<String,String> map){
+        String username = map.get("username");
+        String pwd = map.get("pwd");
+        System.out.println(username);
+        System.out.println(pwd);
+
+        return userService.checkLogin(username,pwd);
     }
 }

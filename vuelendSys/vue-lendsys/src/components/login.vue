@@ -13,9 +13,9 @@
         class="login_form"
       >
         <!--User Id-->
-        <el-form-item prop="userid">
+        <el-form-item prop="username">
           <el-input
-            v-model="loginForm.userid"
+            v-model="loginForm.username"
             prefix-icon="iconfont el-icon-user-solid"
           ></el-input>
         </el-form-item>
@@ -47,11 +47,11 @@ export default {
     return {
       // It is used for login form data
       loginForm: {
-        userid: "user Id",
+        username: "user Name",
         pwd: "123456",
       },
       loginFormRules: {
-        userid: [
+        username: [
           {
             required: true,
             message: "Please enter user Id",
@@ -92,9 +92,22 @@ export default {
       });
 
       axios.post("login",this.loginForm).then(function(resp){
-        alert(resp);
-        if (resp.status != 1000) return ElMessage.error(resp.msg);
-        ElMessage.success(resp.msg);
+        // alert(resp);
+        if (resp.status === 1000){
+          ElMessage({
+              showClose: true,
+              message: resp.data.msg,
+              type: 'success',
+          });
+        }else{
+          ElMessage({
+              showClose: true,
+              message: resp.data.msg,
+              type: 'error',
+          });
+        }
+
+
         console.log(resp);
         // window.sessionStorage.setItem("token", res.data.token);
         // this.$router.push("/login");

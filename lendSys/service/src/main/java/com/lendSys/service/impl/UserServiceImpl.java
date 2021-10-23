@@ -21,12 +21,12 @@ public class UserServiceImpl implements UserService {
     private UsersMapper usersMapper;
 
     @Override
-    public ResultVo checkLogin(String id, String pwd) {
+    public ResultVo checkLogin(String username, String pwd) {
         // based on the User to get the user info
-        int userid = Integer.parseInt(id);
+
         Example example= new Example(Users.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("userid", userid);
+        criteria.andEqualTo("username",  username);
         List<Users> usersList = usersMapper.selectByExample(example);
 
         // check if user exit or not
@@ -49,5 +49,12 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public static boolean isNumeric(final String str) {
+        // null or empty
+        if (str == null || str.length() == 0) {
+            return false;
+        }
+        return str.chars().allMatch(Character::isDigit);
+    }
 
 }
