@@ -13,7 +13,11 @@ const app = createApp(App);
 app.provide('$axios', axios);
 axios.defaults.baseURL = '/api'
 app.config.globalProperties.$http = axios
-
+axios.interceptors.request.use(config =>{
+    console.log(config)
+    config.headers.Authorization = window.sessionStorage.getItem('token')
+    return config
+})
 
 app.use(store).use(router).use(ElementPlus).mount('#app')
 
