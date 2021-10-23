@@ -100,7 +100,7 @@ export default {
               message: resp.data.msg,
               type: 'success',
           });
-          window.sessionStorage.setItem("token", resp.data.data.token);
+          window.sessionStorage.setItem("token", resp.data.token);
           router.push("/Home");
         }else{
           ElMessage({
