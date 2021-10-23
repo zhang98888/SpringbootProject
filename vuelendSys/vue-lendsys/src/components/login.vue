@@ -40,6 +40,7 @@
 <script>
 import axios from "axios";
 import { ElMessage } from 'element-plus'
+import router from '../router'
 
 export default {
 
@@ -93,12 +94,14 @@ export default {
 
       axios.post("login",this.loginForm).then(function(resp){
         // alert(resp);
-        if (resp.status === 1000){
+        if (resp.data.status === 1000){
           ElMessage({
               showClose: true,
               message: resp.data.msg,
               type: 'success',
           });
+          window.sessionStorage.setItem("token", resp.data.data.token);
+          router.push("/Home");
         }else{
           ElMessage({
               showClose: true,
@@ -109,8 +112,7 @@ export default {
 
 
         console.log(resp);
-        // window.sessionStorage.setItem("token", res.data.token);
-        // this.$router.push("/login");
+
       });
     },
   },

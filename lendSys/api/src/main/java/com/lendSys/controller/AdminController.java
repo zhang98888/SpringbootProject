@@ -19,7 +19,7 @@ public class AdminController {
     private AdminService adminService;
 
     @GetMapping(value="/home")
-    public List<Users> userInfo(){
+    public ResultVo userInfo(){
         return adminService.userInfo();
     }
 

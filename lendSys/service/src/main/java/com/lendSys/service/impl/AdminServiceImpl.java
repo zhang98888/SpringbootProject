@@ -22,11 +22,11 @@ public class AdminServiceImpl implements AdminService {
 
 
     @Override
-    public List<Users> userInfo() {
+    public ResultVo userInfo() {
         Example example= new Example(Users.class);
         Example.Criteria criteria = example.createCriteria();
         List<Users> usersList = usersMapper.selectAll();
-        return usersList;
+        return new ResultVo(1000, "Success!", usersList);
     }
     @Transactional
     public ResultVo userRegist(int userId,String name, String pwd) {

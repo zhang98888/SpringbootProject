@@ -37,7 +37,7 @@ export default {
     getAllUsers() {
       axios.get("admin/home").then(function(resp) {
         console.log(resp);
-        this.userList = resp.data.result;
+        this.userList = resp.data.data;
       });
     },
   },

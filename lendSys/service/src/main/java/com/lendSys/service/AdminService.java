@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface AdminService {
 
-    public List<Users> userInfo();
+    public ResultVo userInfo();
     // user register
     public ResultVo userRegist(int userId,String userName, String pwd);
 }
