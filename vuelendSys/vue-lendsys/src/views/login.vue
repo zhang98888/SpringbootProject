@@ -38,88 +38,85 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import router from '../router'
 
 export default {
-
   data() {
     return {
       // It is used for login form data
       loginForm: {
-        username: "user Name",
-        pwd: "123456",
+        username: 'user Name',
+        pwd: '123456'
       },
       loginFormRules: {
         username: [
           {
             required: true,
-            message: "Please enter user Id",
-            trigger: "blur",
+            message: 'Please enter user Id',
+            trigger: 'blur'
           },
           {
             min: 2,
             max: 10,
-            message: "The length is between 2 to 10",
-            trigger: "blur",
-          },
+            message: 'The length is between 2 to 10',
+            trigger: 'blur'
+          }
         ],
         password: [
           {
             required: true,
-            message: "Please Enter password",
-            trigger: "blur",
+            message: 'Please Enter password',
+            trigger: 'blur'
           },
           {
             min: 6,
             max: 15,
-            message: "The length is between 4 to 10",
-            trigger: "blur",
-          },
-        ],
-      },
-    };
+            message: 'The length is between 4 to 10',
+            trigger: 'blur'
+          }
+        ]
+      }
+    }
   },
   methods: {
     // reset method
     resetLoginForm() {
-      this.$refs.loginFormRef.resetFields();
+      this.$refs.loginFormRef.resetFields()
     },
     // log in method
     login() {
-      this.$refs.loginFormRef.validate(async (valid) => {
-        if (!valid) return; 
-      });
+      this.$refs.loginFormRef.validate(async valid => {
+        if (!valid) return
+      })
 
-      axios.post("login",this.loginForm).then(function(resp){
+      axios.post('login', this.loginForm).then(function(resp) {
         // alert(resp);
-        if (resp.data.status === 1000){
+        if (resp.data.status === 1000) {
           ElMessage({
-              showClose: true,
-              message: resp.data.msg,
-              type: 'success',
-          });
-          window.sessionStorage.setItem("token", resp.data.token);
-          router.push("/Home");
-        }else{
+            showClose: true,
+            message: resp.data.msg,
+            type: 'success'
+          })
+          window.sessionStorage.setItem('token', resp.data.data.token)
+          router.push('/Home')
+        } else {
           ElMessage({
-              showClose: true,
-              message: resp.data.msg,
-              type: 'error',
-          });
+            showClose: true,
+            message: resp.data.msg,
+            type: 'error'
+          })
         }
 
-
-        console.log(resp);
-
-      });
-    },
-  },
-};
+        console.log(resp)
+      })
+    }
+  }
+}
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .login-container {
   background-color: #dddddd;
   height: 100%;
