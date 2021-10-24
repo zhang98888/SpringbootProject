@@ -9,22 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "ResultVo Object",
+@ApiModel(value = "UserVo Object",
         description = "Package the data interface reply to the front end")
-public class ResultVo {
-
+public class UserVo {
     // The code will response to the front-end
-    @ApiModelProperty(value = "Reply code")
-    private int status;
+    @ApiModelProperty(value = "user id")
+    private int userid;
     // The msg will response to the front-end
-    @ApiModelProperty(value = "Reply message")
-    private String msg;
-    @ApiModelProperty(value = "Data lines")
-    private int total;
-    // The data will response to the front-end
-    @ApiModelProperty(value = "Reply data")
-    private Object data;
-
-
-
+    @ApiModelProperty(value = "user name")
+    private String username;
+    @ApiModelProperty(value = "user level")
+    private String userlevel;
 }

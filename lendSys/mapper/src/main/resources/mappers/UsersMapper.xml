@@ -18,4 +18,8 @@
     <result column="user_modtime" jdbcType="TIMESTAMP" property="userModtime" />
     <result column="departmentId" jdbcType="INTEGER" property="departmentid" />
   </resultMap>
+  <select id="findByUsername1" resultType="users">
+    select * from users where userName like #{username} and user_level like #{userLevel}
+  </select>
+
 </mapper>

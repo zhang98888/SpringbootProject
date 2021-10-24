@@ -11,9 +11,17 @@ const routes = [
     component: Login
   },
   {
-    path: '/',
+    path: '/admin',
     name: 'AdminApp',
-    component: AdminApp
+    component: AdminApp,
+    redirect: '/admin/table',
+    meta: {title: 'admin', icon: 'example'},
+    children: [{
+      path: 'table',
+      name: 'table',
+      component: () =>import ('@/views/AdminApp.vue'),
+      meta: {title: 'table', icon: 'table'}
+    }]
   },
   {
     path: '/Home',

@@ -1,5 +1,8 @@
 package com.lendSys.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.util.Date;
 import javax.persistence.*;
 
@@ -33,9 +36,11 @@ public class Users {
     private Date userBirth;
 
     @Column(name = "user_regtime")
+    @TableField(fill = FieldFill.INSERT)
     private Date userRegtime;
 
     @Column(name = "user_modtime")
+    @TableField(fill = FieldFill.UPDATE)
     private Date userModtime;
 
     @Column(name = "departmentId")

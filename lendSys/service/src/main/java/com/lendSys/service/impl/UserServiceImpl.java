@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         // check if user exit or not
         if(usersList.size() == 0){
             // user isn't exist
-            return new ResultVo(1001,"User not Exist",null);
+            return new ResultVo(1001,"User not Exist",0,null);
         }else{
             // encrypt the password
             // if password are same, they will get
@@ -40,10 +40,10 @@ public class UserServiceImpl implements UserService {
             Users user = new Users();
             if(md5Pwd.equals(usersList.get(0).getUserpwd())){
                 // log in success
-                return new ResultVo(1000,"Log In Success",usersList.get(0));
+                return new ResultVo(1000,"Log In Success",1,usersList.get(0));
             }else{
                 // pwd is wrong
-                return new ResultVo(1001,"Password is wrong",usersList.get(0));
+                return new ResultVo(1001,"Password is wrong",0,usersList.get(0));
             }
 
         }
