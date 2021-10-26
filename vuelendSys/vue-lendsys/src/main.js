@@ -7,7 +7,7 @@ import 'element-plus/dist/index.css'
 import axios from 'axios'
 import './assets/css/global.css';
 import $ from "jquery" ;
-
+import tabs from './store/tabs'
 
 const app = createApp(App);
 app.provide('$axios', axios);
@@ -21,3 +21,4 @@ axios.interceptors.request.use(config =>{
 
 app.use(store).use(router).use(ElementPlus).mount('#app')
 
+app.use(tabs)

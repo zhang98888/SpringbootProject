@@ -59,7 +59,7 @@
                   </el-form-item>
                   <el-form-item label="User Email">
                     <span>{{ users.row.userEmail }}</span>
-                  </el-form-item>
+                  </el-form-item> 
                   <el-form-item label="Level">
                     <span>{{ users.row.userLevel }}</span>
                   </el-form-item>

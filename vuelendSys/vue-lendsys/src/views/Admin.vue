@@ -3,12 +3,15 @@
     <el-slide width="200px">
       <common-aside></common-aside>
     </el-slide>
-    <el-container>
+    <el-container style="background-color:#f5f5f5">
       <el-header>
-        <common-header></common-header>
+        <common-tag></common-tag>
       </el-header>
-        
-      <el-main> </el-main>
+      
+      <div></div>
+      <el-main> 
+        <router-view />
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -16,16 +19,18 @@
 <script>
 import CommonAside from '../components/commonAside.vue'
 import CommonHeader from '../components/commonHeader.vue'
+import CommonTag from '../components/commonTag.vue'
 export default {
   name: 'AdminApp',
   
-  components: { CommonAside,CommonHeader },
+  components: { CommonAside,CommonHeader,CommonTag},
 
   data() {
     return {}
   }
 }
 </script>
+
 
 <style>
 .demo-table-expand {
@@ -40,7 +45,11 @@ export default {
   margin-bottom: 0;
   width: 50%;
 }
-.el-header,
+.el-header{
+  line-height: 0px;
+  text-align:left;
+  --el-header-height: 30px !important;
+}
 .el-aside {
   line-height: 200px;
 }

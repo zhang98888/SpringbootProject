@@ -1,0 +1,84 @@
+
+
+.user{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.info,
+
+.name{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #5F9EA0;
+}
+
+.access {
+    color: #5F9EA0
+}
+
+.login-info,
+p {
+    line-height: 28px;
+    font-size: 14px;
+    color: #5F9EA0;
+}
+
+.num {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.el-card{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: antiquewhite;
+}
+
+.detail {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.num1{
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+
+.txt {
+    font-size: 14px;
+    text-align: center;
+    color: #999999;
+}
+
+.graph {
+    margin-top: 20px;
+    display: felx;
+    justify-content: space-between;
+}
+.el-card2{
+    width: 48%;
+}
+
+    
+

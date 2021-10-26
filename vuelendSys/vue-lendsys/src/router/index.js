@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AdminApp from '../views/AdminApp.vue'
 import Login from '../views/login.vue'
-import AdminHome from '../views/AdminHome.vue';
+import Admin from '../views/Admin.vue';
 
-export const routes = [
+const routes = [
   {
     path: '/login',
     name: 'login',
@@ -11,12 +11,34 @@ export const routes = [
   },
 
   {
-    path: '/AdminHome',
-    name: 'AdminHome',
-    component: AdminHome
+    path: '/admin',
+    name: 'Admin',
+    component: Admin,
+    children:[
+      {
+        path: '/admin',
+        name: 'AdminHome',
+        component: ()=>import("@/views/admin/AdminHome.vue")
+      },
+      {
+        path: '/admin/users',
+        name: 'Users',
+        component: ()=>import("@/views/admin/users.vue")
+      },
+      {
+        path: '/admin/goods',
+        name: 'Goods',
+        component: ()=>import("@/views/admin/goods.vue")
+      },
+      {
+        path: '/admin/address',
+        name: 'Address',
+        component: ()=>import("@/views/admin/adminAddress.vue")
+      },
+    ]
   },
   {
-    path: '/admin',
+    path: '/adminApp',
     name: 'AdminApp',
     component: AdminApp,
   },
