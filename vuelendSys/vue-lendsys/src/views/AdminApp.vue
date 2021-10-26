@@ -1,47 +1,21 @@
 <template>
   <el-container>
-    <el-header>
-      <div
-        style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc;display: flex"
-      >
-        <div
-          style="width: 200px; padding-left: 0px; font-weight: bold; color: cadetblue"
-        >
-          Admin Management
-        </div>
-      </div>
-    </el-header>
+    <el-aside width="200px">
+        <common-aside></common-aside>
+    </el-aside>
     <el-container>
-      <el-aside width="200px">
-        <div>
-          <el-menu
-            style="width: 200px; min-height: calc(100vh - 50px)"
-            text-color="#5F9EA0"
-            default-active="2"
-            class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
+      <el-header>
+        <div
+          style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc;display: flex"
+        >
+          <div
+            style="width: 200px; padding-left: 0px; font-weight: bold; color: cadetblue"
           >
-            <el-sub-menu index="1">
-              <template #title>Admin</template>
-              <el-menu-item index="1-1">Admin Information</el-menu-item>
-            </el-sub-menu>
-            <el-menu-item index="2">
-              <i class="el-icon-menu"></i>
-              <template #title>User Management</template>
-            </el-menu-item>
-            <el-menu-item index="3">
-              <i class="el-icon-document"></i>
-              <template #title>Item Management</template>
-            </el-menu-item>
-            <el-menu-item index="4" disabled>
-              <i class="el-icon-setting"></i>
-              <template #title>function</template>
-            </el-menu-item>
-          </el-menu>
+            Admin Management
+          </div>
         </div>
-      </el-aside>
-      <el-container>
+      </el-header>
+      <el-main>
         <div style="padding: 10px">
           <div style="margin: 10px 0">
             <el-button type="primary" round @click="addData"
@@ -57,9 +31,6 @@
               <i class="el-icon-download el-icon--right"></i>
             </el-button>
           </div>
-          <div>
-            <h1>{{ message }}</h1>
-          </div>
           <div style="margin: 10px 0">
             <el-input
               v-model="search"
@@ -72,28 +43,34 @@
           </div>
           <el-table :data="tableData" style="width: 100%" stripe>
             <el-table-column type="expand">
-              <template #default="props">
+              <template #default="users">
                 <el-form label-position="left" inline class="demo-table-expand">
                   <el-form-item label="user name">
-                    <span>{{ props.row.username }}</span>
+                    <span>{{ users.row.username }}</span>
                   </el-form-item>
                   <el-form-item label="user Id">
-                    <span>{{ props.row.userid }}</span>
+                    <span>{{ users.row.userid }}</span>
+                  </el-form-item>
+                  <el-form-item label="user Sex">
+                    <span>{{ users.row.userSex }}</span>
                   </el-form-item>
                   <el-form-item label="Department ID">
-                    <span>{{ props.row.departmentId }}</span>
+                    <span>{{ users.row.departmentid }}</span>
                   </el-form-item>
                   <el-form-item label="User Email">
-                    <span>{{ props.row.userEmail }}</span>
+                    <span>{{ users.row.userEmail }}</span>
                   </el-form-item>
                   <el-form-item label="Level">
-                    <span>{{ props.row.userLevel }}</span>
+                    <span>{{ users.row.userLevel }}</span>
                   </el-form-item>
                   <el-form-item label="Working Status">
-                    <span>{{ props.row.status }}</span>
+                    <span>{{ users.row.workingStatus }}</span>
                   </el-form-item>
-                  <el-form-item label="user modtime">
-                    <span>{{ props.row.userModtime }}</span>
+                  <el-form-item label="modify time">
+                    <span>{{ users.row.userModtime }}</span>
+                  </el-form-item>
+                  <el-form-item label="password">
+                    <span>{{ users.row.userpwd }}</span>
                   </el-form-item>
                 </el-form>
               </template>
@@ -102,7 +79,7 @@
             <el-table-column label="Employee ID" prop="userid" sortable>
             </el-table-column>
             <el-table-column label="Name" prop="username"> </el-table-column>
-            <el-table-column label="Department ID" prop="departmentId">
+            <el-table-column label="Department ID" prop="departmentid">
             </el-table-column>
 
             <el-table-column label="Operation">
@@ -128,56 +105,63 @@
           <div>
             <el-dialog title="User Information" v-model="dialogFormVisible">
               <el-form :model="form">
-                <el-form-item label="name" :label-width="120">
+                <el-form-item label="user name" :label-width="120">
                   <el-input
-                    v-model="form.userName"
+                    v-model="form.username"
                     autocomplete="off"
                     style="width: 80%"
                   ></el-input>
                 </el-form-item>
-                <el-form-item label="department" :label-width="120">
+                <el-form-item label="user id" :label-width="120">
                   <el-input
-                    v-model="form.department"
+                    v-model="form.userid"
                     autocomplete="off"
                     style="width: 80%"
                   ></el-input>
                 </el-form-item>
-                <el-form-item label="id" :label-width="120">
+                <el-form-item label="department Id" :label-width="120">
                   <el-input
-                    v-model="form.ID"
+                    v-model="form.departmentid"
                     autocomplete="off"
                     style="width: 80%"
                   ></el-input>
                 </el-form-item>
-                <el-form-item label="departmentId" :label-width="120">
+                <el-form-item label="user Email" :label-width="120">
                   <el-input
-                    v-model="form.departmentId"
+                    v-model="form.userEmail"
                     autocomplete="off"
                     style="width: 80%"
                   ></el-input>
                 </el-form-item>
-                <el-form-item label="Level" :label-width="120">
+                <el-form-item label="user Level" :label-width="120">
                   <el-input
                     v-model="form.userLevel"
                     autocomplete="off"
                     style="width: 80%"
                   ></el-input>
                 </el-form-item>
-                <el-form-item label="address" :label-width="120">
+                <el-form-item label="password" :label-width="120">
                   <el-input
-                    type="textarea"
-                    v-model="form.address"
+                    v-model="form.userpwd"
                     autocomplete="off"
                     style="width: 80%"
                   ></el-input>
                 </el-form-item>
                 <el-form-item label="status" :label-width="120">
-                  <el-radio v-model="form.status" label="Home">Home</el-radio>
-                  <el-radio v-model="form.status" label="Office"
+                  <el-radio v-model="form.workingStatus" label="Home"
+                    >Home</el-radio
+                  >
+                  <el-radio v-model="form.workingStatus" label="Office"
                     >Office</el-radio
                   >
-                  <el-radio v-model="form.status" label="Unknown"
+                  <el-radio v-model="form.workingStatus" label="Unknown"
                     >Unknown</el-radio
+                  >
+                </el-form-item>
+                <el-form-item label="userSex" :label-width="120">
+                  <el-radio v-model="form.userSex" label="Male">Male</el-radio>
+                  <el-radio v-model="form.userSex" label="Female"
+                    >Female</el-radio
                   >
                 </el-form-item>
               </el-form>
@@ -192,19 +176,7 @@
             </el-dialog>
           </div>
         </div>
-        <el-footer>
-          <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page="currentPage"
-            :page-sizes="[100, 200, 300, 400]"
-            :page-size="10"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="total"
-          >
-          </el-pagination
-        ></el-footer>
-      </el-container>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -212,55 +184,52 @@
 <script>
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
+import requst from '../utils/requst'
+import CommonAside from '../components/commonAside.vue'
+
 
 export default {
-  name: 'Home',
-  components: {},
+  name: 'AdminApp',
+  components: {CommonAside},
+
+  data() {
+    return {
+      form: {},
+      tableData: [],
+      dialogFormVisible: false,
+      search: '',
+      listLoading: false
+    }
+  },
+  created() {
+    this.getList()
+  },
   methods: {
     handleEdit() {},
     handleRemove() {},
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath)
-    },
     addData() {
       this.dialogFormVisible = true
       this.form = {}
     },
     save() {
-      axios.get('admin/regist', this.form).then(requst => {
-        console.log(requst)
+      axios.POST('admin/addUserInfo', this.form.target).then(res => {
+        console.log(res)
       })
     },
-    async getMenuList(){
-      const res = await this.$http.get('menus')
-      if(res.meta.status != 200) 
-        return ElMessage({
-          showClose: true,
-          message: resp.meta.msg,
-          type: 'error'
+    getList(page = 1) {
+      this.page = page
+      teacher
+        .getPageTeacherCondition(this.page, this.limit, this.teacherQuery)
+        .then(response => {
+          // console.log(response);
+          this.list = response.data.rows
+          this.total = response.data.total
         })
-      
-      this.menuList = res.data
+        .catch(error => {
+          console.log(error)
+        })
     }
-  },
-  data() {
-    return {
-      form: {},
-      dialogFormVisible: false,
-      search: '',
-      currentPage: 1,
-      total: 10,
-      tableData: [],
-      menuList: [],
-    }
-  },
-  created(){
-    this.getMenuList()
   }
-  
 }
 </script>
 

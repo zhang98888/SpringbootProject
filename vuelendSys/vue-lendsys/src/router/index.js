@@ -1,57 +1,51 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AdminApp from '../views/AdminApp.vue'
 import Login from '../views/login.vue'
-import Home from '../views/home.vue';
-import header from '../components/Header.vue';
+import AdminHome from '../views/AdminHome.vue';
 
-const routes = [
+export const routes = [
   {
     path: '/login',
     name: 'login',
     component: Login
   },
+
+  {
+    path: '/AdminHome',
+    name: 'AdminHome',
+    component: AdminHome
+  },
   {
     path: '/admin',
     name: 'AdminApp',
     component: AdminApp,
-    redirect: '/admin/table',
-    meta: {title: 'admin', icon: 'example'},
-    children: [{
-      path: 'table',
-      name: 'table',
-      component: () =>import ('@/views/AdminApp.vue'),
-      meta: {title: 'table', icon: 'table'}
-    }]
-  },
-  {
-    path: '/Home',
-    name: 'Home',
-    component: Home
   },
 
 ]
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
+
 // 路由导航守卫
-router.beforeEach((to, from, next) => {
-  // to : the router will visit 
-  // from : the router need to change
-  // next: method 
-  //   next() visit directly  next('/login') must visit login
+// router.beforeEach((to, from, next) => {
+//   // to : the router will visit 
+//   // from : the router need to change
+//   // next: method 
+//   //   next() visit directly  next('/login') must visit login
   
-  if(to.path === '/login'){
-      return next(); 
-  }
+//   if(to.path === '/login'){
+//       return next(); 
+//   }
 
-  const tokenStr = window.sessionStorage.getItem('token');
-  if(!tokenStr) return next('/login')
+//   const tokenStr = window.sessionStorage.getItem('token');
+//   if(!tokenStr) return next('/login')
 
-  next();
+//   next();
    
-})
+// })
 
 export default router

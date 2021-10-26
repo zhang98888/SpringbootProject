@@ -1,8 +1,5 @@
 package com.lendSys.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-
 import java.util.Date;
 import javax.persistence.*;
 
@@ -13,6 +10,9 @@ public class Users {
 
     @Column(name = "userName")
     private String username;
+
+    @Column(name = "departmentId")
+    private Integer departmentid;
 
     @Column(name = "userImg")
     private String userimg;
@@ -35,16 +35,14 @@ public class Users {
     @Column(name = "user_birth")
     private Date userBirth;
 
+    @Column(name = "working_status")
+    private String workingStatus;
+
     @Column(name = "user_regtime")
-    @TableField(fill = FieldFill.INSERT)
     private Date userRegtime;
 
     @Column(name = "user_modtime")
-    @TableField(fill = FieldFill.UPDATE)
     private Date userModtime;
-
-    @Column(name = "departmentId")
-    private Integer departmentid;
 
     /**
      * @return userId
@@ -72,6 +70,20 @@ public class Users {
      */
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    /**
+     * @return departmentId
+     */
+    public Integer getDepartmentid() {
+        return departmentid;
+    }
+
+    /**
+     * @param departmentid
+     */
+    public void setDepartmentid(Integer departmentid) {
+        this.departmentid = departmentid;
     }
 
     /**
@@ -173,6 +185,20 @@ public class Users {
     }
 
     /**
+     * @return working_status
+     */
+    public String getWorkingStatus() {
+        return workingStatus;
+    }
+
+    /**
+     * @param workingStatus
+     */
+    public void setWorkingStatus(String workingStatus) {
+        this.workingStatus = workingStatus;
+    }
+
+    /**
      * @return user_regtime
      */
     public Date getUserRegtime() {
@@ -198,19 +224,5 @@ public class Users {
      */
     public void setUserModtime(Date userModtime) {
         this.userModtime = userModtime;
-    }
-
-    /**
-     * @return departmentId
-     */
-    public Integer getDepartmentid() {
-        return departmentid;
-    }
-
-    /**
-     * @param departmentid
-     */
-    public void setDepartmentid(Integer departmentid) {
-        this.departmentid = departmentid;
     }
 }

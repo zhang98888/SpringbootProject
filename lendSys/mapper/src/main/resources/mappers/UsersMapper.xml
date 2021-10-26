@@ -7,6 +7,7 @@
     -->
     <id column="userId" jdbcType="INTEGER" property="userid" />
     <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="departmentId" jdbcType="INTEGER" property="departmentid" />
     <result column="userImg" jdbcType="VARCHAR" property="userimg" />
     <result column="userPwd" jdbcType="VARCHAR" property="userpwd" />
     <result column="user_sex" jdbcType="VARCHAR" property="userSex" />
@@ -14,9 +15,9 @@
     <result column="user_level" jdbcType="VARCHAR" property="userLevel" />
     <result column="user_mobile" jdbcType="VARCHAR" property="userMobile" />
     <result column="user_birth" jdbcType="DATE" property="userBirth" />
+    <result column="working_status" jdbcType="VARCHAR" property="workingStatus" />
     <result column="user_regtime" jdbcType="TIMESTAMP" property="userRegtime" />
     <result column="user_modtime" jdbcType="TIMESTAMP" property="userModtime" />
-    <result column="departmentId" jdbcType="INTEGER" property="departmentid" />
   </resultMap>
   <select id="findByUsername1" resultType="users">
     select * from users where userName like #{username} and user_level like #{userLevel}

@@ -1,45 +1,56 @@
 import axios from 'axios'
+import { ElMessage } from 'element-plus'
 
 const request = axios.create({
-    baseURL: '/api',
+    baseURL: process.env.BASE_API,
     timeout: 5000
 })
 
-// request 拦截器
-// 可以自请求发送前对请求做一些处理
-// 比如统一加token，对请求参数统一加密
-request.interceptors.request.use(config => {
-    config.headers['Content-Type'] = 'application/json;charset=utf-8';
-
-    // config.headers['token'] = user.token;  // 设置请求头
-    return config
-}, error => {
-    return Promise.reject(error)
-});
-
-// response 拦截器
-// 可以在接口响应后统一处理结果
-request.interceptors.response.use(
-    response => {
-        let res = response.data;
-        // 如果是返回的文件
-        if (response.config.responseType === 'blob') {
-            return res
-        }
-        // 兼容服务端返回的字符串数据
-        if (typeof res === 'string') {
-            res = res ? JSON.parse(res) : res
-        }
-        return res;
+const service = axios.create({
+    baseURL: process.env.BASE_API, // api 的 base_url
+    timeout: 20000 // 请求超时时间
+  })
+  
+  // request拦截器
+  service.interceptors.request.use(
+    config => {
+      return config
     },
     error => {
-        console.log('err' + error) // for debug
-        return Promise.reject(error)
+      // Do something with request error
+      console.log(error) // for debug
+      Promise.reject(error)
     }
-)
-
-
-export default request
+  )
+  
+  // response 拦截器
+  service.interceptors.response.use(
+    response => {
+      const res = response.data
+      // debugger
+      if (res.code !== 1000) {
+        ElMessage({
+          message: res.message,
+          type: 'error',
+          duration: 5 * 1000
+        })
+        return Promise.reject('error')
+      } else {
+        return response.data
+      }
+    },
+    error => {
+      console.log('err' + error) // for debug
+      ElMessage({
+        message: error.message,
+        type: 'error',
+        duration: 5 * 1000
+      })
+      return Promise.reject(error)
+    }
+  )
+  
+  export default service
 
 
 
