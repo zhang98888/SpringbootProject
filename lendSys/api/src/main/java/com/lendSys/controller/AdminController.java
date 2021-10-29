@@ -35,12 +35,14 @@ public class AdminController {
     }
 
     @GetMapping(value = "/pageUser/{current}/{size}")
-    public ResultVo getPageUsers(@PathVariable int current,
-                                 @PathVariable int size){
-        return adminService.pageUserInfo(current,size);
+    public ResultVo getPageUsers(@PathVariable String current,
+                                 @PathVariable String size){
+        int curr = Integer.parseInt(current);
+        int s = Integer.parseInt(size);
+        return adminService.pageUserInfo(curr,s);
     }
 
-    @PostMapping(value = "/pageSearchUser/{current}/{size}")
+    @GetMapping(value = "/pageSearchUser/{current}/{size}")
     public ResultVo getPageUsersAdvance(@PathVariable int current,
                                         @PathVariable int size,
                                         @RequestBody(required = false) UserVo userVo){

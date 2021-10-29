@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AdminApp from '../views/AdminApp.vue'
 import Login from '../views/login.vue'
 import Admin from '../views/Admin.vue';
 
@@ -9,7 +8,6 @@ const routes = [
     name: 'login',
     component: Login
   },
-
   {
     path: '/admin',
     name: 'Admin',
@@ -37,11 +35,7 @@ const routes = [
       },
     ]
   },
-  {
-    path: '/adminApp',
-    name: 'AdminApp',
-    component: AdminApp,
-  },
+
 
 ]
 
@@ -52,22 +46,22 @@ const router = createRouter({
 })
 
 
-// 路由导航守卫
-// router.beforeEach((to, from, next) => {
-//   // to : the router will visit 
-//   // from : the router need to change
-//   // next: method 
-//   //   next() visit directly  next('/login') must visit login
+
+router.beforeEach((to, from, next) => {
+  // to : the router will visit 
+  // from : the router need to change
+  // next: method 
+  //   next() visit directly  next('/login') must visit login
   
-//   if(to.path === '/login'){
-//       return next(); 
-//   }
+  if(to.path === '/login'){
+      return next(); 
+  }
 
-//   const tokenStr = window.sessionStorage.getItem('token');
-//   if(!tokenStr) return next('/login')
+  const tokenStr = window.sessionStorage.getItem('token');
+  if(!tokenStr) return next('/login')
 
-//   next();
+  next();
    
-// })
+})
 
 export default router

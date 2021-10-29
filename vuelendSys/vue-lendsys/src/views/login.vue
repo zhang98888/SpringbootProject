@@ -100,7 +100,7 @@ export default {
             type: 'success'
           })
           window.sessionStorage.setItem('token', resp.data.data.token)
-          router.push('/Home')
+          router.push('/admin')
         } else {
           ElMessage({
             showClose: true,

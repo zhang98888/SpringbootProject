@@ -46,7 +46,7 @@ public class AdminServiceImpl implements AdminService {
                 users.setUserModtime(new Date());
                 int check = usersMapper.insert(users);
                 if (check > 0) {
-                    return new ResultVo(1000, "Success!", check, null);
+                    return new ResultVo(1000, "Success!", check, users);
                 } else {
                     return new ResultVo(1001, "Fail to register", 0, null);
                 }
@@ -81,8 +81,9 @@ public class AdminServiceImpl implements AdminService {
     public ResultVo pageUserDetailInfo(int current, int size, UserVo userVo) {
         String username = userVo.getUsername();
         String userlevel = userVo.getUserlevel();
-        if (userVo.getUserid() != 0) {
-            Users users = usersMapper.selectByPrimaryKey(userVo.getUserid());
+        if (userVo.getUserid() != null) {
+            int userId = Integer.parseInt(userVo.getUserid());
+            Users users = usersMapper.selectByPrimaryKey(userId);
             List<Users> usersList = new ArrayList<>();
             usersList.add(users);
             return new ResultVo(1000, "Success!", 1, usersList);

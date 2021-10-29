@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class UserVo {
     // The code will response to the front-end
     @ApiModelProperty(value = "user id")
-    private int userid;
+    private String userid;
     // The msg will response to the front-end
     @ApiModelProperty(value = "user name")
     private String username;
