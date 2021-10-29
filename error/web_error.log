@@ -393,3 +393,34 @@ Caused by: java.net.SocketException: An established connection was aborted by th
 2021-10-29 16:50:03.687 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request body is missing: public com.lendSys.vo.ResultVo com.lendSys.controller.AdminController.getPageUsersAdvance(java.lang.String,java.lang.String,com.lendSys.vo.UserVo)
 2021-10-29 16:51:26.797 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request body is missing: public com.lendSys.vo.ResultVo com.lendSys.controller.AdminController.getPageUsersAdvance(java.lang.String,java.lang.String,com.lendSys.vo.UserVo)
 2021-10-29 16:52:36.112 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "com.lendSys.vo.UserVo.getUsername()" because "userVo" is null
+2021-10-29 21:59:07.881 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.lendSys.service.goodService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lendSys.service.goodService' in your configuration.
+
+2021-10-29 22:07:49.273 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Unrecognized token 'Stock': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'Stock': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (PushbackInputStream); line: 6, column: 25]
+2021-10-29 22:07:56.269 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (PushbackInputStream); line: 4, column: 16]
+2021-10-29 22:08:51.357 [http-nio-9000-exec-7] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (PushbackInputStream); line: 4, column: 16]
+2021-10-29 22:09:06.718 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (PushbackInputStream); line: 4, column: 15]
+2021-10-29 22:09:16.556 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`finalproject`.`product`, CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`))
+### The error may exist in com/lendSys/dao/ProductMapper.java (best guess)
+### The error may involve com.lendSys.dao.ProductMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO product  ( product_id,category_id,product_name,rent_num,product_status,product_des ) VALUES( ?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`finalproject`.`product`, CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`))
+; Cannot add or update a child row: a foreign key constraint fails (`finalproject`.`product`, CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`finalproject`.`product`, CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`))
