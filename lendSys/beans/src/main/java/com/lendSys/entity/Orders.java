@@ -1,6 +1,7 @@
 package com.lendSys.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 public class Orders {
     @Id

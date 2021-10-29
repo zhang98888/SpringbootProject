@@ -1,6 +1,8 @@
 package com.lendSys.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Table(name = "product_picture")
 public class ProductPicture {

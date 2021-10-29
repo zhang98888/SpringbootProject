@@ -1,7 +1,8 @@
 package com.lendSys.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
 public class Users {
     @Id
@@ -10,6 +11,9 @@ public class Users {
 
     @Column(name = "userName")
     private String username;
+
+    @Column(name = "departmentId")
+    private Integer departmentid;
 
     @Column(name = "userImg")
     private String userimg;
@@ -31,6 +35,9 @@ public class Users {
 
     @Column(name = "user_birth")
     private Date userBirth;
+
+    @Column(name = "working_status")
+    private String workingStatus;
 
     @Column(name = "user_regtime")
     private Date userRegtime;
@@ -64,6 +71,20 @@ public class Users {
      */
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    /**
+     * @return departmentId
+     */
+    public Integer getDepartmentid() {
+        return departmentid;
+    }
+
+    /**
+     * @param departmentid
+     */
+    public void setDepartmentid(Integer departmentid) {
+        this.departmentid = departmentid;
     }
 
     /**
@@ -162,6 +183,20 @@ public class Users {
      */
     public void setUserBirth(Date userBirth) {
         this.userBirth = userBirth;
+    }
+
+    /**
+     * @return working_status
+     */
+    public String getWorkingStatus() {
+        return workingStatus;
+    }
+
+    /**
+     * @param workingStatus
+     */
+    public void setWorkingStatus(String workingStatus) {
+        this.workingStatus = workingStatus;
     }
 
     /**

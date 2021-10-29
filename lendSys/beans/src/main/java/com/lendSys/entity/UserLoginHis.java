@@ -1,7 +1,9 @@
 package com.lendSys.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
-import javax.persistence.*;
 
 @Table(name = "user_login_his")
 public class UserLoginHis {

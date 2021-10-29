@@ -13,14 +13,8 @@ public class Category {
     @Column(name = "category_level")
     private Integer categoryLevel;
 
-    @Column(name = "parent_id")
-    private String parentId;
-
     @Column(name = "category_img")
     private String categoryImg;
-
-    @Column(name = "category_bg_color")
-    private String categoryBgColor;
 
     @Column(name = "category_picture")
     private String categoryPicture;
@@ -68,20 +62,6 @@ public class Category {
     }
 
     /**
-     * @return parent_id
-     */
-    public String getParentId() {
-        return parentId;
-    }
-
-    /**
-     * @param parentId
-     */
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
-    }
-
-    /**
      * @return category_img
      */
     public String getCategoryImg() {
@@ -93,20 +73,6 @@ public class Category {
      */
     public void setCategoryImg(String categoryImg) {
         this.categoryImg = categoryImg;
-    }
-
-    /**
-     * @return category_bg_color
-     */
-    public String getCategoryBgColor() {
-        return categoryBgColor;
-    }
-
-    /**
-     * @param categoryBgColor
-     */
-    public void setCategoryBgColor(String categoryBgColor) {
-        this.categoryBgColor = categoryBgColor;
     }
 
     /**
