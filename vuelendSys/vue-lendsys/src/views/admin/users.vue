@@ -181,6 +181,62 @@
         </template>
       </el-dialog>
     </div>
+    <div>
+      <el-dialog title="User Information" v-model="editFormVisible">
+        <el-form :model="editForm">
+          <el-form-item label="user name" :label-width="120">
+            <el-input v-model="editForm.username" style="width: 80%"></el-input>
+          </el-form-item>
+          <el-form-item label="user id" :label-width="120">
+            <el-input v-model="editForm.userid" style="width: 80%"></el-input>
+          </el-form-item>
+          <el-form-item label="department Id" :label-width="120">
+            <el-input
+              v-model="editForm.departmentid"
+              style="width: 80%"
+            ></el-input>
+          </el-form-item>
+          <el-form-item label="user Email" :label-width="120">
+            <el-input
+              v-model="editForm.userEmail"
+              style="width: 80%"
+            ></el-input>
+          </el-form-item>
+          <el-form-item label="user Level" :label-width="120">
+            <el-input
+              v-model="editForm.userLevel"
+              style="width: 80%"
+            ></el-input>
+          </el-form-item>
+          <el-form-item label="password" :label-width="120">
+            <el-input v-model="editForm.userpwd" style="width: 80%"></el-input>
+          </el-form-item>
+          <el-form-item label="status" :label-width="120">
+            <el-radio v-model="editForm.workingStatus" label="Home"
+              >Home</el-radio
+            >
+            <el-radio v-model="editForm.workingStatus" label="Office"
+              >Office</el-radio
+            >
+            <el-radio v-model="editForm.workingStatus" label="Unknown"
+              >Unknown</el-radio
+            >
+          </el-form-item>
+          <el-form-item label="userSex" :label-width="120">
+            <el-radio v-model="editForm.userSex" label="Male">Male</el-radio>
+            <el-radio v-model="editForm.userSex" label="Female"
+              >Female</el-radio
+            >
+          </el-form-item>
+        </el-form>
+        <template #footer>
+          <span class="dialog-footer">
+            <el-button type="primary" @click="editFormsave">Confirm</el-button>
+            <el-button @click="editFormVisible = false">Cancel</el-button>
+          </span>
+        </template>
+      </el-dialog>
+    </div>
   </div>
 </template>
 
@@ -201,14 +257,40 @@ export default {
       search: '',
       currentPage: 1,
       pageSize: 20,
-      total: 400
+      total: 400,
+      editFormVisible: false,
+      editForm: {}
     }
   },
   created() {
     this.load()
   },
   methods: {
-    handleEdit() {},
+    handleEdit(index, rows) {
+      this.editFormVisible = true
+      this.editForm = this.tableData[index]
+    },
+    editFormsave() {
+      axios.post('/admin/editUserInfo', this.editForm).then(res => {
+        if (res.data.status === 1000) {
+          ElMessage({
+            showClose: true,
+            message: res.data.msg,
+            type: 'success'
+          })
+          this.tableData[index] = res.data.data
+        } else {
+          ElMessage({
+            showClose: true,
+            message: res.data.msg,
+            type: 'error'
+          })
+        }
+        console.log(res)
+        this.editFormVisible = false
+      })
+    
+    },
     handleRemove(index, rows) {
       axios
         .delete('/admin/delete/' + this.tableData[index].userid)
@@ -264,7 +346,18 @@ export default {
           this.tableData = res.data.data
         })
     },
-    search() {},
+    search() {
+      console.log(this.searchForm)
+      axios
+        .get(
+          '/admin/pageSearchUser/' + this.currentPage + '/' + this.pageSize,
+          this.searchForm
+        )
+        .then(res => {
+          console.log(res)
+          this.tableData = res.data.data
+        })
+    },
     handleSizeChange(val) {
       console.log(` ${val} per page `)
     },
