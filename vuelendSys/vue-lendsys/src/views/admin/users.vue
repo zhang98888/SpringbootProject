@@ -42,7 +42,7 @@
             type="primary"
             round
             style="margin-left: 5px"
-            @click="search"
+            @click="searchInfo"
             >Search</el-button
           >
         </el-form-item>
@@ -82,7 +82,6 @@
         label="Working Status"
         prop="workingStatus"
       ></el-table-column>
-      <!-- <el-table-column label="modify time" prop="userModtime"></el-table-column> -->
 
       <el-table-column label="Operation" fixed="right">
         <template #default="scope">
@@ -285,7 +284,7 @@ export default {
             message: res.data.msg,
             type: 'error'
           })
-        }
+        } 
         console.log(res)
         this.editFormVisible = false
       })
@@ -319,7 +318,7 @@ export default {
       this.form = {}
     },
     save() {
-      axios.post('admin/addUserInfo', this.form).then(res => {
+      axios.post('/admin/addUserInfo', this.form).then(res => {
         if (res.data.status === 1000) {
           ElMessage({
             showClose: true,
@@ -340,16 +339,15 @@ export default {
     },
     load() {
       axios
-        .get('admin/pageUser/' + this.currentPage + '/' + this.pageSize)
+        .get('/admin/pageUser/' + this.currentPage + '/' + this.pageSize)
         .then(res => {
           console.log(res)
           this.tableData = res.data.data
         })
     },
-    search() {
-      console.log(this.searchForm)
+    searchInfo() {
       axios
-        .get(
+        .post(
           '/admin/pageSearchUser/' + this.currentPage + '/' + this.pageSize,
           this.searchForm
         )
@@ -357,6 +355,7 @@ export default {
           console.log(res)
           this.tableData = res.data.data
         })
+        this.searchForm = {}
     },
     handleSizeChange(val) {
       console.log(` ${val} per page `)
@@ -364,7 +363,7 @@ export default {
     handleCurrentChange(val) {
       console.log(`now page: ${val}`)
       axios
-        .get('admin/pageUser/' + this.currentPage + '/' + this.pageSize)
+        .get('/admin/pageUser/' + this.currentPage + '/' + this.pageSize)
         .then(res => {
           console.log(res)
           this.tableData = res.data.data

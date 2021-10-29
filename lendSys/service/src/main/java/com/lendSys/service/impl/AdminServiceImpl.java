@@ -79,6 +79,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ResultVo pageUserDetailInfo(int current, int size, UserVo userVo) {
+        if(userVo == null) {
+            List<Users> usersList = usersMapper.selectAll();
+            return new ResultVo(1000, "success", usersList.size(), usersList);
+        }
         String username = userVo.getUsername();
         String userlevel = userVo.getUserlevel();
         if (userVo.getUserid() != null) {

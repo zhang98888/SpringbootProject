@@ -9,6 +9,7 @@ import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -42,12 +43,13 @@ public class AdminController {
         return adminService.pageUserInfo(curr,s);
     }
 
-    @GetMapping(value = "/pageSearchUser/{current}/{size}")
-    public ResultVo getPageUsersAdvance(@PathVariable int current,
-                                        @PathVariable int size,
+    @PostMapping(value = "/pageSearchUser/{current}/{size}")
+    public ResultVo getPageUsersAdvance(@PathVariable String current,
+                                        @PathVariable String size,
                                         @RequestBody(required = false) UserVo userVo){
-
-        return adminService.pageUserDetailInfo(current,size,userVo);
+        int curr = Integer.parseInt(current);
+        int s = Integer.parseInt(size);
+        return adminService.pageUserDetailInfo(curr,s,userVo);
     }
 
     @PostMapping(value = "/editUserInfo")
