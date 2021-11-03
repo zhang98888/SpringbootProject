@@ -8,6 +8,7 @@ const routes = [
     name: 'login',
     component: Login
   },
+
   {
     path: '/admin',
     name: 'Admin',
@@ -15,7 +16,7 @@ const routes = [
     children:[
       {
         path: '/admin',
-        name: 'AdminHome',
+        name: 'Home',
         component: ()=>import("@/views/admin/AdminHome.vue")
       },
       {
@@ -29,9 +30,24 @@ const routes = [
         component: ()=>import("@/views/admin/goods.vue")
       },
       {
+        path: '/admin/goodsPic',
+        name: 'GoodsPic',
+        component: ()=>import("@/views/admin/goodsPicTure.vue")
+      },
+      {
         path: '/admin/category',
         name: 'category',
         component: ()=>import("@/views/admin/category.vue")
+      },
+      {
+        path: '/user/userAddress',
+        name: 'userAddress',
+        component: ()=>import("@/views/user/userAddress.vue")
+      },
+      {
+        path: '/user/userInfo',
+        name: 'userInfo',
+        component: ()=>import("@/views/user/userInfo.vue")
       },
     ]
   },
@@ -47,21 +63,22 @@ const router = createRouter({
 
 
 
-// router.beforeEach((to, from, next) => {
-//   // to : the router will visit 
-//   // from : the router need to change
-//   // next: method 
-//   //   next() visit directly  next('/login') must visit login
+router.beforeEach((to, from, next) => {
+  // to : the router will visit 
+  // from : the router need to change
+  // next: method 
+  //   next() visit directly  next('/login') must visit login
   
-//   if(to.path === '/login'){
-//       return next(); 
-//   }
+  if(to.path === '/login'){
+      return next(); 
+  }
 
-//   const tokenStr = window.sessionStorage.getItem('token');
-//   if(!tokenStr) return next('/login')
+  const tokenStr = window.sessionStorage.getItem('token');
 
-//   next();
+  if(!tokenStr) return next('/login')
+
+  next();
    
-// })
+})
 
 export default router

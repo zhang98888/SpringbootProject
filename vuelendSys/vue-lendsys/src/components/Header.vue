@@ -1,25 +1,28 @@
 <template>
-  <el-menu
-    :default-active="activeIndex2"
-    class="el-menu-demo"
-    mode="horizontal"
-    @select="handleSelect"
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
-  >
-    <el-menu-item index="1">index1</el-menu-item>
-    <el-menu-item index="2" disabled>index2</el-menu-item>
-    <el-menu-item index="3">index3</el-menu-item>
-    <el-sub-menu index="2">
-      <template #title>
-        <img :src="userImg" class="user" />
+  <div class="header">
+    <a href="#/">
+      <!-- 点击进入首页 -->
+      <img class="logo" src="@/assets/logo2.png" />
+      <span class="company">LendSys</span>
+    </a>
+    <el-dropdown>
+      <span class="el-dropdown-link">
+        <img :src="userImg" class="user-img" />
+        
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item icon="el-icon-edit" command="edit"
+            >user information</el-dropdown-item
+          >
+
+          <el-dropdown-item icon="el-icon-s-operation" @click="logout"
+            >log out</el-dropdown-item
+          >
+        </el-dropdown-menu>
       </template>
-      <el-menu-item index="2-1">选项1</el-menu-item>
-      <el-menu-item index="2-2">选项2</el-menu-item>
-    </el-sub-menu>
-    <el-button type="info" @click="logout">logout</el-button>
-  </el-menu>
+    </el-dropdown>
+  </div>
 </template>
 
 <script>
@@ -49,17 +52,35 @@ export default {
 .header {
   align-items: center;
   display: flex;
-
-  height: 100%;
+  background-color: #545c64;
+  height: 60px;
   justify-content: space-between;
 }
-.left {
-  display: flex;
-  align-items: center;
-}
 
-.user {
+.user-img {
   width: 40px;
   height: 40px;
+}
+.logo {
+  vertical-align: middle; 
+  padding: 0px 10px 0px 40px; 
+  width: 40px;
+  height: 40px;
+}
+
+.company {
+  position: absolute;
+  color: white;
+}
+
+/* 下拉菜单 */
+.el-dropdown {
+  float: right; 
+  margin-right: 40px; 
+}
+/* 系统管理 */
+.el-dropdown-link {
+  color: white;
+  cursor: pointer; 
 }
 </style>

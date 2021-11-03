@@ -23,6 +23,7 @@ public class Product {
     @Column(name = "product_des")
     private String productDes;
 
+
     /**
      * @return product_id
      */

@@ -26,7 +26,7 @@ public class AdminController {
     }
 
     @PostMapping(value="/addUserInfo")
-    public ResultVo addUserInfo(@RequestBody Users users){
+    public ResultVo addUserInfo(@RequestBody Users users) throws Exception {
         return adminService.addUserInfo(users);
     }
 
@@ -53,7 +53,7 @@ public class AdminController {
     }
 
     @PostMapping(value = "/editUserInfo")
-    public ResultVo editUserInfo(@RequestBody Users users){
+    public ResultVo editUserInfo(@RequestBody Users users) throws Exception {
         return adminService.editUserInfo(users);
     }
 }

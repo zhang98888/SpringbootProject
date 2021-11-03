@@ -90,6 +90,7 @@
               v-model="form.categoryId"
               autocomplete="off"
               style="width: 80%"
+              sortable
             ></el-input>
           </el-form-item>
           <el-form-item label="product Name" :label-width="120">
@@ -104,14 +105,15 @@
               v-model="form.rentNum"
               autocomplete="off"
               style="width: 80%"
+              sortable
             ></el-input>
           </el-form-item>
           <el-form-item label="product status" :label-width="120">
-            <el-radio v-model="form.productStatus" label="Available"
-              >1</el-radio
+            <el-radio v-model="form.productStatus" label="1"
+              >Available</el-radio
             >
-            <el-radio v-model="form.productStatus" label="Npt Available"
-              >2</el-radio
+            <el-radio v-model="form.productStatus" label="2"
+              >Not Available</el-radio
             >
           </el-form-item>
           <el-form-item label="product des" :label-width="120">
@@ -131,7 +133,7 @@
       </el-dialog>
     </div>
     <div>
-      <el-dialog title="User Information" v-model="editFormVisible">
+      <el-dialog title="Product Information" v-model="editFormVisible">
         <el-form :model="editForm">
           <el-form-item label="product id" :label-width="120">
             <el-input
@@ -282,30 +284,6 @@ export default {
       this.editForm = this.tableData[index]
     },
     editFormsave() {
-      axios.post('/admin/editUserInfo', this.editForm).then(res => {
-        if (res.data.status === 1000) {
-          ElMessage({
-            showClose: true,
-            message: res.data.msg,
-            type: 'success'
-          })
-          this.tableData[index] = res.data.data
-        } else {
-          ElMessage({
-            showClose: true,
-            message: res.data.msg,
-            type: 'error'
-          })
-        }
-        console.log(res)
-        this.editFormVisible = false
-      })
-    },
-    handleEdit(index, rows) {
-      this.editFormVisible = true
-      this.editForm = this.tableData[index]
-    },
-    editFormsave() {
       axios.post('/product/editProductInfo', this.editForm).then(res => {
         if (res.data.status === 1000) {
           ElMessage({
@@ -314,6 +292,8 @@ export default {
             type: 'success'
           })
           this.tableData[index] = res.data.data
+          this.editForm = {}
+          this.editFormVisible = false
         } else {
           ElMessage({
             showClose: true,
@@ -321,9 +301,21 @@ export default {
             type: 'error'
           })
         }
+
         console.log(res)
-        this.editFormVisible = false
       })
+    },
+    searchProduct() {
+      axios
+        .post(
+          '/product/searchProduct/' + this.currentPage + '/' + this.pageSize,
+          this.searchForm
+        )
+        .then(res => {
+          console.log(res)
+          this.tableData = res.data.data
+        })
+      this.searchForm = {}
     }
   }
 }

@@ -7,7 +7,7 @@ const store = createStore({
     tabList:[
         {
           path: '/admin',
-          name: 'AdminHome',
+          name: 'Home',
           icon: 'menu',
           label: 'Home',
         },
@@ -18,9 +18,9 @@ const store = createStore({
           state.isCollapse = !state.isCollapse
       },
       selectMenu(state,val) {
-          // val.name === 'AdminHome' ?(state.currentMenu= null) :state.currentMenu = val
+        
 
-          if(val.name === 'AdminHome'){
+          if(val.name === 'Home'){
             state.currentMenu = null
           }else{
             state.currentMenu = val

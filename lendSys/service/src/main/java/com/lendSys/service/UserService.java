@@ -5,5 +5,6 @@ import com.lendSys.vo.ResultVo;
 public interface UserService {
 
     // user login
-    public ResultVo checkLogin(String userName, String pwd);
+    public ResultVo checkLogin(String userName, String pwd) throws Exception;
+    public ResultVo getUsrInfo(String token);
 }

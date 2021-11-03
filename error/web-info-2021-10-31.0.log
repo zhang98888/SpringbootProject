@@ -1,0 +1,186 @@
+2021-10-31 20:48:54.846 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 22700 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 20:48:54.852 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 20:48:56.933 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 20:48:56.946 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 20:48:56.946 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 20:48:56.947 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 20:48:57.109 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 20:48:57.109 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2192 ms
+2021-10-31 20:48:57.206 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 20:48:57.353 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 20:48:58.517 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 20:48:59.114 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 20:48:59.115 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 20:48:59.116 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 20:48:59.116 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 20:48:59.263 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 20:48:59.283 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 20:48:59.285 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 20:48:59.310 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 20:48:59.356 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 20:48:59.562 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 20:48:59.571 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 20:48:59.610 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 5.584 seconds (JVM running for 6.662)
+2021-10-31 20:49:29.702 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 20:49:29.702 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 20:49:29.703 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-10-31 21:05:32.000 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 21472 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 21:05:32.003 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 21:05:33.704 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 21:05:33.715 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:05:33.716 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 21:05:33.716 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 21:05:33.879 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 21:05:33.879 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1821 ms
+2021-10-31 21:05:33.972 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 21:05:34.089 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 21:05:35.038 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 21:05:35.624 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 21:05:35.625 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 21:05:35.626 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 21:05:35.626 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 21:05:35.757 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:05:35.776 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 21:05:35.777 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 21:05:35.798 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 21:05:35.837 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 21:05:36.027 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 21:05:36.035 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 21:05:36.067 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 4.715 seconds (JVM running for 5.494)
+2021-10-31 21:05:44.383 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 21:05:44.383 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 21:05:44.384 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-10-31 21:09:48.370 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 15316 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 21:09:48.373 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 21:09:50.143 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 21:09:50.155 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:09:50.156 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 21:09:50.156 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 21:09:50.310 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 21:09:50.310 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1884 ms
+2021-10-31 21:09:50.401 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 21:09:50.519 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 21:09:51.490 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 21:09:52.088 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 21:09:52.089 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 21:09:52.090 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 21:09:52.090 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 21:09:52.229 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:09:52.248 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 21:09:52.250 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 21:09:52.271 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 21:09:52.309 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 21:09:52.507 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 21:09:52.516 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 21:09:52.549 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 4.85 seconds (JVM running for 5.585)
+2021-10-31 21:10:18.682 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 21:10:18.682 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 21:10:18.683 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-10-31 21:10:36.802 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 4848 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 21:10:36.805 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 21:10:38.619 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 21:10:38.630 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:10:38.631 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 21:10:38.631 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 21:10:38.775 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 21:10:38.775 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1909 ms
+2021-10-31 21:10:38.881 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 21:10:39.023 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 21:10:40.156 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 21:10:40.799 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 21:10:40.800 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 21:10:40.800 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 21:10:40.801 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 21:10:40.956 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:10:40.977 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 21:10:40.978 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 21:10:41.002 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 21:10:41.052 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 21:10:41.264 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 21:10:41.274 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 21:10:41.308 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 5.178 seconds (JVM running for 6.729)
+2021-10-31 21:10:55.332 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 21:10:55.332 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 21:10:55.333 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-10-31 21:12:23.911 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2021-10-31 21:12:23.917 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-10-31 21:12:28.975 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 22944 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 21:12:28.979 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 21:12:30.899 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 21:12:30.910 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:12:30.911 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 21:12:30.911 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 21:12:31.062 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 21:12:31.062 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2016 ms
+2021-10-31 21:12:31.173 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 21:12:31.307 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 21:12:32.362 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 21:12:32.998 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 21:12:32.999 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 21:12:33.000 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 21:12:33.000 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 21:12:33.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:12:33.168 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 21:12:33.169 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 21:12:33.193 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 21:12:33.241 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 21:12:33.449 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 21:12:33.459 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 21:12:33.494 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 5.194 seconds (JVM running for 6.218)
+2021-10-31 21:14:11.994 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 21:14:11.994 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 21:14:11.995 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-10-31 21:15:38.351 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2021-10-31 21:15:38.357 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-10-31 21:15:42.598 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 15072 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 21:15:42.601 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 21:15:44.386 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 21:15:44.397 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:15:44.398 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 21:15:44.398 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 21:15:44.542 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 21:15:44.542 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1884 ms
+2021-10-31 21:15:44.641 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 21:15:44.765 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 21:15:45.714 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 21:15:46.294 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 21:15:46.295 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 21:15:46.296 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 21:15:46.297 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 21:15:46.432 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:15:46.450 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 21:15:46.451 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 21:15:46.473 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 21:15:46.514 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 21:15:46.705 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 21:15:46.715 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 21:15:46.750 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 4.802 seconds (JVM running for 5.567)
+2021-10-31 21:15:50.206 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 21:15:50.206 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 21:15:50.207 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-10-31 21:18:51.714 [main] INFO  com.lendSys.ApiApplication - Starting ApiApplication using Java 15.0.1 on DESKTOP-C3O5G2V with PID 16520 (C:\IdeaProjects\Project\lendSys\api\target\classes started by Wenting Zhang in C:\IdeaProjects\Project\lendSys)
+2021-10-31 21:18:51.717 [main] INFO  com.lendSys.ApiApplication - No active profile set, falling back to default profiles: default
+2021-10-31 21:18:53.434 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2021-10-31 21:18:53.444 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:18:53.444 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-31 21:18:53.444 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-31 21:18:53.588 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-31 21:18:53.588 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1816 ms
+2021-10-31 21:18:53.679 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-31 21:18:53.799 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-31 21:18:54.752 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-31 21:18:55.343 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-10-31 21:18:55.344 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-10-31 21:18:55.345 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-10-31 21:18:55.346 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-10-31 21:18:55.481 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2021-10-31 21:18:55.499 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path ''
+2021-10-31 21:18:55.500 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-10-31 21:18:55.523 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-10-31 21:18:55.567 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-10-31 21:18:55.759 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteProductUsingDELETE_1
+2021-10-31 21:18:55.767 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getPageUsersAdvanceUsingPOST_1
+2021-10-31 21:18:55.801 [main] INFO  com.lendSys.ApiApplication - Started ApiApplication in 4.878 seconds (JVM running for 5.673)
+2021-10-31 21:19:01.133 [http-nio-9000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-31 21:19:01.134 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-31 21:19:01.135 [http-nio-9000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms

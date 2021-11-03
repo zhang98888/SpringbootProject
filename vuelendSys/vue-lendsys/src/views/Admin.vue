@@ -18,12 +18,11 @@
 
 <script>
 import CommonAside from '../components/commonAside.vue'
-import CommonHeader from '../components/commonHeader.vue'
 import CommonTag from '../components/commonTag.vue'
 export default {
   name: 'AdminApp',
   
-  components: { CommonAside,CommonHeader,CommonTag},
+  components: { CommonAside,CommonTag},
 
   data() {
     return {}

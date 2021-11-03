@@ -255,7 +255,7 @@ export default {
       dialogFormVisible: false,
       search: '',
       currentPage: 1,
-      pageSize: 20,
+      pageSize: 10,
       total: 400,
       editFormVisible: false,
       editForm: {}
@@ -278,6 +278,7 @@ export default {
             type: 'success'
           })
           this.tableData[index] = res.data.data
+          this.editFormVisible = false
         } else {
           ElMessage({
             showClose: true,
@@ -285,8 +286,7 @@ export default {
             type: 'error'
           })
         } 
-        console.log(res)
-        this.editFormVisible = false
+        console.log(res)        
       })
     
     },

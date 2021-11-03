@@ -18,12 +18,18 @@ public class UserController {
     private UserService userService;
 
     @PostMapping(value="/login")
-    public ResultVo login(@RequestBody HashMap<String,String> map){
+    public ResultVo login(@RequestBody HashMap<String,String> map) throws Exception {
         String username = map.get("username");
         String pwd = map.get("pwd");
         System.out.println(username);
         System.out.println(pwd);
 
         return userService.checkLogin(username,pwd);
+    }
+
+    @PostMapping(value="/getUserInfo")
+    public ResultVo getUserInfo(@RequestParam("token") String token){
+
+        return userService.getUsrInfo(token);
     }
 }

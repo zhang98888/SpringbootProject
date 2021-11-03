@@ -1,0 +1,13 @@
+2021-10-31 20:49:34.979 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'token' for method parameter type String is not present
+2021-10-31 20:49:42.644 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'token' for method parameter type String is not present
+2021-10-31 21:03:40.931 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'token' for method parameter type String is not present
+2021-10-31 21:05:44.428 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:06:18.646 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:06:20.751 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:07:57.581 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:10:18.735 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:10:55.390 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:12:14.504 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+2021-10-31 21:14:12.592 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'token' for method parameter type String is not present
+2021-10-31 21:15:50.254 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'token' for method parameter type String is not present
+2021-10-31 21:18:21.985 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'token' for method parameter type String is not present

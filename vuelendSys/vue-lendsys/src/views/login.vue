@@ -96,10 +96,10 @@ export default {
         if (resp.data.status === 1000) {
           ElMessage({
             showClose: true,
-            message: resp.data.msg,
+            message: "success",
             type: 'success'
           })
-          window.sessionStorage.setItem('token', resp.data.data.token)
+          window.sessionStorage.setItem('token', resp.data.msg)
           router.push('/admin')
         } else {
           ElMessage({

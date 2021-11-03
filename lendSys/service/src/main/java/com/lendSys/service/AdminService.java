@@ -3,7 +3,11 @@ package com.lendSys.service;
 import com.lendSys.entity.Users;
 import com.lendSys.vo.ResultVo;
 import com.lendSys.vo.UserVo;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 public interface AdminService {
@@ -11,7 +15,7 @@ public interface AdminService {
     public ResultVo userInfo();
 
     // Add new user
-    public ResultVo addUserInfo(Users users);
+    public ResultVo addUserInfo(Users users) throws Exception;
 
     // user delete
     public ResultVo userRemove(String id);
@@ -23,6 +27,8 @@ public interface AdminService {
     public ResultVo pageUserDetailInfo(int current, int size, UserVo userVo);
 
     //edit user info
-    public ResultVo editUserInfo(Users users);
+    public ResultVo editUserInfo(Users users) throws Exception;
+
+
 
 }

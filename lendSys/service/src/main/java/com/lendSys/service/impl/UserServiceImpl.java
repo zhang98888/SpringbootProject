@@ -4,14 +4,13 @@ import com.lendSys.dao.UsersMapper;
 import com.lendSys.entity.Users;
 import com.lendSys.service.UserService;
 import com.lendSys.utils.MD5;
+import com.lendSys.utils.Sha1Utils;
 import com.lendSys.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -21,7 +20,7 @@ public class UserServiceImpl implements UserService {
     private UsersMapper usersMapper;
 
     @Override
-    public ResultVo checkLogin(String username, String pwd) {
+    public ResultVo checkLogin(String username, String pwd) throws Exception {
         // based on the User to get the user info
 
         Example example= new Example(Users.class);
@@ -36,11 +35,12 @@ public class UserServiceImpl implements UserService {
         }else{
             // encrypt the password
             // if password are same, they will get
-            String md5Pwd = MD5.md5(pwd);
+            String sha1Pwd = Sha1Utils.shaEncode(pwd);
             Users user = new Users();
-            if(md5Pwd.equals(usersList.get(0).getUserpwd())){
+            if(sha1Pwd.equals(usersList.get(0).getUserpwd())){
                 // log in success
-                return new ResultVo(1000,"Log In Success",1,usersList.get(0));
+                String token = username;
+                return new ResultVo(1000,token,1,usersList.get(0));
             }else{
                 // pwd is wrong
                 return new ResultVo(1001,"Password is wrong",0,usersList.get(0));
@@ -55,6 +55,16 @@ public class UserServiceImpl implements UserService {
             return false;
         }
         return str.chars().allMatch(Character::isDigit);
+    }
+
+    @Override
+    public ResultVo getUsrInfo(String token){
+        String username = token;
+        Example example= new Example(Users.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("username",  username);
+        List<Users> usersList = usersMapper.selectByExample(example);
+        return new ResultVo(1000,token,1,usersList.get(0));
     }
 
 }

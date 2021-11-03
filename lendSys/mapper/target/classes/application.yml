@@ -13,6 +13,10 @@ mybatis:
   type-aliases-package: com.lendSys.entity
 server:
   port: 9000
+file:
+  staticAccessPath: /image/**
+  classpath: /static/image/
+
 
 
 

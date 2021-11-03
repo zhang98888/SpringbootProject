@@ -1,17 +1,26 @@
 package com.lendSys.service.impl;
 import com.alibaba.druid.util.StringUtils;;
+import com.alibaba.excel.EasyExcel;
 import com.github.pagehelper.PageHelper;
 import com.lendSys.dao.UsersMapper;
 import com.lendSys.entity.Users;
 import com.lendSys.service.AdminService;
 import com.lendSys.utils.MD5;
+import com.lendSys.utils.Sha1Utils;
+import com.lendSys.utils.WebStudentListener;
 import com.lendSys.vo.ResultVo;
 import com.lendSys.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 import tk.mybatis.mapper.entity.Example;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 @Service
@@ -29,7 +38,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Transactional
-    public ResultVo addUserInfo(Users users) {
+    public ResultVo addUserInfo(Users users) throws Exception {
         synchronized (this) {
             // check the user name has been register or not
             String username = users.getUsername();
@@ -40,8 +49,8 @@ public class AdminServiceImpl implements AdminService {
             // if not, need to save
             if (usersList.size() == 0 && users.getDepartmentid() != 0) {
                 String pwd = users.getUserpwd();
-                String md5Pwd = MD5.md5(pwd);
-                users.setUserpwd(md5Pwd);
+                String sha1Pwd = Sha1Utils.shaEncode(pwd);
+                users.setUserpwd(sha1Pwd);
                 users.setUserRegtime(new Date());
                 users.setUserModtime(new Date());
                 int check = usersMapper.insert(users);
@@ -113,11 +122,15 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public ResultVo editUserInfo(Users users){
+    public ResultVo editUserInfo(Users users) throws Exception {
+        String pwd = Sha1Utils.shaEncode(users.getUserpwd());
+        users.setUserpwd(pwd);
         int check = usersMapper.updateByPrimaryKey(users);
         if(check == 0){
             return new ResultVo(1001, "Fail to update", 0, null);
         }else
             return new ResultVo(1000, "Success", 1, users);
     }
+
+
 }
