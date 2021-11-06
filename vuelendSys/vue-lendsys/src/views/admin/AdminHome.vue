@@ -5,8 +5,8 @@
         <div class="user">
           <img :src="userImg" alt="" />
           <div class="login-info">
-            <div class="name"><p>User name: <span>Admin</span></p></div>
-            <div class="access"><p>User Level: <span>Supervisor</span></p></div>
+            <div class="name"><p>User name: <span>{{username}}</span></p></div>
+            <div class="access"><p>User Level: <span>{{userlevel}}</span></p></div>
           </div>
         </div>
       </el-card>
@@ -19,9 +19,20 @@
 export default {
   data() {
     return {
-      userImg: require('../../assets/logo2.png')
+      userImg: require('../../assets/logo2.png'),
+      username: "username",
+      userlevel: "userlevel"
+    }
+  },
+  created() {
+     this.load()
+  },
+  methods: {
+    load(){
+       
     }
   }
+
 }
 </script>
 
