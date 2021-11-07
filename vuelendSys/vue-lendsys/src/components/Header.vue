@@ -1,27 +1,36 @@
 <template>
   <div class="header">
-    <a href="#/">
-      <!-- 点击进入首页 -->
-      <img class="logo" src="@/assets/logo2.png" />
-      <span class="company">LendSys</span>
+    <a href="">
+      <img class="logo" src="@/assets/header.png" />
     </a>
-    <el-dropdown>
-      <span class="el-dropdown-link">
-        <img :src="userImg" class="user-img" />
-        
-      </span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item icon="el-icon-edit" command="edit"
-            >user information</el-dropdown-item
-          >
+    <div class="back">
+      <a href="" class="nav-link">Home</a>
+      <a href="" class="nav-link">Product</a>
+      <el-dropdown>
+        <span class="el-dropdown-link">
+          <img :src="userImg" class="user-img" />
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item icon="el-icon-edit" command="edit" href=""
+              >user information</el-dropdown-item
+            >
+            <el-dropdown-item icon="el-icon-edit" command="edit" href=""
+              >user order</el-dropdown-item
+            >
+            <el-dropdown-item icon="el-icon-edit" command="edit" href=""
+              >user Address</el-dropdown-item
+            >
 
-          <el-dropdown-item icon="el-icon-s-operation" @click="logout"
-            >log out</el-dropdown-item
-          >
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
+            <el-dropdown-item icon="el-icon-s-operation" @click="logout"
+              >log out</el-dropdown-item
+            >
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+
+      
+    </div>
   </div>
 </template>
 
@@ -60,11 +69,12 @@ export default {
 .user-img {
   width: 40px;
   height: 40px;
+  border-radius: 20px;
 }
 .logo {
-  vertical-align: middle; 
-  padding: 0px 10px 0px 40px; 
-  width: 40px;
+  vertical-align: middle;
+  padding: 0px 10px 0px 0px;
+  width: 300px;
   height: 40px;
 }
 
@@ -73,14 +83,26 @@ export default {
   color: white;
 }
 
-/* 下拉菜单 */
 .el-dropdown {
-  float: right; 
-  margin-right: 40px; 
+  float: right;
+  margin-right: 100px;
 }
-/* 系统管理 */
+
 .el-dropdown-link {
   color: white;
-  cursor: pointer; 
+  cursor: pointer;
+  margin-right: 40px;
 }
+.nav-link {
+  color: white;
+  margin-right: 40px;
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
 </style>

@@ -5,7 +5,7 @@ import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import axios from 'axios'
-import './assets/css/global.css';
+import './assets/css/global.less';
 import $ from "jquery" ;
 import tabs from './store/tabs'
 
