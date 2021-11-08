@@ -35,7 +35,7 @@ export default {
             flex: 1;
             font-size: 20px;
             font-weight: normal;
-            margin-left: 190px;
+            margin-left: 0px;
             height: 30px;
             small{
                 font-size: 10px;

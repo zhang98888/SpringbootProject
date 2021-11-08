@@ -19,7 +19,7 @@ export default {
 
 
 .home-banner {
-  width: 1240px;
+  width: 900px;
   height: 450px !important;
   left: 0;
   right: 0;

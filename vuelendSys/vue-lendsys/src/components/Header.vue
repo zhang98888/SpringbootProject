@@ -4,18 +4,23 @@
       <img class="logo" src="@/assets/header.png" />
     </a>
     <div class="back">
-      <a href="" class="nav-link">Home</a>
+      <a href="/" class="nav-link">Home</a>
       <a href="" class="nav-link">Product</a>
-      <el-dropdown>
+      <a href="/admin" class="nav-link">Information</a>
+      <a href="/order" class="nav-link">Order</a>
+      <a href="" class="nav-link">Address</a>
+      <a @click="logout" class="nav-link">logout</a>
+
+      <!-- <el-dropdown>
         <span class="el-dropdown-link">
           <img :src="userImg" class="user-img" />
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item icon="el-icon-edit" command="edit" href=""
+            <el-dropdown-item icon="el-icon-edit" command="edit" href="/admin"
               >user information</el-dropdown-item
             >
-            <el-dropdown-item icon="el-icon-edit" command="edit" href=""
+            <el-dropdown-item icon="el-icon-edit" command="edit" href="/order"
               >user order</el-dropdown-item
             >
             <el-dropdown-item icon="el-icon-edit" command="edit" href=""
@@ -27,7 +32,7 @@
             >
           </el-dropdown-menu>
         </template>
-      </el-dropdown>
+      </el-dropdown> -->
 
       
     </div>
@@ -103,6 +108,7 @@ export default {
   flex-direction: row;
   align-items: center;
 }
+
 
 
 </style>

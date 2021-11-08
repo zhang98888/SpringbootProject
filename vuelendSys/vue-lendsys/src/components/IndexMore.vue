@@ -26,7 +26,7 @@ export default {
         font-size: 15px;
         vertical-align: middle;
         color:silver;
-        margin-right: 190px;
+        margin-right: 0px;
     }
 }
 </style>

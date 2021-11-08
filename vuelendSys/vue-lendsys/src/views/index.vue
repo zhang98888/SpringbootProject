@@ -7,16 +7,26 @@
     <el-main>
       <div class="container">
         <div class="home">
-          <IndexAside /> 
+          <IndexAside />
         </div>
         <div>
           <IndexBanner />
         </div>
       </div>
-      <IndexName title="Recommend" subTitle="Polular rented">
-        <template #right><index-more path="/" /></template>
-      </IndexName>
-      <IndexMorePic />
+      <div class="main">
+        <IndexName title="Recommend" subTitle="Polular rented">
+          <template #right><index-more path="/"/></template>
+        </IndexName>
+        <IndexMorePic />
+      </div>
+      <div class="lines1"></div>
+      <div class="main">
+        <IndexName title="Recommend" subTitle="Polular rented">
+          <template #right><index-more path="/"/></template>
+        </IndexName>
+        <IndexMorePic />
+      </div>
+      <div class="lines1"></div>
     </el-main>
   </el-container>
 </template>
@@ -29,10 +39,15 @@ import IndexName from '../components/IndexButtomName.vue'
 import IndexMore from '../components/IndexMore.vue'
 import IndexMorePic from '../components/IndexMorePic.vue'
 
-
-
 export default {
-  components: { IndexAside, IndexBanner, commonHeader,IndexName, IndexMore,IndexMorePic }
+  components: {
+    IndexAside,
+    IndexBanner,
+    commonHeader,
+    IndexName,
+    IndexMore,
+    IndexMorePic
+  }
 }
 </script>
 
@@ -40,9 +55,8 @@ export default {
 .container {
   display: flex;
   justify-content: center;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
 }
-
 
 .el-header {
   height: 80px;
@@ -53,5 +67,21 @@ export default {
   background: hsla(0, 0%, 0%, 0.5);
   position: relative;
   z-index: 99;
+}
+
+.el-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 1150px;
+}
+.lines1 {
+  height: 12px;
+  background-color: whitesmoke;
+  width: 100%;
+  position: relative;
 }
 </style>

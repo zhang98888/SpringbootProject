@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/login.vue'
 import Admin from '../views/Admin.vue';
 import Index from '../views/index.vue'
+import Order from '../views/user/UserOrder.vue'
+import Basket from '../views/user/Basket.vue'
 
 
 const routes = [
@@ -15,7 +17,16 @@ const routes = [
     name: 'login',
     component: Login
   },
-
+  {
+    path: '/order',
+    name: 'order',
+    component: Order
+  },
+  {
+    path: '/basket',
+    name: 'basket',
+    component: Basket
+  },
   {
     path: '/admin',
     name: 'Admin',
