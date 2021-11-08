@@ -20,10 +20,10 @@
       </div>
       <div class="lines1"></div>
       <div class="main">
-        <IndexName title="Recommend" subTitle="Polular rented">
+        <IndexName title="Working at Home" subTitle="Suitable for working at home">
           <template #right><index-more path="/"/></template>
         </IndexName>
-        <IndexMorePic />
+        <IndexHomeWork />
       </div>
       <div class="lines1"></div>
     </el-main>
@@ -37,6 +37,7 @@ import commonHeader from '../components/commonHeader.vue'
 import IndexName from '../components/IndexButtomName.vue'
 import IndexMore from '../components/IndexMore.vue'
 import IndexMorePic from '../components/IndexMorePic.vue'
+import IndexHomeWork from '../components/IndexHomeWork.vue'
 
 export default {
   components: {
@@ -45,7 +46,8 @@ export default {
     commonHeader,
     IndexName,
     IndexMore,
-    IndexMorePic
+    IndexMorePic,
+    IndexHomeWork
   }
 }
 </script>

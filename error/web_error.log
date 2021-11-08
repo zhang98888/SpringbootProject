@@ -13,3 +13,18 @@
 2021-11-08 17:07:32.664 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.lendSys.entity.ProductPicture.getSort()" is null
 2021-11-08 17:09:39.139 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.lendSys.entity.ProductPicture.getSort()" is null
 2021-11-08 17:33:34.052 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "com.lendSys.dao.ProductMapper.selectByPrimaryKey(Object)" because "this.productMapper" is null
+2021-11-08 22:16:00.126 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.lendSys.service.homeImg' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lendSys.service.homeImg' in your configuration.
+

@@ -2,13 +2,16 @@ package com.lendSys.service.impl;
 
 import com.lendSys.dao.HomeImgMapper;
 import com.lendSys.entity.HomeImg;
-import com.lendSys.service.homeImg;
+import com.lendSys.service.homeImgService;
 import com.lendSys.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class homeImgImpl implements homeImg {
+@Service
+public class homeImgServiceImpl implements homeImgService {
     @Autowired
     private HomeImgMapper homeImgMapper;
 

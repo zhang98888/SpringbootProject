@@ -1,23 +1,36 @@
 <template>
   <div class="home-banner">
     <el-carousel :interval="5000" height="450px" arrow="always" type="card">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <img src="@/assets/logo.png" />
+      <el-carousel-item v-for="item in HomeImg" :key="item">
+        <img :src="item.imgUrl" style="height:450px; width:450px"/>
       </el-carousel-item>
     </el-carousel>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  
+  data() {
+    return {
+      HomeImg: []
+    }
+  },
+  created() {
+    this.load()
+  },
+  methods: {
+    load() {
+      axios.get('/homeImg').then(res => {
+        console.log(res)
+        this.HomeImg = res.data.data
+      })
+    }
+  }
 }
 </script>
 
-
 <style lang="less" scoped>
-
-
 .home-banner {
   width: 900px;
   height: 450px !important;
@@ -38,12 +51,11 @@ export default {
 
 .el-carousel__item:nth-child(2n) {
   background-color: #d3dce6;
-   height: 450px !important;
+  height: 450px !important;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
-   height: 450px !important;
+  height: 450px !important;
 }
-
 </style>
