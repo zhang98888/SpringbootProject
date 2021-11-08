@@ -9,4 +9,5 @@ public interface goodPicService {
     public ResultVo addGoodPic(ProductPicture productPicture);
     public ResultVo editGoodPic(ProductPicture productPicture);
     public ResultVo searchGoodPic(int current, int size, int id);
+    public ResultVo getAdvanceGoodPic();
 }

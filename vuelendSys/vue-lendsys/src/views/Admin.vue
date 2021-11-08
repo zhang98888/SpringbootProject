@@ -1,8 +1,8 @@
 <template>
   <el-container style="height: 100%">
-    <el-slide width="200px">
+    <el-slide width="200px" style="background-color: #222d32">
       <common-aside></common-aside>
-    </el-slide>
+    </el-slide >
     <el-container style="background-color:#f5f5f5">
       <el-header>
         <common-tag></common-tag>

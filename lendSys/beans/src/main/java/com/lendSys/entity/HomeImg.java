@@ -11,7 +11,7 @@ public class HomeImg {
     private Integer imgId;
 
     @Column(name = "img_url")
-    private Integer imgUrl;
+    private String imgUrl;
 
     @Column(name = "prod_id")
     private Integer prodId;
@@ -46,14 +46,14 @@ public class HomeImg {
     /**
      * @return img_url
      */
-    public Integer getImgUrl() {
+    public String getImgUrl() {
         return imgUrl;
     }
 
     /**
      * @param imgUrl
      */
-    public void setImgUrl(Integer imgUrl) {
+    public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
 

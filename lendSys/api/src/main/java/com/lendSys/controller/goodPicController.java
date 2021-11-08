@@ -53,4 +53,9 @@ public class goodPicController {
         return picService.searchGoodPic(curr,s,pictureId);
     }
 
+    @GetMapping(value = "/getAdvanceGoodPic")
+    public ResultVo getAdvanceGoodPic() {
+        return picService.getAdvanceGoodPic();
+    }
+
 }

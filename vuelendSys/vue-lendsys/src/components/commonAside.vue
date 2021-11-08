@@ -9,11 +9,12 @@
       active-text-color="#faf039"
       
     >
-      <div style="height: 50px; line-height: 50px; display: flex">
+      <div style="height: 50px; line-height: 50px; display: flex; height: 100%">
         <div
           style="width: 200px; padding-left: 0px; font-weight: bold; color: cadetblue; flex;
           flex-direction: row;
-          justify-content: center;"
+          justify-content: center; 
+          height: 100%"
         >
           Admin Management
         </div>

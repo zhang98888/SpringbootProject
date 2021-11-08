@@ -16,6 +16,7 @@ public class ProductPicture {
 
     private String url;
 
+    @Column(name = "sort")
     private Integer sort;
 
     @Column(name = "is_main")

@@ -1,10 +1,13 @@
 package com.lendSys.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.lendSys.dao.ProductMapper;
 import com.lendSys.dao.ProductPictureMapper;
 import com.lendSys.entity.Category;
+import com.lendSys.entity.Product;
 import com.lendSys.entity.ProductPicture;
 import com.lendSys.service.goodPicService;
+import com.lendSys.vo.PicInfoVo;
 import com.lendSys.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -20,6 +23,8 @@ import java.util.List;
 public class goodPicServiceImpl implements goodPicService {
     @Autowired
     private ProductPictureMapper pictureMapper;
+    @Autowired
+    private ProductMapper productMapper;
 
     @Override
     public ResultVo getGoodPic(int current, int size) {
@@ -45,7 +50,7 @@ public class goodPicServiceImpl implements goodPicService {
     public ResultVo addGoodPic(ProductPicture productPicture) {
         synchronized (this) {
             int pictureId = productPicture.getPictureId();
-            if(pictureId == 0){
+            if (pictureId == 0) {
                 return new ResultVo(1001, "Need to input pictureId", 0, null);
             }
             ProductPicture picture = pictureMapper.selectByPrimaryKey(pictureId);
@@ -65,9 +70,9 @@ public class goodPicServiceImpl implements goodPicService {
     @Override
     public ResultVo editGoodPic(ProductPicture productPicture) {
         int check = pictureMapper.updateByPrimaryKey(productPicture);
-        if(check == 0){
+        if (check == 0) {
             return new ResultVo(1001, "Fail to update", 0, null);
-        }else
+        } else
             return new ResultVo(1000, "Success", 1, productPicture);
     }
 
@@ -77,5 +82,19 @@ public class goodPicServiceImpl implements goodPicService {
         List<ProductPicture> lists = new ArrayList<>();
         lists.add(picture);
         return new ResultVo(1000, "Success!", 1, lists);
+    }
+
+    @Override
+    public ResultVo getAdvanceGoodPic() {
+        List<ProductPicture> lists = pictureMapper.selectAll();
+        List<PicInfoVo> list = new ArrayList<>();
+        for (ProductPicture pic : lists) {
+            if (pic.getSort() == 1) {
+                Product product = productMapper.selectByPrimaryKey(pic.getProductId());
+                PicInfoVo pices = new PicInfoVo(product.getProductName(), product.getRentNum(), pic.getUrl());
+                list.add(pices);
+            }
+        }
+        return new ResultVo(1000, "Success!", 1, list);
     }
 }

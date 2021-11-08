@@ -2,19 +2,20 @@
   <el-row>
     <el-col
       :span="4"
-      v-for="(o, index) in 2"
-      :key="o"
+      v-for="picture in Picture"
+      :key="picture"
       :offset="index > 0 ? 2 : 0"
     >
-      <el-card :body-style="{ padding: '0px' }" shadow="always">
-        <img
-          src="@/assets/logo.png"
-          class="image"
-        />
+      <el-card :body-style="{ padding: '4px' }" shadow="always">
+        <img :src="picture.url" class="image" />
         <div style="padding: 14px;">
-          <span>Description</span>
           <div class="bottom">
-            <time class="time">{{ currentDate }}</time>
+            <p>
+              <span>{{ picture.productname }}</span>
+            </p>
+            <p>
+              Rent Number: <span>{{ picture.rent }}</span>
+            </p>
           </div>
         </div>
       </el-card>
@@ -23,27 +24,40 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
-      currentDate: new Date()
+      currentDate: new Date(),
+      Picture: []
+    }
+  },
+  created() {
+    this.load()
+  },
+  methods: {
+    load() {
+      axios.get('/goodPic/getAdvanceGoodPic').then(res => {
+        console.log(res)
+        this.Picture = res.data.data
+        console.log(this.Picture)
+      })
     }
   }
 }
 </script>
 
 <style>
-.time {
-  font-size: 13px;
-  color: #999;
+.el-card {
+  margin-left: 10px;
+  height: 240px;
 }
 
 .bottom {
   margin-top: 13px;
-  line-height: 12px;
+  line-height: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
 .button {
@@ -54,6 +68,10 @@ export default {
 .image {
   width: 100%;
   display: block;
+  height: 130px;
 }
 
+p{
+  font-size: 8px;
+}
 </style>

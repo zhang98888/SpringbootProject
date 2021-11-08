@@ -28,13 +28,13 @@
     </div>
     <el-table
       :data="tableData"
-      :span-method="objectSpanMethod"
+     
       border
       style="width: 100%; margin-top: 20px"
     >
-      <el-table-column prop="productId" label="product Id" width="180">
+      <el-table-column prop="productId" label="product Id" width="180" sortable>
       </el-table-column>
-      <el-table-column prop="pictureId" label="picture Id"> </el-table-column>
+      <el-table-column prop="pictureId" label="picture Id" sortable> </el-table-column>
       <el-table-column prop="url" label="url"> </el-table-column>
       <el-table-column prop="isMain" label="isMain"> </el-table-column>
       <el-table-column label="Operation" fixed="right">
@@ -154,33 +154,18 @@ export default {
       searchForm: {},
       search: '',
       currentPage: 1,
-      pageSize: 20,
+      pageSize: 10,
       total: 400,
       dialogFormVisible: false,
       form: {},
       editForm: {},
-      editFormVisible: false
+      editFormVisible: false,
     }
   },
   created() {
     this.load()
   },
   methods: {
-    objectSpanMethod({ rowIndex, columnIndex }) {
-      if (columnIndex === 0) {
-        if (rowIndex % 2 === 0) {
-          return {
-            rowspan: 2,
-            colspan: 1
-          }
-        } else {
-          return {
-            rowspan: 0,
-            colspan: 0
-          }
-        }
-      }
-    },
     load() {
       axios
         .get('/goodPic/getAllGoodPic/' + this.currentPage + '/' + this.pageSize)
@@ -224,7 +209,7 @@ export default {
         }
         console.log(res)
         this.dialogFormVisible = false
-        form = {}
+        this.form = {}
       })
     },
     fileUploadSuccess(res) {

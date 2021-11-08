@@ -3,7 +3,6 @@
     <el-header>
       <commonHeader />
     </el-header>
-
     <el-main>
       <div class="container">
         <div class="home">
