@@ -1,0 +1,115 @@
+2021-11-13 15:36:37.442 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.lendSys.service.cartService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lendSys.service.cartService' in your configuration.
+
+2021-11-13 15:38:57.292 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl': Unsatisfied dependency expressed through field 'cartMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartMapper' defined in file [C:\IdeaProjects\Project\lendSys\mapper\target\classes\com\lendSys\dao\CartMapper.class]: Invocation of init method failed; nested exception is tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: cartId - 该字段@GeneratedValue配置只允许以下几种形式:
+1.useGeneratedKeys的@GeneratedValue(generator=\"JDBC\")  
+2.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator="Mysql"])
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.lendSys.ApiApplication.main(ApiApplication.java:13)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl': Unsatisfied dependency expressed through field 'cartMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartMapper' defined in file [C:\IdeaProjects\Project\lendSys\mapper\target\classes\com\lendSys\dao\CartMapper.class]: Invocation of init method failed; nested exception is tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: cartId - 该字段@GeneratedValue配置只允许以下几种形式:
+1.useGeneratedKeys的@GeneratedValue(generator=\"JDBC\")  
+2.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator="Mysql"])
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cartMapper' defined in file [C:\IdeaProjects\Project\lendSys\mapper\target\classes\com\lendSys\dao\CartMapper.class]: Invocation of init method failed; nested exception is tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: cartId - 该字段@GeneratedValue配置只允许以下几种形式:
+1.useGeneratedKeys的@GeneratedValue(generator=\"JDBC\")  
+2.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator="Mysql"])
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 36 common frames omitted
+Caused by: tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: cartId - 该字段@GeneratedValue配置只允许以下几种形式:
+1.useGeneratedKeys的@GeneratedValue(generator=\"JDBC\")  
+2.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator="Mysql"])
+	at tk.mybatis.mapper.mapperhelper.MapperHelper.setSqlSource(MapperHelper.java:378)
+	at tk.mybatis.mapper.mapperhelper.MapperHelper.processMappedStatement(MapperHelper.java:297)
+	at tk.mybatis.mapper.mapperhelper.MapperHelper.processConfiguration(MapperHelper.java:283)
+	at tk.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:93)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 46 common frames omitted
+Caused by: tk.mybatis.mapper.MapperException: tk.mybatis.mapper.MapperException: cartId - 该字段@GeneratedValue配置只允许以下几种形式:
+1.useGeneratedKeys的@GeneratedValue(generator=\"JDBC\")  
+2.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator="Mysql"])
+	at tk.mybatis.mapper.mapperhelper.MapperTemplate.setSqlSource(MapperTemplate.java:256)
+	at tk.mybatis.mapper.mapperhelper.MapperHelper.setSqlSource(MapperHelper.java:375)
+	... 52 common frames omitted
+Caused by: tk.mybatis.mapper.MapperException: cartId - 该字段@GeneratedValue配置只允许以下几种形式:
+1.useGeneratedKeys的@GeneratedValue(generator=\"JDBC\")  
+2.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator="Mysql"])
+	at tk.mybatis.mapper.mapperhelper.resolve.DefaultEntityResolve.processGeneratedValue(DefaultEntityResolve.java:243)
+	at tk.mybatis.mapper.mapperhelper.resolve.DefaultEntityResolve.processKeyGenerator(DefaultEntityResolve.java:209)
+	at tk.mybatis.mapper.mapperhelper.resolve.DefaultEntityResolve.processField(DefaultEntityResolve.java:159)
+	at tk.mybatis.mapper.mapperhelper.resolve.DefaultEntityResolve.resolveEntity(DefaultEntityResolve.java:86)
+	at tk.mybatis.mapper.mapperhelper.EntityHelper.initEntityNameMap(EntityHelper.java:173)
+	at tk.mybatis.mapper.mapperhelper.MapperTemplate.getEntityClass(MapperTemplate.java:172)
+	at tk.mybatis.mapper.provider.ExampleProvider.selectCountByExample(ExampleProvider.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at tk.mybatis.mapper.mapperhelper.MapperTemplate.setSqlSource(MapperTemplate.java:246)
+	... 53 common frames omitted
+2021-11-13 15:43:00.782 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+2021-11-13 15:43:57.406 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+2021-11-13 15:46:52.855 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+2021-11-13 15:47:16.213 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+2021-11-13 15:47:57.490 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+2021-11-13 15:48:17.529 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')

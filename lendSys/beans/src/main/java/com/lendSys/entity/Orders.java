@@ -2,6 +2,7 @@ package com.lendSys.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
+import java.util.Date;
 
 public class Orders {
     @Id
@@ -15,7 +16,24 @@ public class Orders {
     private Integer orderStatus;
 
     @Column(name = "order_remark")
-    private String orderRemark;
+    private Integer orderRemark;
+
+    @Column(name = "good_id")
+    private Integer goodId;
+
+    @Column(name = "order_num")
+    private Integer orderNum;
+
+    @Column(name = "start_date")
+    private Date startDate;
+
+    @Column(name = "end_date")
+    private Date endDate;
+
+
+    @Column(name = "length")
+    private Integer length;
+
 
     /**
      * @return order_id
@@ -62,14 +80,79 @@ public class Orders {
     /**
      * @return order_remark
      */
-    public String getOrderRemark() {
+    public Integer getOrderRemark() {
         return orderRemark;
     }
 
     /**
      * @param orderRemark
      */
-    public void setOrderRemark(String orderRemark) {
+    public void setOrderRemark(Integer orderRemark) {
         this.orderRemark = orderRemark;
+    }
+
+    /**
+     * @return good_id
+     */
+    public Integer getGoodId() {
+        return goodId;
+    }
+
+    /**
+     * @param goodId
+     */
+    public void setGoodId(Integer goodId) {
+        this.goodId = goodId;
+    }
+
+    /**
+     * @return orderNum
+     */
+    public Integer getOrderNum() {
+        return orderNum;
+    }
+
+    /**
+     * @param orderNum
+     */
+    public void setOrderNum(Integer orderNum) {
+        this.orderNum = orderNum;
+    }
+
+    /**
+     * @return startDate
+     */
+    public Date getStartDate() {
+        return startDate;
+    }
+    /**
+     * @param startDate
+     */
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+    /**
+     * @return endDate
+     */
+    public Date getEndDate() {
+        return endDate;
+    }
+    /**
+     * @param endDate
+     */
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+    /**
+     * @return length
+     */
+    public Integer getLength() {
+        return length;
+    }
+    /**
+     * @param length
+     */
+    public void setLength(Integer length) {
+        this.length = length;
     }
 }

@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lendSys.dao.CartMapper">
-  <resultMap id="BaseResultMap" type="com.lendSys.entity.Cart">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
-    <result column="productId" jdbcType="INTEGER" property="productid" />
-    <result column="sku_id" jdbcType="INTEGER" property="skuId" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="cart_num" jdbcType="INTEGER" property="cartNum" />
-    <result column="cart_time" jdbcType="TIMESTAMP" property="cartTime" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.lendSys.entity.Cart">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="cart_id" jdbcType="INTEGER" property="cartId"/>
+        <result column="productId" jdbcType="INTEGER" property="productid"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="cart_num" jdbcType="INTEGER" property="cartNum"/>
+        <result column="cart_time" jdbcType="TIMESTAMP" property="cartTime"/>
+    </resultMap>
+    <resultMap id="AdvanceResultMap" type="com.lendSys.vo.CartVo">
+        <id column="cart_id" jdbcType="INTEGER" property="cartId"/>
+        <result column="productId" jdbcType="INTEGER" property="productid"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="cart_num" jdbcType="INTEGER" property="cartNum"/>
+        <result column="cart_time" jdbcType="TIMESTAMP" property="cartTime"/>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"/>
+    </resultMap>
+    <select id="selectByName" resultMap="AdvanceResultMap">
+        select cart_id,
+               productId,
+               user_id,
+               cart_num,
+               cart_time,
+               product_name
+        from (select cart_id,
+                     productId,
+                     user_id,
+                     cart_num,
+                     cart_time
+              from cart
+                       inner join users on user_id = userId
+              where userName = #{username}) as t
+                 inner join product on productId = product_id
+    </select>
 </mapper>

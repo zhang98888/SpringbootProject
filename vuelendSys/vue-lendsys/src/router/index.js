@@ -4,6 +4,9 @@ import Admin from '../views/Admin.vue';
 import Index from '../views/index.vue'
 import Order from '../views/user/UserOrder.vue'
 import Basket from '../views/user/Basket.vue'
+import categotyPro from '../views/categoryPro.vue'
+import product from '../views/product.vue'
+import productDetail from '../views/productDetail.vue'
 
 
 const routes = [
@@ -26,6 +29,21 @@ const routes = [
     path: '/basket',
     name: 'basket',
     component: Basket
+  },
+  {
+    path: '/category/:categoryId',
+    name: 'categotyPro',
+    component: categotyPro,
+  },
+  {
+    path: '/product',
+    name: 'product',
+    component: product,
+  },
+  {
+    path: '/product/:productId',
+    name: 'productDetail',
+    component: productDetail,
   },
   {
     path: '/admin',

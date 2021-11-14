@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lendSys.dao.ProductPictureMapper">
-  <resultMap id="BaseResultMap" type="com.lendSys.entity.ProductPicture">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="picture_id" jdbcType="INTEGER" property="pictureId" />
-    <result column="product_id" jdbcType="INTEGER" property="productId" />
-    <result column="url" jdbcType="VARCHAR" property="url" />
-    <result column="sort" jdbcType="INTEGER" property="sort" />
-    <result column="is_main" jdbcType="INTEGER" property="isMain" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.lendSys.entity.ProductPicture">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="picture_id" jdbcType="INTEGER" property="pictureId"/>
+        <result column="product_id" jdbcType="INTEGER" property="productId"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="sort" jdbcType="INTEGER" property="sort"/>
+        <result column="is_main" jdbcType="INTEGER" property="isMain"/>
+    </resultMap>
+
+    <resultMap id="CategoryPicVo" type="com.lendSys.vo.CategoryPicVo">
+        <id column="picture_id" jdbcType="INTEGER" property="pictureId"/>
+        <id column="product_id" jdbcType="INTEGER" property="productId"/>
+        <result column="product_name" jdbcType="VARCHAR" property="productName"/>
+        <result column="category_id" jdbcType="INTEGER" property="categoryId"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="rent_num" jdbcType="INTEGER" property="rentNum"/>
+    </resultMap>
+
+    <select id="selectCategoryPic" resultMap="CategoryPicVo">
+        select pro.product_id,picture_id, product_name, category_id, url, rent_num
+        from product_picture as pic
+                 inner join product as pro on pro.product_id = pic.product_id
+        where category_id = #{categoryId} and pic.is_main = 1
+    </select>
+
+    <select id="productPic" resultMap="CategoryPicVo">
+        select pro.product_id,picture_id, product_name, category_id, url, rent_num
+        from product_picture as pic
+                 inner join product as pro on pro.product_id = pic.product_id
+        where pic.is_main = 1
+    </select>
 </mapper>

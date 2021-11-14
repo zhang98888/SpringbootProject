@@ -14,14 +14,14 @@
       </div>
       <div class="main">
         <IndexName title="Recommend" subTitle="Polular rented">
-          <template #right><index-more path="/"/></template>
+          <template #right><index-more path="/product"/></template>
         </IndexName>
         <IndexMorePic />
       </div>
       <div class="lines1"></div>
       <div class="main">
         <IndexName title="Working at Home" subTitle="Suitable for working at home">
-          <template #right><index-more path="/"/></template>
+          <template #right><index-more path="/product"/></template>
         </IndexName>
         <IndexHomeWork />
       </div>

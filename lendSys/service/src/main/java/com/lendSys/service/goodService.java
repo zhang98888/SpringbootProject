@@ -7,6 +7,7 @@ import com.lendSys.vo.productVo;
 public interface goodService {
 
     public ResultVo getAllGoods( int current, int size );
+    public ResultVo getDetailGoods( String id);
     public ResultVo removeGoods(String id);
     public ResultVo addGoods(Product product);
     public ResultVo editGoods(Product product);

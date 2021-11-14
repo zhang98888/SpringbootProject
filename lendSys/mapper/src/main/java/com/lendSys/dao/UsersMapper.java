@@ -1,7 +1,5 @@
 package com.lendSys.dao;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lendSys.entity.Users;
 import com.lendSys.generalDao.GeneralDao;
 import org.apache.ibatis.annotations.Param;

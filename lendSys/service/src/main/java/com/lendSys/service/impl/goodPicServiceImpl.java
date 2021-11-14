@@ -7,12 +7,14 @@ import com.lendSys.entity.Category;
 import com.lendSys.entity.Product;
 import com.lendSys.entity.ProductPicture;
 import com.lendSys.service.goodPicService;
+import com.lendSys.vo.CategoryPicVo;
 import com.lendSys.vo.PicInfoVo;
 import com.lendSys.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
@@ -30,6 +32,15 @@ public class goodPicServiceImpl implements goodPicService {
     public ResultVo getGoodPic(int current, int size) {
         PageHelper.startPage(current, size);
         List<ProductPicture> list = pictureMapper.selectAll();
+        com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
+        int total = list.size();
+        return new ResultVo(1000, "Success!", total, list);
+    }
+
+    @Override
+    public ResultVo getProductPic(int current, int size) {
+        PageHelper.startPage(current, size);
+        List<CategoryPicVo> list = pictureMapper.productPic();
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
         int total = list.size();
         return new ResultVo(1000, "Success!", total, list);
@@ -96,5 +107,16 @@ public class goodPicServiceImpl implements goodPicService {
             }
         }
         return new ResultVo(1000, "Success!", 1, list);
+    }
+
+    @Override
+    public ResultVo gatCategoryPic(String categoryId,String current,String size){
+        int id = Integer.parseInt(categoryId);
+        int curr = Integer.parseInt(current);
+        int s = Integer.parseInt(size);
+        PageHelper.startPage(curr, s);
+        List<CategoryPicVo> productList = pictureMapper.selectCategoryPic(id);
+        com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) productList;
+        return new ResultVo(1000,"success!",productList.size(),productList);
     }
 }

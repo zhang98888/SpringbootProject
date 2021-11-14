@@ -1,0 +1,13 @@
+2021-11-12 22:05:28.163 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:05:39.724 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:06:22.278 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:08:53.108 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:11:39.722 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:11:57.547 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:13:04.137 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:13:40.104 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:14:28.273 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:14:28.275 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:14:48.989 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-12 22:16:07.937 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+2021-11-12 22:18:56.271 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported

@@ -1,8 +1,10 @@
 <template>
   <div class="home-banner">
-    <el-carousel :interval="5000" height="450px" arrow="always" type="card">
+    <el-carousel :interval="5000" height="450px" arrow="always" type="card" v-if="HomeImg.length > 0">
       <el-carousel-item v-for="item in HomeImg" :key="item">
-        <img :src="item.imgUrl" style="height:450px; width:450px"/>
+        <RouterLink :to="'/product/' + item.prodId">
+          <img :src="item.imgUrl" style="height:450px; width:450px" />
+        </RouterLink>
       </el-carousel-item>
     </el-carousel>
   </div>

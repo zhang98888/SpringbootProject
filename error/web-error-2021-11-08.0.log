@@ -1,0 +1,30 @@
+2021-11-08 16:07:04.692 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:10:19.554 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:10:42.749 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:11:48.454 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:13:32.201 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:18:47.248 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:20:37.321 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Maximum upload size exceeded; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException: The field file exceeds its maximum permitted size of 1048576 bytes.
+2021-11-08 16:58:45.995 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-08 16:59:23.944 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-08 16:59:45.570 [http-nio-9000-exec-7] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-08 17:00:21.023 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-08 17:00:23.657 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-08 17:07:32.664 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.lendSys.entity.ProductPicture.getSort()" is null
+2021-11-08 17:09:39.139 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.lendSys.entity.ProductPicture.getSort()" is null
+2021-11-08 17:33:34.052 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Cannot invoke "com.lendSys.dao.ProductMapper.selectByPrimaryKey(Object)" because "this.productMapper" is null
+2021-11-08 22:16:00.126 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.lendSys.service.homeImg' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lendSys.service.homeImg' in your configuration.
+

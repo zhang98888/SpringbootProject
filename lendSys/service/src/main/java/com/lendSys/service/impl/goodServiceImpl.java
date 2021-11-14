@@ -6,6 +6,7 @@ import com.lendSys.entity.Product;
 import com.lendSys.entity.Users;
 import com.lendSys.service.goodService;
 import com.lendSys.vo.ResultVo;
+import com.lendSys.vo.detailProductVo;
 import com.lendSys.vo.productVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -27,6 +28,14 @@ public class goodServiceImpl implements goodService {
         PageHelper.startPage(current, size);
         List<Product> goodsList = productMapper.selectAll();
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) goodsList;
+        int total = goodsList.size();
+        return new ResultVo(1000, "Success!", total, goodsList);
+    }
+
+    @Override
+    public ResultVo getDetailGoods( String id) {
+        int productId = Integer.parseInt(id);
+        List<detailProductVo> goodsList = productMapper.getDetailProduct(productId);
         int total = goodsList.size();
         return new ResultVo(1000, "Success!", total, goodsList);
     }

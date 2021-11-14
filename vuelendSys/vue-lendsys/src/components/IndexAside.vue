@@ -2,7 +2,7 @@
   <div class="index-aside">
     <ul class="menu">
       <li v-for="category in categoryName" :key="category.categoryName">
-        <RouterLink :to="'/category/${category.categoryId}'">{{category.categoryName}}</RouterLink>
+        <RouterLink :to="'/category/'+ category.categoryId">{{category.categoryName}}</RouterLink>
       </li>
     </ul>
   </div>

@@ -23,6 +23,9 @@ public class Product {
     @Column(name = "product_des")
     private String productDes;
 
+    @Column(name = "product_level")
+    private String productLevel;
+
 
     /**
      * @return product_id
@@ -106,5 +109,19 @@ public class Product {
      */
     public void setProductDes(String productDes) {
         this.productDes = productDes;
+    }
+
+    /**
+     * @return product_level
+     */
+    public String getProductLevel() {
+        return productLevel;
+    }
+
+    /**
+     * @param productLevel
+     */
+    public void setProductLevel(String productLevel) {
+        this.productLevel = productLevel;
     }
 }

@@ -1,19 +1,19 @@
 package com.lendSys.entity;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
 public class Cart {
     @Id
     @Column(name = "cart_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cartId;
 
     @Column(name = "productId")
     private Integer productid;
-
-    @Column(name = "sku_id")
-    private Integer skuId;
 
     @Column(name = "user_id")
     private Integer userId;
@@ -52,19 +52,6 @@ public class Cart {
         this.productid = productid;
     }
 
-    /**
-     * @return sku_id
-     */
-    public Integer getSkuId() {
-        return skuId;
-    }
-
-    /**
-     * @param skuId
-     */
-    public void setSkuId(Integer skuId) {
-        this.skuId = skuId;
-    }
 
     /**
      * @return user_id

@@ -1,0 +1,1 @@
+2021-11-11 16:33:44.587 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "${category.categoryId}"

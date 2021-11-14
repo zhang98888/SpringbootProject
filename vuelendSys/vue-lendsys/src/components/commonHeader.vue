@@ -2,16 +2,16 @@
   <header class="commonHeader">
     <div class="container">
       <ul class="navs">
-        <a href="">
+        <a href="/product">
           <img class="logo" src="@/assets/logo.png" />
         </a>
         <template
           v-for="category in categoryName"
           :key="category.categoryName"
         >
-        <el-link :underline="false" href="">{{category.categoryName}}</el-link>
+        <el-link :underline="false" :href="'/category/'+category.categoryId">{{category.categoryName}}</el-link>
         </template>
-        <el-link class="el-icon-shopping-cart-full" href=""></el-link>
+        <el-link class="el-icon-shopping-cart-full" href="/basket"></el-link>
       </ul>
     </div>
   </header>
@@ -24,7 +24,7 @@ export default {
   name: 'commonHeader',
   data() {
     return {
-      categoryName: []
+      categoryName: [],
     }
   },
   created() {

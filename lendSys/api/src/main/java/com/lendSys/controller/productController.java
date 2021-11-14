@@ -29,6 +29,11 @@ public class productController {
         return productService.getAllGoods(curr, s);
     }
 
+    @GetMapping(value = "/{productId}")
+    public ResultVo getDetailProduct(@PathVariable String productId) {
+        return productService.getDetailGoods(productId);
+    }
+
     @PostMapping(value = "/addProductInfo")
     public ResultVo addProductInfo(@RequestBody Product product) {
         return productService.addGoods(product);

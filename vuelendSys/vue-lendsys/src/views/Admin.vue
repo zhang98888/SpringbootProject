@@ -47,7 +47,6 @@ export default {
 .el-header{
   line-height: 0px;
   text-align:left;
-  --el-header-height: 30px !important;
 }
 .el-aside {
   line-height: 200px;
