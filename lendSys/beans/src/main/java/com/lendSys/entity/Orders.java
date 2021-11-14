@@ -1,12 +1,15 @@
 package com.lendSys.entity;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
 public class Orders {
     @Id
     @Column(name = "order_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer orderId;
 
     @Column(name = "user_id")
@@ -18,11 +21,11 @@ public class Orders {
     @Column(name = "order_remark")
     private Integer orderRemark;
 
-    @Column(name = "good_id")
-    private Integer goodId;
+    @Column(name = "product_id")
+    private Integer productId;
 
-    @Column(name = "order_num")
-    private Integer orderNum;
+    @Column(name = "cart_num")
+    private Integer cartNum;
 
     @Column(name = "start_date")
     private Date startDate;
@@ -33,6 +36,10 @@ public class Orders {
 
     @Column(name = "length")
     private Integer length;
+
+    @Column(name = "product_name")
+    private String productName;
+
 
 
     /**
@@ -92,35 +99,35 @@ public class Orders {
     }
 
     /**
-     * @return good_id
+     * @return product_id
      */
-    public Integer getGoodId() {
-        return goodId;
+    public Integer getProductId() {
+        return productId;
     }
 
     /**
-     * @param goodId
+     * @param productId
      */
-    public void setGoodId(Integer goodId) {
-        this.goodId = goodId;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
     /**
-     * @return orderNum
+     * @return cart_num
      */
-    public Integer getOrderNum() {
-        return orderNum;
+    public Integer getCartNum() {
+        return cartNum;
     }
 
     /**
-     * @param orderNum
+     * @param cartNum
      */
-    public void setOrderNum(Integer orderNum) {
-        this.orderNum = orderNum;
+    public void setCartNum(Integer cartNum) {
+        this.cartNum = cartNum;
     }
 
     /**
-     * @return startDate
+     * @return start_date
      */
     public Date getStartDate() {
         return startDate;
@@ -132,7 +139,7 @@ public class Orders {
         this.startDate = startDate;
     }
     /**
-     * @return endDate
+     * @return end_date
      */
     public Date getEndDate() {
         return endDate;
@@ -154,5 +161,19 @@ public class Orders {
      */
     public void setLength(Integer length) {
         this.length = length;
+    }
+
+    /**
+     * @return product_name
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

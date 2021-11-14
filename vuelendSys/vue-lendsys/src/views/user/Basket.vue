@@ -36,7 +36,11 @@
         >
         </el-pagination>
       </div>
-      <el-dialog title="Borrow Information" v-model="borrowFormVisible" width="70%">
+      <el-dialog
+        title="Borrow Information"
+        v-model="borrowFormVisible"
+        width="70%"
+      >
         <el-form :model="borrowForm">
           <el-table :data="formData" style="width: 100%">
             <el-table-column prop="productid" label="product Id" width="150">
@@ -52,8 +56,19 @@
             <el-table-column prop="cartTime" label="Date" show-overflow-tooltip>
             </el-table-column>
           </el-table>
-          <el-form-item label="Category id" :label-width="120">
-            <el-input v-model="formData" style="width: 80%"></el-input>
+          <el-form-item label="Rent Length">
+            <el-radio-group v-model="borrowForm.borrowlength">
+              <el-radio label="3">3 Month</el-radio>
+              <el-radio label="6">6 Month</el-radio>
+              <el-radio label="9">9 Month</el-radio>
+              <el-radio label="12">12 Month</el-radio>
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item label="Collect or not">
+            <el-radio-group v-model="borrowForm.orderRemark">
+              <el-radio label="1">Home delivery</el-radio>
+              <el-radio label="2">Collect</el-radio>
+            </el-radio-group>
           </el-form-item>
         </el-form>
         <template #footer>
@@ -72,6 +87,7 @@
 <script>
 import axios from 'axios'
 import commonHeader from '../../components/commonHeader.vue'
+import qs from 'qs'
 
 export default {
   components: {
@@ -86,7 +102,7 @@ export default {
       total: 400,
       borrowFormVisible: false,
       borrowForm: [],
-      formData: []
+      formData: [],
     }
   },
   created() {
@@ -120,12 +136,23 @@ export default {
         })
     },
     borrow() {
-        this.formData = this.multipleSelection
-        this.borrowFormVisible = true
-      },
+      this.formData = this.multipleSelection
+      this.borrowFormVisible = true
+    },
     borrowFormSave() {
-        
-        this.formData ={}
+      let map = {
+        "carts": this.formData,
+        "borrowlength": this.borrowForm.borrowlength,
+        "orderRemark" : this.borrowForm.orderRemark
+      }
+      console.log(map)
+      axios.post('/order/add/',map).then(res => {
+        console.log(res)
+      })
+
+      this.formData = []
+      this.borrowForm = []
+      this.borrowFormVisible = false
     }
   }
 }
@@ -144,5 +171,4 @@ export default {
   height: 40px;
   width: 100%;
 }
-
 </style>
