@@ -11,6 +11,7 @@ import com.lendSys.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public ResultVo getAllOrder(String username, int current, int size) {
         PageHelper.startPage(current, size);
-        List list = ordersMapper.selectbyUserName(username);
+        List<Orders> list = ordersMapper.selectbyUserName(username);
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
         return new ResultVo(1000, "success!", list.size(), list);
     }
@@ -42,5 +43,17 @@ public class OrderServiceImpl implements OrderService {
             ordersMapper.insert(order);
         }
         return new ResultVo(1000, "Success!", 1, null);
+    }
+
+    @Override
+    public ResultVo getReturnOrder(String username){
+        List<Orders> list = ordersMapper.selectbyUserName(username);
+        List<Orders> newList = new ArrayList<>();
+        for(Orders order: list){
+            if(order.getOrderStatus() == 3){
+                newList.add(order);
+            }
+        }
+        return new ResultVo(1000,"success",newList.size(),newList);
     }
 }

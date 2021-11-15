@@ -102,7 +102,7 @@ export default {
       total: 400,
       borrowFormVisible: false,
       borrowForm: [],
-      formData: [],
+      formData: []
     }
   },
   created() {
@@ -129,7 +129,9 @@ export default {
     handleCurrentChange(val) {
       console.log(`now page: ${val}`)
       axios
-        .get('/goodPic/getAllGoodPic/' + this.currentPage + '/' + this.pageSize)
+        .get('/cart/' + this.currentPage + '/' + this.pageSize, {
+          params: { username: window.sessionStorage.getItem('token') }
+        })
         .then(res => {
           console.log(res)
           this.tableData = res.data.data
@@ -141,18 +143,29 @@ export default {
     },
     borrowFormSave() {
       let map = {
-        "carts": this.formData,
-        "borrowlength": this.borrowForm.borrowlength,
-        "orderRemark" : this.borrowForm.orderRemark
+        carts: this.formData,
+        borrowlength: this.borrowForm.borrowlength,
+        orderRemark: this.borrowForm.orderRemark
       }
-      console.log(map)
-      axios.post('/order/add/',map).then(res => {
-        console.log(res)
-      })
 
-      this.formData = []
-      this.borrowForm = []
-      this.borrowFormVisible = false
+      let list = []
+      console.log(this.formData)
+      for (var index in this.formData) {
+        list.push(this.formData[index].cartId)
+      }
+      console.log(list)
+      axios.post('/order/add/', map).then(res => {
+        if (res.data.status === 1000) {
+          axios.post('/cart/remove/', list).then(resp => {
+            if (resp.data.status === 1000) {
+              this.formData = []
+              this.borrowForm = []
+              this.borrowFormVisible = false
+              router.push('/order')
+            }
+          })
+        }
+      })
     }
   }
 }

@@ -32,9 +32,12 @@ public class cartServiceImpl implements cartService {
     }
 
     @Override
-    public ResultVo removeCart(String id) {
-        Integer cartId = Integer.parseInt(id);
-        int num = cartMapper.deleteByPrimaryKey(cartId);
+    public ResultVo removeCart(List<String> ids) {
+        int num = 0;
+        for(String id : ids){
+            Integer cartId = Integer.parseInt(id);
+            num = cartMapper.deleteByPrimaryKey(cartId);
+        }
         if (num > 0) {
             return new ResultVo(1000, "Delete Success!", num, null);
         } else

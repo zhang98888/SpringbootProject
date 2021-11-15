@@ -10,4 +10,5 @@ import com.lendSys.vo.ResultVo;
 public interface OrderService {
     public ResultVo getAllOrder(String username,int current, int page);
     public ResultVo addToOrder(CartVo[] cart, OrderVO orderVO);
+    public ResultVo getReturnOrder(String username);
 }

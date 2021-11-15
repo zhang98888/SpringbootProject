@@ -42,7 +42,8 @@
       </el-table-column>
       <el-table-column prop="categoryName" label="category Name" width="180">
       </el-table-column>
-      <el-table-column prop="categoryLevel" label="category level"> </el-table-column>
+      <el-table-column prop="categoryLevel" label="category level">
+      </el-table-column>
       <el-table-column prop="categoryImg" label="Img"> </el-table-column>
       <el-table-column label="Operation" fixed="right">
         <template #default="scope">
@@ -63,17 +64,19 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      v-model:currentPage="currentPage"
-      :page-sizes="[100, 200, 300, 400]"
-      :page-size="pageSize"
-      layout="sizes, prev, pager, next"
-      :total="total"
-      style="display: flex; justify-content: center"
-    >
-    </el-pagination>
+    <div class="pagination">
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        v-model:currentPage="currentPage"
+        :page-sizes="[100, 200, 300, 400]"
+        :page-size="pageSize"
+        layout="sizes, prev, pager, next"
+        :total="total"
+        style="display: flex; justify-content: center"
+      >
+      </el-pagination>
+    </div>
     <div>
       <el-dialog title="Category Information" v-model="dialogFormVisible">
         <el-form :model="form">
@@ -120,10 +123,7 @@
       <el-dialog title="Category Information" v-model="editFormVisible">
         <el-form :model="editForm">
           <el-form-item label="Category id" :label-width="120">
-            <el-input
-              v-model="form.categoryId"
-              style="width: 80%"
-            ></el-input>
+            <el-input v-model="form.categoryId" style="width: 80%"></el-input>
           </el-form-item>
           <el-form-item label="category Name" :label-width="120">
             <el-input
@@ -190,7 +190,9 @@ export default {
     },
     load() {
       axios
-        .get('/category/getAllCategory/' + this.currentPage + '/' + this.pageSize)
+        .get(
+          '/category/getAllCategory/' + this.currentPage + '/' + this.pageSize
+        )
         .then(res => {
           console.log(res)
           this.tableData = res.data.data
@@ -202,7 +204,9 @@ export default {
     handleCurrentChange(val) {
       console.log(`now page: ${val}`)
       axios
-        .get('/category/getAllCategory/' + this.currentPage + '/' + this.pageSize)
+        .get(
+          '/category/getAllCategory/' + this.currentPage + '/' + this.pageSize
+        )
         .then(res => {
           console.log(res)
           this.tableData = res.data.data
@@ -295,11 +299,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-table .warning-row {
   --el-table-tr-background-color: var(--el-color-warning-lighter);
 }
 .el-table .success-row {
   --el-table-tr-background-color: var(--el-color-success-lighter);
+}
+.pagination {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
 }
 </style>

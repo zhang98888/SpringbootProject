@@ -64,17 +64,19 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      v-model:currentPage="currentPage"
-      :page-sizes="[100, 200, 300, 400]"
-      :page-size="pageSize"
-      layout="sizes, prev, pager, next"
-      :total="total"
-      style="display: flex; justify-content: center"
-    >
-    </el-pagination>
+    <div class="pagination">
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        v-model:currentPage="currentPage"
+        :page-sizes="[100, 200, 300, 400]"
+        :page-size="pageSize"
+        layout="sizes, prev, pager, next"
+        :total="total"
+        style="display: flex; justify-content: center"
+      >
+      </el-pagination>
+    </div>
     <div>
       <el-dialog title="Product Information" v-model="dialogFormVisible">
         <el-form :model="form">
@@ -321,11 +323,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-table .warning-row {
   --el-table-tr-background-color: var(--el-color-warning-lighter);
 }
 .el-table .success-row {
   --el-table-tr-background-color: var(--el-color-success-lighter);
+}
+.pagination {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
 }
 </style>

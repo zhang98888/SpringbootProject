@@ -26,15 +26,11 @@
         </el-form-item>
       </el-form>
     </div>
-    <el-table
-      :data="tableData"
-     
-      border
-      style="width: 100%; margin-top: 20px"
-    >
+    <el-table :data="tableData" border style="width: 100%; margin-top: 20px">
       <el-table-column prop="productId" label="product Id" width="180" sortable>
       </el-table-column>
-      <el-table-column prop="pictureId" label="picture Id" sortable> </el-table-column>
+      <el-table-column prop="pictureId" label="picture Id" sortable>
+      </el-table-column>
       <el-table-column prop="url" label="url"> </el-table-column>
       <el-table-column prop="isMain" label="isMain"> </el-table-column>
       <el-table-column label="Operation" fixed="right">
@@ -55,17 +51,20 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      v-model:currentPage="currentPage"
-      :page-sizes="[100, 200, 300, 400]"
-      :page-size="pageSize"
-      layout="sizes, prev, pager, next"
-      :total="total"
-      style="display: flex; justify-content: center"
-    >
-    </el-pagination>
+
+    <div class="pagination">
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        v-model:currentPage="currentPage"
+        :page-sizes="[100, 200, 300, 400]"
+        :page-size="pageSize"
+        layout="sizes, prev, pager, next"
+        :total="total"
+        style="display: flex; justify-content: center"
+      >
+      </el-pagination>
+    </div>
     <div>
       <el-dialog title="Product Img Information" v-model="dialogFormVisible">
         <el-form :model="form">
@@ -159,7 +158,7 @@ export default {
       dialogFormVisible: false,
       form: {},
       editForm: {},
-      editFormVisible: false,
+      editFormVisible: false
     }
   },
   created() {
@@ -282,3 +281,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.pagination {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+}
+</style>

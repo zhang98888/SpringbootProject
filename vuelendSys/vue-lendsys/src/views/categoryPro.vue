@@ -3,7 +3,7 @@
     <el-header style="height: 80px;">
       <commonHeader />
     </el-header>
-    <el-main>
+    <el-main margin-bottom="0px">
       <el-row>
         <el-col
           :span="4"
@@ -26,6 +26,8 @@
           </el-card>
         </el-col>
       </el-row>
+    </el-main>
+    <div class="pagination">
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
@@ -37,7 +39,7 @@
         style="display: flex; justify-content: center"
       >
       </el-pagination>
-    </el-main>
+    </div>
   </el-container>
 </template>
 
@@ -126,4 +128,11 @@ p {
 .el-row {
   padding: 20px;
 }
+.pagination {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+}
+
 </style>

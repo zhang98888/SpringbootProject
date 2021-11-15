@@ -102,17 +102,20 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      v-model:currentPage="currentPage"
-      :page-sizes="[100, 200, 300, 400]"
-      :page-size="pageSize"
-      layout="sizes, prev, pager, next"
-      :total="total"
-      style="display: flex; justify-content: center"
-    >
-    </el-pagination>
+
+    <div class="pagination">
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        v-model:currentPage="currentPage"
+        :page-sizes="[100, 200, 300, 400]"
+        :page-size="pageSize"
+        layout="sizes, prev, pager, next"
+        :total="total"
+        style="display: flex; justify-content: center"
+      >
+      </el-pagination>
+    </div>
     <div>
       <el-dialog title="User Information" v-model="dialogFormVisible">
         <el-form :model="form">
@@ -285,10 +288,9 @@ export default {
             message: res.data.msg,
             type: 'error'
           })
-        } 
-        console.log(res)        
+        }
+        console.log(res)
       })
-    
     },
     handleRemove(index, rows) {
       axios
@@ -355,7 +357,7 @@ export default {
           console.log(res)
           this.tableData = res.data.data
         })
-        this.searchForm = {}
+      this.searchForm = {}
     },
     handleSizeChange(val) {
       console.log(` ${val} per page `)
@@ -373,7 +375,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .demo-table-expand {
   font-size: 0;
 }
@@ -385,5 +387,11 @@ export default {
   margin-right: 0;
   margin-bottom: 0;
   width: 50%;
+}
+.pagination {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
 }
 </style>

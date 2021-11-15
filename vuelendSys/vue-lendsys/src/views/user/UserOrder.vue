@@ -4,26 +4,31 @@
       <commonHeader />
     </el-header>
     <el-main>
-      <el-table :data="tableData" tooltip-effect="dark" style="width: 80%">
-        <el-table-column prop="productId" label="product Id" width="130">
+      <el-table :data="tableData" tooltip-effect="dark" style="width: 80%" fit="true">
+        <el-table-column align="center" prop="productId" label="product Id" >
         </el-table-column>
-        <el-table-column prop="productName" label="product Name" width="200">
+        <el-table-column align="center" prop="orderStatus" label="Rent Status" sortable="true">
+          <template v-slot="scope">
+            <span v-if="scope.row.orderStatus === 1">Need Approval</span>
+            <span v-if="scope.row.orderStatus === 2">Collect/Delivery</span>
+            <span v-if="scope.row.orderStatus === 3">Renting</span>
+            <span v-if="scope.row.orderStatus === 4">Return</span>
+          </template>
         </el-table-column>
-        <el-table-column prop="orderStatus" label="Rent Status" width="130">
+        <el-table-column align="center" prop="cartNum" label="Quantity" >
         </el-table-column>
-        <el-table-column prop="cartNum" label="Quantity" width="130">
+        <el-table-column align="center" prop="endDate" label="Return Date" >
         </el-table-column>
-        <el-table-column
-          prop="endDate"
-          label="Return Date"
-          show-overflow-tooltip
-        >
+        <el-table-column align="center" label="Return">
+          <template v-slot="scope">
+            <el-button v-if="scope.row.orderStatus === 1" @click="returnGood" disabled>Return</el-button>
+            <el-button v-if="scope.row.orderStatus === 2" @click="returnGood" disabled>Return</el-button>
+            <el-button v-if="scope.row.orderStatus === 3" @click="returnGood" >Return</el-button>
+            <el-button v-if="scope.row.orderStatus === 4" @click="returnGood" disabled>Return</el-button>
+          </template>
+          
         </el-table-column>
       </el-table>
-      <div style="margin-top: 20px;margin-bottom:20px">
-        <el-button @click="borrow">Borrow</el-button>
-        <el-button @click="toggleSelection()">Clear Selection</el-button>
-      </div>
       <div class="pagination">
         <el-pagination
           @current-change="handleCurrentChange"

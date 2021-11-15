@@ -41,4 +41,9 @@ public class OrderController {
         return orderService.addToOrder(carts,orderVO);
     }
 
+    @GetMapping(value="/getReturn")
+    public ResultVo getReturnOrder(@RequestParam String username){
+        return orderService.getReturnOrder(username);
+    }
+
 }
