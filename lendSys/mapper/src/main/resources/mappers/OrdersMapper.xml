@@ -32,4 +32,41 @@
                  inner join users on userId = user_id
         where userName = #{username}
     </select>
+
+    <select id="waitForCollect" resultMap="BaseResultMap">
+        select order_id,
+               user_id,
+               order_status,
+               order_remark,
+               product_id,
+               cart_num,
+               start_date,
+               end_date,
+               length,
+               product_name
+        from orders
+        where order_status = 2
+    </select>
+
+    <select id="waitForApproval" resultMap="BaseResultMap">
+        select order_id,
+               user_id,
+               order_status,
+               order_remark,
+               product_id,
+               cart_num,
+               start_date,
+               end_date,
+               length,
+               product_name
+        from orders
+        where user_id in
+              (select userId
+               from users
+               where departmentId = (select departmentId from users where username = #{username})
+                 and user_level = (select user_level from users where username = #{username}) + 1
+              )
+          and order_status = 1
+    </select>
+
 </mapper>

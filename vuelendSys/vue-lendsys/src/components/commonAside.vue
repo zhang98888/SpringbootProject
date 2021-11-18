@@ -59,9 +59,9 @@ export default {
       async noChildren() {
       let formdata = new FormData()
       const tokenStr = window.sessionStorage.getItem('token')
-      formdata.append('token', tokenStr)
+      formdata.append('username', tokenStr)
       await axios.post('/getUserInfo', formdata).then(res => {
-        if (res.data.data.userLevel === 'S1') {
+        if (res.data.data.userLevel === '111') {
           this.form = this.menu
         } else 
           this.form = this.userMenu

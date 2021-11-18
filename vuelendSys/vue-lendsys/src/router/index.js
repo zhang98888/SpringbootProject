@@ -85,6 +85,11 @@ const routes = [
         name: 'userInfo',
         component: ()=>import("@/views/user/userInfo.vue")
       },
+      {
+        path: '/admin/borrow',
+        name: 'borrowGoods',
+        component: ()=>import("@/views/admin/borrowApprove.vue")
+      }
     ]
   },
 

@@ -43,7 +43,7 @@ export default {
 }
 
 .el-carousel__item h3 {
-  color: #d3dce6;
+  background-color: white;
   font-size: 18px;
   opacity: 0.75;
   line-height: 450px;
@@ -52,12 +52,12 @@ export default {
 }
 
 .el-carousel__item:nth-child(2n) {
-  background-color: #d3dce6;
+  background-color: white;
   height: 450px !important;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
+  background-color: white;
   height: 450px !important;
 }
 </style>

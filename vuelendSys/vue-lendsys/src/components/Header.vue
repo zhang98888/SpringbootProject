@@ -1,15 +1,16 @@
 <template>
   <div class="header">
-    <a href="">
+    <a href="/">
       <img class="logo" src="@/assets/header.png" />
     </a>
     <div class="back">
       <a href="/" class="nav-link">Home</a>
-      <a href="" class="nav-link">Product</a>
-      <a href="/admin" class="nav-link">Information</a>
+      <a href="/product" class="nav-link">Product</a>
+      <a href="/admin" class="nav-link">Management</a>
+      <a href="/user/userInfo" class="nav-link">Information</a>
       <a href="/order" class="nav-link">Order</a>
-      <a href="" class="nav-link">Address</a>
-      <a @click="logout" class="nav-link">logout</a>
+      <a href="/user/userAddress" class="nav-link">Address</a>
+      <a href="" @click="logout" class="nav-link">logout</a>
 
       <!-- <el-dropdown>
         <span class="el-dropdown-link">

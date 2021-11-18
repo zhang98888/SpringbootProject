@@ -46,4 +46,32 @@ public class OrderController {
         return orderService.getReturnOrder(username);
     }
 
+    @GetMapping(value="/approvalOrder/{current}/{size}")
+    public ResultVo getApprovalOrder(@PathVariable String current,
+                                   @PathVariable String size){
+        int curr = Integer.parseInt(current);
+        int s = Integer.parseInt(size);
+        return orderService.getApprovalOrder(curr,s);
+    }
+
+    @PostMapping(value = "/endDate/")
+    public ResultVo setRentOrder(@RequestBody Orders orders){
+        return orderService.setRentOrder(orders);
+    }
+
+    @GetMapping(value = "/approveRentOrder/")
+    public ResultVo approveRentOrder(@RequestParam("username") String username){
+        return orderService.approveRentOrder(username);
+    }
+
+    @PostMapping(value = "/approve/")
+    public ResultVo approveOrder(@RequestBody Orders orders){
+        return orderService.approveOrder(orders);
+    }
+    @PostMapping(value = "/returnOrder/")
+    public ResultVo returnOrder(@RequestBody Orders orders){
+        return orderService.returnOrder(orders);
+    }
+
+
 }

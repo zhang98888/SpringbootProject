@@ -1,0 +1,57 @@
+2021-11-16 21:41:44.224 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.util.ArrayList cannot be cast to class com.github.pagehelper.Page (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.github.pagehelper.Page is in unnamed module of loader 'app')
+2021-11-16 21:41:46.826 [http-nio-9000-exec-7] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.util.ArrayList cannot be cast to class com.github.pagehelper.Page (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.github.pagehelper.Page is in unnamed module of loader 'app')
+2021-11-16 21:42:30.720 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.util.ArrayList cannot be cast to class com.github.pagehelper.Page (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.github.pagehelper.Page is in unnamed module of loader 'app')
+2021-11-16 21:43:28.993 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.util.ArrayList cannot be cast to class com.github.pagehelper.Page (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.github.pagehelper.Page is in unnamed module of loader 'app')
+2021-11-16 21:46:01.363 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.util.ArrayList cannot be cast to class com.github.pagehelper.Page (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.github.pagehelper.Page is in unnamed module of loader 'app')
+2021-11-16 21:48:32.387 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - class java.util.ArrayList cannot be cast to class com.github.pagehelper.Page (java.util.ArrayList is in module java.base of loader 'bootstrap'; com.github.pagehelper.Page is in unnamed module of loader 'app')
+2021-11-16 21:48:50.088 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - null
+2021-11-16 21:49:38.547 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - null
+2021-11-16 21:55:28.772 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-16 21:56:09.638 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+### The error may exist in com/lendSys/dao/OrdersMapper.java (best guess)
+### The error may involve com.lendSys.dao.OrdersMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO orders  ( order_id,user_id,order_status,order_remark,product_id,cart_num,start_date,end_date,length,product_name ) VALUES( ?,?,?,?,?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+; Duplicate entry '3' for key 'orders.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+2021-11-16 21:57:46.374 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+### The error may exist in com/lendSys/dao/OrdersMapper.java (best guess)
+### The error may involve com.lendSys.dao.OrdersMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO orders  ( order_id,user_id,order_status,order_remark,product_id,cart_num,start_date,end_date,length,product_name ) VALUES( ?,?,?,?,?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+; Duplicate entry '3' for key 'orders.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+2021-11-16 21:58:57.007 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+### The error may exist in com/lendSys/dao/OrdersMapper.java (best guess)
+### The error may involve com.lendSys.dao.OrdersMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO orders  ( order_id,user_id,order_status,order_remark,product_id,cart_num,start_date,end_date,length,product_name ) VALUES( ?,?,?,?,?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+; Duplicate entry '3' for key 'orders.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+2021-11-16 21:59:38.502 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+### The error may exist in com/lendSys/dao/OrdersMapper.java (best guess)
+### The error may involve com.lendSys.dao.OrdersMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO orders  ( order_id,user_id,order_status,order_remark,product_id,cart_num,start_date,end_date,length,product_name ) VALUES( ?,?,?,?,?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+; Duplicate entry '3' for key 'orders.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+2021-11-16 22:05:57.242 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+### The error may exist in com/lendSys/dao/OrdersMapper.java (best guess)
+### The error may involve com.lendSys.dao.OrdersMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO orders  ( order_id,user_id,order_status,order_remark,product_id,cart_num,start_date,end_date,length,product_name ) VALUES( ?,?,?,?,?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+; Duplicate entry '3' for key 'orders.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+2021-11-16 22:06:45.051 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+### The error may exist in com/lendSys/dao/OrdersMapper.java (best guess)
+### The error may involve com.lendSys.dao.OrdersMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO orders  ( order_id,user_id,order_status,order_remark,product_id,cart_num,start_date,end_date,length,product_name ) VALUES( ?,?,?,?,?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'
+; Duplicate entry '3' for key 'orders.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'orders.PRIMARY'

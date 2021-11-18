@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -55,5 +56,44 @@ public class OrderServiceImpl implements OrderService {
             }
         }
         return new ResultVo(1000,"success",newList.size(),newList);
+    }
+
+    @Override
+    public ResultVo getApprovalOrder(int current, int size){
+        PageHelper.startPage(current, size,true);
+        List<Orders> list = ordersMapper.waitForCollect();
+        com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
+        return new ResultVo(1000,"Success",list.size(),list);
+    }
+
+    @Override
+    public ResultVo setRentOrder(Orders orders){
+        int len = orders.getLength();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.add(Calendar.MONTH, len);
+        Date enddate = cal.getTime();
+        orders.setEndDate(enddate);
+        orders.setOrderStatus(3);
+        ordersMapper.updateByPrimaryKey(orders);
+        return new ResultVo(1000,"success",1, orders);
+    }
+
+    @Override
+    public ResultVo approveRentOrder(String username){
+        List<Orders> list = ordersMapper.waitForApproval(username);
+        return new ResultVo(1000,"Success",list.size(),list);
+    }
+    @Override
+    public ResultVo returnOrder(Orders orders){
+        orders.setOrderStatus(4);
+        ordersMapper.updateByPrimaryKey(orders);
+        return new ResultVo(1000,"Success",1,orders);
+    }
+    @Override
+    public ResultVo approveOrder(Orders orders){
+        orders.setOrderStatus(2);
+        ordersMapper.updateByPrimaryKey(orders);
+        return new ResultVo(1000,"Success",1,orders);
     }
 }

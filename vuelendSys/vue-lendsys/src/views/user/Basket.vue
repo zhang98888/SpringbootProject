@@ -19,10 +19,14 @@
         <el-table-column prop="cartNum" label="Quantity" width="200">
         </el-table-column>
         <el-table-column prop="cartTime" label="Date" show-overflow-tooltip>
+          <template v-slot="scope">
+            {{ dateCal(scope.row.cartTime) }}
+          </template>
         </el-table-column>
       </el-table>
       <div style="margin-top: 20px;margin-bottom:20px">
         <el-button @click="borrow">Borrow</el-button>
+        <el-button @click="remove">Remove</el-button>
         <el-button @click="toggleSelection()">Clear Selection</el-button>
       </div>
       <div class="pagination">
@@ -54,6 +58,9 @@
             <el-table-column prop="cartNum" label="Quantity" width="150">
             </el-table-column>
             <el-table-column prop="cartTime" label="Date" show-overflow-tooltip>
+              <template v-slot="scope">
+                {{ dateCal(scope.row.cartTime) }}
+              </template>
             </el-table-column>
           </el-table>
           <el-form-item label="Rent Length">
@@ -87,7 +94,7 @@
 <script>
 import axios from 'axios'
 import commonHeader from '../../components/commonHeader.vue'
-import qs from 'qs'
+import { dateFormat } from '../../utils/dateFormate'
 
 export default {
   components: {
@@ -161,11 +168,14 @@ export default {
               this.formData = []
               this.borrowForm = []
               this.borrowFormVisible = false
-              router.push('/order')
+              this.$router.push('/order')
             }
           })
         }
       })
+    },
+    dateCal(date) {
+      return dateFormat(date, 'yyyy-MM-dd hh:mm:ss')
     }
   }
 }

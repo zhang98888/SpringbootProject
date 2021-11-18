@@ -21,6 +21,13 @@ export default [
         url: '/user/userAddress'
       },
       {
+        path: '/admin/borrow',
+        name: 'borrowGoods',
+        label: 'Goods Rent Approval',
+        icon: 'picture',
+        url: '/admin/borrow'
+      },
+      {
         path: '/admin/users',
         name: 'Users',
         icon: 'user',

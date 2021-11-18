@@ -28,8 +28,8 @@ public class UserController {
     }
 
     @PostMapping(value="/getUserInfo")
-    public ResultVo getUserInfo(@RequestParam("token") String token){
+    public ResultVo getUserInfo(@RequestParam("username") String username){
 
-        return userService.getUsrInfo(token);
+        return userService.getUsrInfo(username);
     }
 }

@@ -1,4 +1,17 @@
-2021-11-15 16:44:45.991 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - null
-2021-11-15 16:45:28.624 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - null
-2021-11-15 16:46:12.694 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - null
-2021-11-15 16:50:07.814 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - null
+2021-11-17 14:59:55.026 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
+2021-11-17 15:10:02.634 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
+2021-11-17 15:10:04.170 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
+2021-11-17 15:10:50.961 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
+2021-11-17 15:10:50.991 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:11:27.098 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-17 15:11:35.452 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-17 15:12:07.638 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-17 15:12:26.328 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:12:26.344 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:13:35.460 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:13:35.479 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:14:27.605 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:14:51.231 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:15:21.087 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:15:24.040 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-17 15:16:06.381 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present

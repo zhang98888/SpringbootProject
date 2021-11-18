@@ -12,7 +12,9 @@
           :offset="index > 0 ? 2 : 0"
         >
           <el-card :body-style="{ padding: '4px' }" shadow="hover">
-            <img :src="picture.url" class="image" />
+            <RouterLink :to="'/product/' + picture.productId">
+              <img :src="picture.url" class="image" />
+            </RouterLink>
             <div style="padding: 14px;">
               <div class="bottom">
                 <p>
@@ -122,7 +124,6 @@ p {
   padding: 20px;
 }
 
-
 .el-header {
   height: 80px;
 }
@@ -132,5 +133,4 @@ p {
   height: 40px;
   width: 100%;
 }
-
 </style>

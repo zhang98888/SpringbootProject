@@ -71,8 +71,9 @@
                 @click="AddToCart"
                 >Add to Cart</el-button
               >
-            </div></div
-        ></el-col>
+            </div>
+          </div></el-col
+        >
       </el-row>
     </el-main>
   </el-container>
@@ -128,6 +129,23 @@ export default {
       }
       axios.post('/cart/add', map).then(res => {
         console.log(map)
+        this.$confirm(
+          'Do you want to jump to Basket?',
+          'Remind',
+          {
+            confirmButtonText: 'confirm',
+            cancelButtonText: 'cancel',
+            type: 'warning'
+          }
+        ).then(() => {
+             this.$router.push('/basket')
+          })
+          .catch(() => {
+            this.$message({
+              type: 'info',
+              message: 'cancel'
+            })
+          })
       })
     }
   }

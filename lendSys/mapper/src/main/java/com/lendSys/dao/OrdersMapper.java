@@ -8,4 +8,8 @@ import java.util.List;
 @Repository
 public interface OrdersMapper extends GeneralDao<Orders> {
     public List<Orders> selectbyUserName(String username);
+
+    public List<Orders> waitForCollect();
+
+    public List<Orders> waitForApproval(String username);
 }

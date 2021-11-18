@@ -11,4 +11,9 @@ public interface OrderService {
     public ResultVo getAllOrder(String username,int current, int page);
     public ResultVo addToOrder(CartVo[] cart, OrderVO orderVO);
     public ResultVo getReturnOrder(String username);
+    public ResultVo getApprovalOrder(int current, int page);
+    public ResultVo setRentOrder(Orders orders);
+    public ResultVo approveRentOrder(String username);
+    public ResultVo returnOrder(Orders orders);
+    public ResultVo approveOrder(Orders orders);
 }

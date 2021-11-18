@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="main">
-        <IndexName title="Recommend" subTitle="Polular rented">
+        <IndexName title="Available" subTitle="Polular rented">
           <template #right><index-more path="/product"/></template>
         </IndexName>
         <IndexMorePic />
