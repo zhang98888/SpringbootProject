@@ -73,5 +73,17 @@ public class OrderController {
         return orderService.returnOrder(orders);
     }
 
+    @GetMapping(value = "/selectByStatus/{current}/{size}")
+    public ResultVo selectByStatus(@RequestParam("username") String username,
+                                   @RequestParam("status") String status,
+                                   @PathVariable String current,
+                                   @PathVariable String size){
+        int curr = Integer.parseInt(current);
+        int s = Integer.parseInt(size);
+        int orderStatus = Integer.parseInt(status);
+        return orderService.selectByStatus(username,orderStatus,curr,s);
+    }
+
+
 
 }

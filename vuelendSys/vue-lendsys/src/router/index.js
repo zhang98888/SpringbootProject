@@ -76,11 +76,6 @@ const routes = [
         component: ()=>import("@/views/admin/category.vue")
       },
       {
-        path: '/user/userAddress',
-        name: 'userAddress',
-        component: ()=>import("@/views/user/userAddress.vue")
-      },
-      {
         path: '/user/userInfo',
         name: 'userInfo',
         component: ()=>import("@/views/user/userInfo.vue")

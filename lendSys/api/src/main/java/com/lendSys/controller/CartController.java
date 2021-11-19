@@ -46,4 +46,9 @@ public class CartController {
         return carts.removeCart(ids);
     }
 
+    @GetMapping(value = "/")
+    public ResultVo getCartProduct(@RequestParam("username") String username) {
+        return carts.getAll(username);
+    }
+
 }

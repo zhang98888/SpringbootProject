@@ -11,4 +11,5 @@ import java.util.List;
 public interface CartMapper extends GeneralDao<Cart> {
 
     public List<Cart> selectByName(String username);
+    public List<Cart> selectByProductAndName(int userid,String username);
 }

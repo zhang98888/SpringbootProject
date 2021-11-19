@@ -13,11 +13,4 @@ export default [
         label: 'Information',
         url: '/user/userInfo'
       },
-      {
-        path: '/user/userAddress',
-        name: 'userAddress',
-        label: 'Address Table',
-        icon: 'document',
-        url: '/user/userAddress'
-      },
     ]

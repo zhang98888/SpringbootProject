@@ -12,4 +12,6 @@ public interface OrdersMapper extends GeneralDao<Orders> {
     public List<Orders> waitForCollect();
 
     public List<Orders> waitForApproval(String username);
+
+    public List<Orders> selectByStatus(String username,int orderStatus);
 }

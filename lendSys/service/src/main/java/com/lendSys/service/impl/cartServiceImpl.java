@@ -48,15 +48,12 @@ public class cartServiceImpl implements cartService {
     public ResultVo addCart(Cart cart,String username) {
         synchronized (this) {
             int productId = cart.getProductid();
-            Example example = new Example(Cart.class);
-            Example.Criteria criteria = example.createCriteria();
-            criteria.andEqualTo("productid", productId);
-            List<Cart> carts = cartMapper.selectByExample(example);
             Example exampleUser = new Example(Users.class);
             Example.Criteria criteriaUser = exampleUser.createCriteria();
             criteriaUser.andEqualTo("username", username);
             Users users = usersMapper.selectByExample(exampleUser).get(0);
             cart.setUserId(users.getUserid());
+            List<Cart> carts = cartMapper.selectByProductAndName(productId,username);
             // if not, need to save
             if (carts.size() == 0) {
                 int check = cartMapper.insert(cart);
@@ -78,5 +75,11 @@ public class cartServiceImpl implements cartService {
     @Override
     public ResultVo editCart(Cart cart) {
         return null;
+    }
+
+    @Override
+    public ResultVo getAll(String username){
+        List list = cartMapper.selectByName(username);
+        return new ResultVo(1000,"Success",list.size(),list);
     }
 }

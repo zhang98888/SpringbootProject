@@ -69,4 +69,23 @@
           and order_status = 1
     </select>
 
+    <select id="selectByStatus" resultMap="BaseResultMap">
+        select order_id,
+               user_id,
+               order_status,
+               order_remark,
+               product_id,
+               cart_num,
+               start_date,
+               end_date,
+               length,
+               product_name
+        from orders
+        where user_id =
+              (select userId
+               from users
+               where username = #{username})
+          and order_status = #{orderStatus}
+    </select>
+
 </mapper>

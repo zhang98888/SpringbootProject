@@ -13,7 +13,7 @@ public class Users {
     private String username;
 
     @Column(name = "departmentId")
-    private Integer departmentid;
+        private Integer departmentid;
 
     @Column(name = "userImg")
     private String userimg;

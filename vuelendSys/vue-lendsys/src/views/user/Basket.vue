@@ -12,13 +12,13 @@
         @selection-change="handleSelectionChange"
       >
         <el-table-column type="selection" width="55"> </el-table-column>
-        <el-table-column prop="productid" label="product Id" width="200">
+        <el-table-column prop="productid" label="product Id" width="200" align="center">
         </el-table-column>
-        <el-table-column prop="productName" label="product Name" width="200">
+        <el-table-column prop="productName" label="product Name" width="400" align="center">
         </el-table-column>
-        <el-table-column prop="cartNum" label="Quantity" width="200">
+        <el-table-column prop="cartNum" label="Quantity" width="200" align="center">
         </el-table-column>
-        <el-table-column prop="cartTime" label="Date" show-overflow-tooltip>
+        <el-table-column prop="cartTime" label="Date" show-overflow-tooltip align="center">
           <template v-slot="scope">
             {{ dateCal(scope.row.cartTime) }}
           </template>
@@ -161,6 +161,7 @@ export default {
         list.push(this.formData[index].cartId)
       }
       console.log(list)
+
       axios.post('/order/add/', map).then(res => {
         if (res.data.status === 1000) {
           axios.post('/cart/remove/', list).then(resp => {
@@ -173,6 +174,32 @@ export default {
           })
         }
       })
+    },
+    remove() {
+      let list = []
+      console.log(this.formData)
+      for (var index in this.multipleSelection) {
+        list.push(this.multipleSelection[index].cartId)
+      }
+      console.log(list)
+      this.$confirm('Do you want to remove from basket?', 'Remind', {
+        confirmButtonText: 'confirm',
+        cancelButtonText: 'cancel',
+        type: 'warning'
+      })
+        .then(() => {
+          axios.post('/cart/remove/', list).then(resp => {
+            if (resp.data.status === 1000) {
+              this.load()
+            }
+          })
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: 'cancel'
+          })
+        })
     },
     dateCal(date) {
       return dateFormat(date, 'yyyy-MM-dd hh:mm:ss')

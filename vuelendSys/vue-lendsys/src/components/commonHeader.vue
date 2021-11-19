@@ -5,13 +5,20 @@
         <a href="/product">
           <img class="logo" src="@/assets/logo.png" />
         </a>
-        <template
-          v-for="category in categoryName"
-          :key="category.categoryName"
-        >
-        <el-link :underline="false" :href="'/category/'+category.categoryId">{{category.categoryName}}</el-link>
+        <template v-for="category in categoryName" :key="category.categoryName">
+          <el-link
+            :underline="false"
+            :href="'/category/' + category.categoryId"
+            >{{ category.categoryName }}</el-link
+          >
         </template>
-        <el-link class="el-icon-shopping-cart-full" href="/basket"></el-link>
+        <el-badge :value="cartValue" class="item">
+          <el-link
+            class="el-icon-shopping-cart-full"
+            href="/basket"
+            style="margin-right:5px"
+          ></el-link>
+        </el-badge>
       </ul>
     </div>
   </header>
@@ -25,6 +32,7 @@ export default {
   data() {
     return {
       categoryName: [],
+      cartValue: 0
     }
   },
   created() {
@@ -36,6 +44,13 @@ export default {
       axios.get('/category/getAllCategory/' + 1 + '/' + 20).then(res => {
         console.log(res)
         this.categoryName = res.data.data
+        axios
+          .get('/cart/', {
+            params: { username: window.sessionStorage.getItem('token') }
+          })
+          .then(resp => {
+            this.cartValue = resp.data.total
+          })
       })
     }
   }
@@ -76,5 +91,9 @@ export default {
   padding: 0px 10px 0px 0px;
   width: 80px;
   height: 80px;
+}
+.item {
+  margin-top: 10px;
+  margin-right: 40px;
 }
 </style>

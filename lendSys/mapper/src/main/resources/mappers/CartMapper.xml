@@ -36,4 +36,16 @@
               where userName = #{username}) as t
                  inner join product on productId = product_id
     </select>
+    <select id="selectByProductAndName" resultMap="BaseResultMap">
+        select cart_id,
+               productId,
+               user_id,
+               cart_num,
+               cart_time
+        from cart
+                 inner join users on user_id = userId
+        where userName = #{username}
+          and productId = #{userid}
+
+    </select>
 </mapper>

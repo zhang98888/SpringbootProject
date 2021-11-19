@@ -1,14 +1,13 @@
 package com.lendSys.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "product_picture")
 public class ProductPicture {
     @Id
     @Column(name = "picture_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer pictureId;
 
     @Column(name = "product_id")

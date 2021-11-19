@@ -9,7 +9,6 @@
       <a href="/admin" class="nav-link">Management</a>
       <a href="/user/userInfo" class="nav-link">Information</a>
       <a href="/order" class="nav-link">Order</a>
-      <a href="/user/userAddress" class="nav-link">Address</a>
       <a href="" @click="logout" class="nav-link">logout</a>
 
       <!-- <el-dropdown>

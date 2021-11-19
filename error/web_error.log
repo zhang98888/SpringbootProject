@@ -1,17 +1,29 @@
-2021-11-17 14:59:55.026 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - For input string: "undefined"
-2021-11-17 15:10:02.634 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
-2021-11-17 15:10:04.170 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
-2021-11-17 15:10:50.961 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
-2021-11-17 15:10:50.991 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:11:27.098 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
-2021-11-17 15:11:35.452 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
-2021-11-17 15:12:07.638 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
-2021-11-17 15:12:26.328 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:12:26.344 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:13:35.460 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:13:35.479 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:14:27.605 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:14:51.231 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:15:21.087 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:15:24.040 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
-2021-11-17 15:16:06.381 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-19 13:55:23.860 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-19 13:55:26.551 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-19 14:34:09.489 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:09.490 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:09.491 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:09.492 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:21.191 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:21.192 [http-nio-9000-exec-7] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:21.192 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 14:34:21.193 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - Invalid bound statement (not found): com.lendSys.dao.OrdersMapper.selectByStatus
+2021-11-19 16:37:45.940 [http-nio-9000-exec-6] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
+2021-11-19 16:38:17.153 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
+2021-11-19 16:38:25.248 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'GET' not supported
+2021-11-19 16:38:45.546 [http-nio-9000-exec-2] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-19 16:38:49.115 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-19 16:45:00.559 [http-nio-9000-exec-3] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-19 16:45:03.899 [http-nio-9000-exec-4] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-19 16:46:33.990 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'POST' not supported
+2021-11-19 16:46:51.277 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'username' for method parameter type String is not present
+2021-11-19 17:23:15.345 [http-nio-9000-exec-10] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Cannot deserialize value of type `com.lendSys.entity.Useraddress` from Array value (token `JsonToken.START_ARRAY`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.lendSys.entity.Useraddress` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-11-19 17:24:57.904 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Cannot deserialize value of type `com.lendSys.entity.Useraddress` from Array value (token `JsonToken.START_ARRAY`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.lendSys.entity.Useraddress` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-11-19 17:36:36.999 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - JSON parse error: Cannot deserialize value of type `com.lendSys.vo.AddressVo` from Array value (token `JsonToken.START_ARRAY`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.lendSys.vo.AddressVo` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+2021-11-19 17:39:07.733 [http-nio-9000-exec-9] ERROR com.lendSys.utils.GlobalExceptionHandler - Request method 'DELETE' not supported
+2021-11-19 17:45:57.509 [http-nio-9000-exec-5] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'addrid' for method parameter type String is not present
+2021-11-19 17:47:42.553 [http-nio-9000-exec-8] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'addrid' for method parameter type String is not present
+2021-11-19 17:49:08.967 [http-nio-9000-exec-1] ERROR com.lendSys.utils.GlobalExceptionHandler - Required request parameter 'addrid' for method parameter type int is not present

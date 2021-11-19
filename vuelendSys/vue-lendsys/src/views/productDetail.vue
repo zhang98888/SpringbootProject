@@ -7,7 +7,7 @@
       <el-row>
         <el-col :span="12"
           ><div class="grid-content">
-            <el-carousel indicator-position="outside" height="500px">
+            <el-carousel indicator-position="outside" height="500px" v-if="product.length > 0">
               <el-carousel-item
                 v-for="item in product"
                 :key="item"

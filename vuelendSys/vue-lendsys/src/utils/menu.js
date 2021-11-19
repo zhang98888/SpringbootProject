@@ -14,13 +14,6 @@ export default [
         url: '/user/userInfo'
       },
       {
-        path: '/user/userAddress',
-        name: 'userAddress',
-        label: 'Address Table',
-        icon: 'document',
-        url: '/user/userAddress'
-      },
-      {
         path: '/admin/borrow',
         name: 'borrowGoods',
         label: 'Goods Rent Approval',

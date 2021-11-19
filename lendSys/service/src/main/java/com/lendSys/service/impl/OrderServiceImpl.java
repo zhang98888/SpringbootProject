@@ -80,6 +80,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    // The orders which will be shown on manager's pages
     public ResultVo approveRentOrder(String username){
         List<Orders> list = ordersMapper.waitForApproval(username);
         return new ResultVo(1000,"Success",list.size(),list);
@@ -96,4 +97,13 @@ public class OrderServiceImpl implements OrderService {
         ordersMapper.updateByPrimaryKey(orders);
         return new ResultVo(1000,"Success",1,orders);
     }
+
+    @Override
+    public ResultVo selectByStatus(String username,int status,int current, int size){
+        PageHelper.startPage(current, size);
+        List<Orders> list = ordersMapper.selectByStatus(username,status);
+        com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
+        return new ResultVo(1000,"Success",list.size(),list);
+    };
+
 }
