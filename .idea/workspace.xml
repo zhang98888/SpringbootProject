@@ -5,60 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce02cdf9-e45e-4a0f-bd10-c4cfe8068ad3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lendSys/api/src/main/java/com/lendSys/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/HomeImg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/ProductPicture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Sku.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/UserLoginHis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Useraddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/common/src/main/java/com/lendSys/utils/MD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/CartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/HomeImgMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/OrdersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/ProductPictureMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/SkuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/UserLoginHisMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/UseraddressMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/UsersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/generalDao/GeneralDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/CartMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/CategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/HomeImgMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/OrdersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/ProductMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/ProductPictureMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/SkuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/UserLoginHisMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/UseraddressMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/UsersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/tkGenerator/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/api/src/main/java/com/lendSys/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/api/src/main/java/com/lendSys/ApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/api/src/main/java/com/lendSys/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/api/src/main/java/com/lendSys/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/api/src/test/java/dao/UserDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/beans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/beans/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/beans/src/main/java/com/lendSys/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/beans/target/classes/com/lendSys/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/common/src/main/java/com/lendSys/vo/ResultVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/common/src/main/java/com/lendSys/vo/ResultVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/common/target/classes/com/lendSys/vo/ResultVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/common/target/classes/com/lendSys/vo/ResultVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/mapper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/mapper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/mapper/src/main/java/com/lendSys/dao/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/mapper/src/main/resources/mappers/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/mapper/target/classes/com/lendSys/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/mapper/target/classes/mappers/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/service/src/main/java/com/lendSys/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/service/src/main/java/com/lendSys/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/service/src/main/java/com/lendSys/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/service/src/main/java/com/lendSys/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/service/target/classes/com/lendSys/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/service/target/classes/com/lendSys/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lendSys/service/target/classes/com/lendSys/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/lendSys/service/target/classes/com/lendSys/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +27,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lendSys" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,10 +53,22 @@
       <updated>1634569713528</updated>
       <workItem from="1634569715820" duration="105000" />
       <workItem from="1634746582864" duration="121000" />
+      <workItem from="1637793205078" duration="131000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
