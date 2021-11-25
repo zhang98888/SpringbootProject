@@ -1,9 +1,0 @@
-2021-11-17 14:05:51.669 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 14:52:46.657 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:10:41.498 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:11:17.239 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:12:19.147 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:13:15.566 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:15:58.843 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:20:31.316 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
-2021-11-17 15:29:01.689 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lendSys]' package. Please check your configuration.
