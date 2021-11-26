@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8f6d2f4-1577-4364-b2fc-482ffe46cec4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/lendSys/utils/WebStudentListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/lendSys/vo/AddressVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/lendSys/vo/AddressVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/lendSys/vo/CartVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/lendSys/vo/CartVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/lendSys/vo/OrderVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/lendSys/vo/OrderVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/java/com/lendSys/dao/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/java/com/lendSys/dao/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/AdminServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,20 +70,28 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../projectSpring" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18396847" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\Project\lendSys" />
+      <recent name="C:\IdeaProjects\Project\lendSys\api" />
+      <recent name="C:\IdeaProjects\Project\lendSys\beans" />
+      <recent name="C:\IdeaProjects\Project\lendSys\common" />
       <recent name="C:\IdeaProjects\Project\lendSys\beans\src\main\java\com\lendSys" />
-      <recent name="C:\IdeaProjects\Project\lendSys\mapper\src\test\java\com\lendSys\lendSys\lendSys" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\Project\lendSys\api\src\main\docker" />
+      <recent name="C:\IdeaProjects\Project\lendSys\service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.lendSys" />
@@ -86,6 +107,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ApiApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDaoTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mapper" />
       <extension name="coverage">
@@ -235,7 +269,10 @@
       <workItem from="1637682595416" duration="992000" />
       <workItem from="1637695220315" duration="783000" />
       <workItem from="1637793135525" duration="1381000" />
-      <workItem from="1637849640012" duration="670000" />
+      <workItem from="1637849640012" duration="5453000" />
+      <workItem from="1637864539501" duration="5967000" />
+      <workItem from="1637932512178" duration="7437000" />
+      <workItem from="1637945120998" duration="10055000" />
     </task>
     <servers />
   </component>
@@ -256,5 +293,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

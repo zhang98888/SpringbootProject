@@ -1,26 +1,18 @@
 package com.lendSys.service.impl;
 import com.alibaba.druid.util.StringUtils;;
-import com.alibaba.excel.EasyExcel;
 import com.github.pagehelper.PageHelper;
 import com.lendSys.dao.UsersMapper;
 import com.lendSys.entity.Users;
 import com.lendSys.service.AdminService;
-import com.lendSys.utils.MD5;
 import com.lendSys.utils.Sha1Utils;
-import com.lendSys.utils.WebStudentListener;
 import com.lendSys.vo.ResultVo;
 import com.lendSys.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.MultipartFile;
 import tk.mybatis.mapper.entity.Example;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 @Service

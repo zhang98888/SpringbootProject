@@ -1,0 +1,11 @@
+com\lendSys\entity\Category.class
+com\lendSys\entity\Useraddress.class
+com\lendSys\entity\Department.class
+com\lendSys\entity\Product.class
+com\lendSys\entity\Users.class
+com\lendSys\entity\Orders.class
+com\lendSys\entity\Cart.class
+com\lendSys\entity\HomeImg.class
+com\lendSys\entity\Sku.class
+com\lendSys\entity\ProductPicture.class
+com\lendSys\entity\UserLoginHis.class

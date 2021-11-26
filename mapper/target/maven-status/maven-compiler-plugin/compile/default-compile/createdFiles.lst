@@ -1,0 +1,12 @@
+com\lendSys\dao\CartMapper.class
+com\lendSys\dao\ProductMapper.class
+com\lendSys\dao\SkuMapper.class
+com\lendSys\dao\HomeImgMapper.class
+com\lendSys\dao\ProductPictureMapper.class
+com\lendSys\dao\UserLoginHisMapper.class
+com\lendSys\dao\CategoryMapper.class
+com\lendSys\dao\UseraddressMapper.class
+com\lendSys\dao\DepartmentMapper.class
+com\lendSys\dao\OrdersMapper.class
+com\lendSys\dao\UsersMapper.class
+com\lendSys\generalDao\GeneralDao.class

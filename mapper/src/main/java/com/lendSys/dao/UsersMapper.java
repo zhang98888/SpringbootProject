@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface UsersMapper extends GeneralDao<Users> {
 
-    public List<Users> findByLevelAndUsername( @Param("username") String username ,
-                                               @Param("userLevel") String userLevel);
+    public List<Users> findByLevelAndUsername(@Param("username") String username ,
+                                              @Param("userLevel") String userLevel);
 
 }
