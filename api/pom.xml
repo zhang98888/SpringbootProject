@@ -35,11 +35,6 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
         <!--   Swagger2 && Swagger UI  -->
 
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
@@ -57,27 +52,28 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.lendSys.ApiApplication</mainClass>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <mainClass>com.lendSys.ApiApplication</mainClass>-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>2.7.0</version>
+
                 <configuration>
                     <!-- 拉取所需的基础镜像 - 这里用于运行springboot项目 -->
                     <from>
-                        <image>registry-intl.ap-southeast-1.aliyuncs.com/finalproject/docker-jenkins</image>
+                        <image>openjdk:15</image>
                     </from>
                     <!-- 最后生成的镜像配置 -->
                     <to>
@@ -96,9 +92,10 @@
                     <container>
                         <ports>
                             <!--指定镜像端口 , 这里没用 docfile的操作-->
-                            <port>8080</port>
+                            <port>9000</port>
                         </ports>
                     </container>
+                    <allowInsecureRegistries>true</allowInsecureRegistries>
                 </configuration>
                 <executions>
                     <execution>
