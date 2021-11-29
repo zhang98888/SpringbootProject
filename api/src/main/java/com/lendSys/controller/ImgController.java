@@ -26,7 +26,7 @@ public class ImgController {
     public ResultVo upload(MultipartFile file) throws IOException {
         String originalFilename = file.getOriginalFilename();
         String flag = IdUtil.fastSimpleUUID();
-        String rootFilePath = "/mydata/image/" + flag + "_" + originalFilename;
+        String rootFilePath = "/media/" + flag + "_" + originalFilename;
         //String rootFilePath = System.getProperty("user.dir") + "/api/src/main/resources/static/image/" + flag + "_" + originalFilename;
         //String rootFilePath = "/var/lib/jenkins/workspace/projectSpring/api/src/main/resources/static/image/" + flag + "_" + originalFilename;
         FileUtil.writeBytes(file.getBytes(),rootFilePath);
@@ -37,7 +37,7 @@ public class ImgController {
     @GetMapping("/{flag}")
     public void getImg(@PathVariable String flag, HttpServletResponse response){
         OutputStream os;
-        String basePath = "/mydata/image/";
+        String basePath = "/media/";
         //String basePath = System.getProperty("user.dir") + "/api/src/main/resources/static/image/";
         //String basePath = "/var/lib/jenkins/workspace/projectSpring/api/src/main/resources/static/image/";
         List<String> filenames = FileUtil.listFileNames(basePath);
