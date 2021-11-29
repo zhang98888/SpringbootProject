@@ -25,7 +25,7 @@ public class ImgController {
     public ResultVo upload(MultipartFile file) throws IOException {
         String originalFilename = file.getOriginalFilename();
         String flag = IdUtil.fastSimpleUUID();
-        String rootFilePath = "/mydata/image/" + flag + "_" + originalFilename;
+        String rootFilePath = "/var/lib/jenkins/workspace/projectSpring/api/src/main/resources/static/image" + flag + "_" + originalFilename;
         FileUtil.writeBytes(file.getBytes(),rootFilePath);
         return new ResultVo(1000,"success",0,"http://8.208.82.237:9000/images/" + flag);
 
@@ -35,7 +35,7 @@ public class ImgController {
     public void getImg(@PathVariable String flag, HttpServletResponse response){
         OutputStream os;
        // String basePath = System.getProperty("user.dir") + "/api/src/main/resources/static/image/";
-        String basePath = "/mydata/image/";
+        String basePath = "/var/lib/jenkins/workspace/projectSpring/api/src/main/resources/static/image";
         List<String> filenames = FileUtil.listFileNames(basePath);
         String filename = filenames.stream().filter(name -> name.contains(flag)).findAny().orElse("");
         try{
