@@ -27,7 +27,7 @@ public class ImgController {
         String flag = IdUtil.fastSimpleUUID();
         String rootFilePath = System.getProperty("user.dir") + "/api/src/main/resources/static/image/" + flag + "_" + originalFilename;
         FileUtil.writeBytes(file.getBytes(),rootFilePath);
-        return new ResultVo(1000,"success",0,"http://localhost:9000/images/" + flag);
+        return new ResultVo(1000,"success",0,"http://8.208.82.237:9000/images/" + flag);
 
     }
 
