@@ -7,6 +7,8 @@
     <list default="true" id="f8f6d2f4-1577-4364-b2fc-482ffe46cec4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/lendSys/controller/ImgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/lendSys/controller/ImgController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/lendSys/controller/productController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/lendSys/controller/productController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +251,9 @@
       <workItem from="1638009864472" duration="2415000" />
       <workItem from="1638018710050" duration="4015000" />
       <workItem from="1638113398341" duration="7000" />
-      <workItem from="1638189936729" duration="1698000" />
+      <workItem from="1638189936729" duration="2865000" />
+      <workItem from="1638196677289" duration="6973000" />
+      <workItem from="1638216595754" duration="74000" />
     </task>
     <servers />
   </component>

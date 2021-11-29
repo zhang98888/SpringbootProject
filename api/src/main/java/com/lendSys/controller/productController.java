@@ -50,7 +50,7 @@ public class productController {
     }
 
     @PostMapping(value = "/searchProduct/{current}/{size}")
-    public ResultVo getPageUsersAdvance(@PathVariable String current,
+    public ResultVo searchProduct(@PathVariable String current,
                                         @PathVariable String size,
                                         @RequestBody(required = false) productVo productVo){
         int curr = Integer.parseInt(current);
