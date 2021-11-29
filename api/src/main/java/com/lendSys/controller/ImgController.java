@@ -34,7 +34,8 @@ public class ImgController {
     @GetMapping("/{flag}")
     public void getImg(@PathVariable String flag, HttpServletResponse response){
         OutputStream os;
-        String basePath = System.getProperty("user.dir") + "/api/src/main/resources/static/image/";
+       // String basePath = System.getProperty("user.dir") + "/api/src/main/resources/static/image/";
+        String basePath = "/var/lib/jenkins/workspace/Springboot" + "/api/src/main/resources/static/image/";
         List<String> filenames = FileUtil.listFileNames(basePath);
         String filename = filenames.stream().filter(name -> name.contains(flag)).findAny().orElse("");
         try{
