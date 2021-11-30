@@ -63,9 +63,10 @@ public class goodPicController {
         return picService.searchGoodPic(curr, s, pictureId);
     }
 
-    @GetMapping(value = "/getAdvanceGoodPic")
-    public ResultVo getAdvanceGoodPic() {
-        return picService.getAdvanceGoodPic();
+    @GetMapping(value = "/getAdvanceGoodPic/{num}")
+    public ResultVo getAdvanceGoodPic(@PathVariable String num) {
+        int numId = Integer.getInteger(num);
+        return picService.getAdvanceGoodPic(numId);
     }
 
     @PostMapping(value = "/category/{categoryId}/{current}/{size}")

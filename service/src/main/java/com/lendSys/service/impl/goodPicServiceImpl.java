@@ -67,6 +67,7 @@ public class goodPicServiceImpl implements goodPicService {
 //            ProductPicture picture = pictureMapper.selectByPrimaryKey(pictureId);
 //            // if not, need to save
 //            if (picture == null) {
+            productPicture.setSort(0);
             int check = pictureMapper.insert(productPicture);
             if (check > 0) {
                 return new ResultVo(1000, "Success!", check, productPicture);
@@ -95,11 +96,11 @@ public class goodPicServiceImpl implements goodPicService {
     }
 
     @Override
-    public ResultVo getAdvanceGoodPic() {
+    public ResultVo getAdvanceGoodPic(int num) {
         List<ProductPicture> lists = pictureMapper.selectAll();
         List<PicInfoVo> list = new ArrayList<>();
         for (ProductPicture pic : lists) {
-            if (pic.getSort() == 1) {
+            if (pic.getSort() == num) {
                 Product product = productMapper.selectByPrimaryKey(pic.getProductId());
                 PicInfoVo pices = new PicInfoVo(product.getProductName(), product.getRentNum(), pic.getUrl());
                 list.add(pices);

@@ -10,7 +10,7 @@ public interface goodPicService {
     public ResultVo addGoodPic(ProductPicture productPicture);
     public ResultVo editGoodPic(ProductPicture productPicture);
     public ResultVo searchGoodPic(int current, int size, int id);
-    public ResultVo getAdvanceGoodPic();
+    public ResultVo getAdvanceGoodPic(int num);
     public ResultVo gatCategoryPic(String categoryId,String current,
                                    String size);
 }
