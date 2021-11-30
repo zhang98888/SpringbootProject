@@ -102,7 +102,7 @@ public class goodPicServiceImpl implements goodPicService {
         for (ProductPicture pic : lists) {
             if (pic.getSort() == num) {
                 Product product = productMapper.selectByPrimaryKey(pic.getProductId());
-                PicInfoVo pices = new PicInfoVo(product.getProductName(), product.getRentNum(), pic.getUrl());
+                PicInfoVo pices = new PicInfoVo(product.getProductName(), product.getRentNum(), pic.getUrl(), pic.getProductId());
                 list.add(pices);
             }
         }

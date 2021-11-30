@@ -19,4 +19,6 @@ public class PicInfoVo {
     private int rent;
     @ApiModelProperty(value = "url")
     private String url;
+    @ApiModelProperty(value = "productId")
+    private int productId;
 }
