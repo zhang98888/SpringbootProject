@@ -60,21 +60,20 @@ public class goodPicServiceImpl implements goodPicService {
     @Transactional
     public ResultVo addGoodPic(ProductPicture productPicture) {
         synchronized (this) {
-            int pictureId = productPicture.getPictureId();
-            if (pictureId == 0) {
-                return new ResultVo(1001, "Need to input pictureId", 0, null);
+//            int pictureId = productPicture.getPictureId();
+//            if (pictureId == 0) {
+//                return new ResultVo(1001, "Need to input pictureId", 0, null);
+//            }
+//            ProductPicture picture = pictureMapper.selectByPrimaryKey(pictureId);
+//            // if not, need to save
+//            if (picture == null) {
+            int check = pictureMapper.insert(productPicture);
+            if (check > 0) {
+                return new ResultVo(1000, "Success!", check, productPicture);
+            } else {
+                return new ResultVo(1001, "Fail to register", 0, null);
             }
-            ProductPicture picture = pictureMapper.selectByPrimaryKey(pictureId);
-            // if not, need to save
-            if (picture == null) {
-                int check = pictureMapper.insert(productPicture);
-                if (check > 0) {
-                    return new ResultVo(1000, "Success!", check, productPicture);
-                } else {
-                    return new ResultVo(1001, "Fail to register", 0, null);
-                }
-            } else
-                return new ResultVo(1001, "Picture has been register", 0, null);
+
         }
     }
 

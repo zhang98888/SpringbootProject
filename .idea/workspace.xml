@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8f6d2f4-1577-4364-b2fc-482ffe46cec4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/goodPicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/goodPicServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +252,7 @@
       <workItem from="1638189936729" duration="2865000" />
       <workItem from="1638196677289" duration="6973000" />
       <workItem from="1638216595754" duration="10435000" />
-      <workItem from="1638282273052" duration="1255000" />
+      <workItem from="1638282273052" duration="2682000" />
     </task>
     <servers />
   </component>
