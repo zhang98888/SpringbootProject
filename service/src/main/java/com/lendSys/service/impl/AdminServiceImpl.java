@@ -1,4 +1,5 @@
 package com.lendSys.service.impl;
+
 import com.alibaba.druid.util.StringUtils;;
 import com.github.pagehelper.PageHelper;
 import com.lendSys.dao.UsersMapper;
@@ -51,9 +52,9 @@ public class AdminServiceImpl implements AdminService {
                 } else {
                     return new ResultVo(1001, "Fail to register", 0, null);
                 }
-            } else if( users.getDepartmentid() == 0) {
+            } else if (users.getDepartmentid() == 0) {
                 return new ResultVo(1001, "No department", 0, null);
-            }else
+            } else
                 return new ResultVo(1001, "User has been register", 0, null);
         }
     }
@@ -80,7 +81,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ResultVo pageUserDetailInfo(int current, int size, UserVo userVo) {
-        if(userVo == null) {
+        if (userVo == null) {
             List<Users> usersList = usersMapper.selectAll();
             return new ResultVo(1000, "success", usersList.size(), usersList);
         }
@@ -92,35 +93,39 @@ public class AdminServiceImpl implements AdminService {
             List<Users> usersList = new ArrayList<>();
             usersList.add(users);
             return new ResultVo(1000, "Success!", 1, usersList);
-        } else if(!StringUtils.isEmpty(username) || !StringUtils.isEmpty(userlevel)) {
+        } else if (!StringUtils.isEmpty(username) || !StringUtils.isEmpty(userlevel)) {
             PageHelper.startPage(current, size);
             List<Users> usersList = null;
             Example example = new Example(Users.class);
             Example.Criteria criteria = example.createCriteria();
-            if(!StringUtils.isEmpty(username) && !StringUtils.isEmpty(userlevel)){
-                usersList = usersMapper.findByLevelAndUsername(username,userlevel);
-            }else if(!StringUtils.isEmpty(username)){
+            if (!StringUtils.isEmpty(username) && !StringUtils.isEmpty(userlevel)) {
+                usersList = usersMapper.findByLevelAndUsername(username, userlevel);
+            } else if (!StringUtils.isEmpty(username)) {
                 criteria.andEqualTo("username", username);
                 usersList = usersMapper.selectByExample(example);
-            }else if(!StringUtils.isEmpty(userlevel)){
+            } else if (!StringUtils.isEmpty(userlevel)) {
                 criteria.andEqualTo("userLevel", userlevel);
                 usersList = usersMapper.selectByExample(example);
             }
 
             com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) usersList;
             return new ResultVo(1000, "Success", usersList.size(), usersList);
-        }else
+        } else
             return new ResultVo(1000, "Success", 0, null);
     }
 
     @Override
     public ResultVo editUserInfo(Users users) throws Exception {
-        String pwd = Sha1Utils.shaEncode(users.getUserpwd());
-        users.setUserpwd(pwd);
+        Users preuser = usersMapper.selectByPrimaryKey(users.getUserid());
+        String pwd = users.getUserpwd();
+        if (!pwd.equals(preuser.getUserpwd())) {
+            pwd = Sha1Utils.shaEncode(users.getUserpwd());
+            users.setUserpwd(pwd);
+        }
         int check = usersMapper.updateByPrimaryKey(users);
-        if(check == 0){
+        if (check == 0) {
             return new ResultVo(1001, "Fail to update", 0, null);
-        }else
+        } else
             return new ResultVo(1000, "Success", 1, users);
     }
 
