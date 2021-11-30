@@ -65,7 +65,7 @@ public class goodPicController {
 
     @GetMapping(value = "/getAdvanceGoodPic/{num}")
     public ResultVo getAdvanceGoodPic(@PathVariable String num) {
-        int numId = Integer.getInteger(num);
+        int numId = Integer.parseInt(num);
         return picService.getAdvanceGoodPic(numId);
     }
 
