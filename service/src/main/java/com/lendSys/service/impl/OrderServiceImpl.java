@@ -93,7 +93,7 @@ public class OrderServiceImpl implements OrderService {
         criteria.andEqualTo("username",  username);
         List<Users> usersList = usersMapper.selectByExample(example);
         Users user = usersList.get(0);
-        if(user.getUserLevel().equals("1")){
+        if(user.getUserLevel().equals("111")){
             List<Orders> newList = ordersMapper.getAdminApproval();
             return new ResultVo(1000,"Success",newList.size(),newList);
         } else{
