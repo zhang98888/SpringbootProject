@@ -1,10 +1,15 @@
 package com.lendSys.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
     @Id
     @Column(name = "product_id")

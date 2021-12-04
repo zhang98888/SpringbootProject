@@ -88,4 +88,24 @@
           and order_status = #{orderStatus}
     </select>
 
+    <select id="getAdminApproval" resultMap="BaseResultMap">
+        select order_id,
+               user_id,
+               order_status,
+               order_remark,
+               product_id,
+               cart_num,
+               start_date,
+               end_date,
+               length,
+               product_name
+        from orders
+        where user_id in
+              (select userId
+               from users
+               where user_level = 1
+              )
+          and order_status = 1
+    </select>
+
 </mapper>

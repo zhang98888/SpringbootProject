@@ -54,7 +54,7 @@ public class AddressServiceImpl implements AddressService {
                 useraddressMapper.insert(useraddress);
                 return new ResultVo(1000, "Success", 1, useraddress);
             } else {
-                return new ResultVo(1001, "You should only have  one default address", 0, null);
+                return new ResultVo(1001, "You should only have one default address", 0, null);
             }
 
         } else {

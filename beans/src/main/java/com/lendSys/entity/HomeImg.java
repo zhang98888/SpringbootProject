@@ -1,9 +1,14 @@
 package com.lendSys.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "home_img")
 public class HomeImg {
     @Id

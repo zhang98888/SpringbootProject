@@ -1,11 +1,16 @@
 package com.lendSys.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class Cart {
     @Id
     @Column(name = "cart_id")

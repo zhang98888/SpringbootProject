@@ -1,9 +1,14 @@
 package com.lendSys.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.util.Date;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class Users {
     @Id
     @Column(name = "userId")
