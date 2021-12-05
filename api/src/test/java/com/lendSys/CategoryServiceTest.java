@@ -54,7 +54,14 @@ public class CategoryServiceTest {
     }
 
     @Test
-    public void addCategoryTest(){
+    public void removeCategory2(){
+        Mockito.when(categoryMapper.deleteByPrimaryKey(any())).thenReturn(0);
+        ResultVo resultVo = service.removeCategory("1");
+        Assert.assertEquals(1001,resultVo.getStatus());
+    }
+
+    @Test
+    public void addCategoryTest1(){
         Category category = new Category(1,"MMM",1,null,null);
         List<Category> categoryList = new ArrayList<>();
         EntityHelper.initEntityNameMap(Category.class, new Config());
@@ -65,11 +72,42 @@ public class CategoryServiceTest {
     }
 
     @Test
-    public void editCategoryTest(){
+    public void addCategoryTest2(){
+        Category category = new Category(1,"MMM",1,null,null);
+        List<Category> categoryList = new ArrayList<>();
+        EntityHelper.initEntityNameMap(Category.class, new Config());
+        Mockito.when(categoryMapper.selectByExample(any())).thenReturn(categoryList);
+        Mockito.when(categoryMapper.insert(any())).thenReturn(0);
+        ResultVo resultVo = service.addCategory(category);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+    @Test
+    public void addCategoryTest3(){
+        Category category = new Category(1,"MMM",1,null,null);
+        List<Category> categoryList = new ArrayList<>();
+        categoryList.add(category);
+        EntityHelper.initEntityNameMap(Category.class, new Config());
+        Mockito.when(categoryMapper.selectByExample(any())).thenReturn(categoryList);
+        Mockito.when(categoryMapper.insert(any())).thenReturn(1);
+        ResultVo resultVo = service.addCategory(category);
+        Assert.assertEquals(1001,resultVo.getStatus());
+    }
+
+    @Test
+    public void editCategoryTest1(){
         Category category = new Category(1,"MMM",1,null,null);
         Mockito.when(categoryMapper.updateByPrimaryKey(any())).thenReturn(0);
         ResultVo resultVo = service.editCategory(category);
         Assert.assertEquals(1001,resultVo.getStatus());
+    }
+
+    @Test
+    public void editCategoryTest2(){
+        Category category = new Category(1,"MMM",1,null,null);
+        Mockito.when(categoryMapper.updateByPrimaryKey(any())).thenReturn(1);
+        ResultVo resultVo = service.editCategory(category);
+        Assert.assertEquals(1000,resultVo.getStatus());
     }
 
 

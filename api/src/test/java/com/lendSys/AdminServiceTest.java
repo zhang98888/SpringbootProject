@@ -75,10 +75,61 @@ public class AdminServiceTest {
     }
 
     @Test
+    public void addUserInfo2() throws Exception {
+        Users users = new Users();
+        users.setUserid(1000);
+        users.setDepartmentid(200);
+        users.setUserpwd("123456");
+        List<Users> usersList = new ArrayList<>();
+        EntityHelper.initEntityNameMap(Users.class, new Config());
+        Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
+        Mockito.when(usersMapper.insert(any())).thenReturn(0);
+        ResultVo resultVo = adminService.addUserInfo(users);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+    @Test
+    public void addUserInfo3() throws Exception {
+        Users users = new Users();
+        users.setUserid(1000);
+        users.setDepartmentid(200);
+        users.setUserpwd("123456");
+        List<Users> usersList = new ArrayList<>();
+        usersList.add(users);
+        EntityHelper.initEntityNameMap(Users.class, new Config());
+        Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
+        Mockito.when(usersMapper.insert(any())).thenReturn(0);
+        ResultVo resultVo = adminService.addUserInfo(users);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+    @Test
+    public void addUserInfo4() throws Exception {
+        Users users = new Users();
+        users.setUserid(1000);
+        users.setDepartmentid(0);
+        users.setUserpwd("123456");
+        List<Users> usersList = new ArrayList<>();
+        usersList.add(users);
+        EntityHelper.initEntityNameMap(Users.class, new Config());
+        Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
+        Mockito.when(usersMapper.insert(any())).thenReturn(0);
+        ResultVo resultVo = adminService.addUserInfo(users);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+    @Test
     public void userRemoveTest(){
         Mockito.when(usersMapper.deleteByPrimaryKey(any())).thenReturn(1);
         ResultVo resultVo = adminService.userRemove("1");
         Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
+    public void userRemoveTest2(){
+        Mockito.when(usersMapper.deleteByPrimaryKey(any())).thenReturn(0);
+        ResultVo resultVo = adminService.userRemove("1");
+        Assert.assertEquals(0,resultVo.getTotal());
     }
 
     @Test
@@ -90,6 +141,19 @@ public class AdminServiceTest {
         Mockito.when(usersMapper.updateByPrimaryKey(any())).thenReturn(1);
         ResultVo resultVo = adminService.editUserInfo(users);
         Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
+    public void editUserInfoTest2() throws Exception{
+        Users users = new Users();
+        users.setUserpwd("123456");
+        Users users1 = new Users();
+        users1.setUserpwd("111111");
+        List<Users> usersList = new ArrayList<>();
+        Mockito.when(usersMapper.selectByPrimaryKey(any())).thenReturn(users1);
+        Mockito.when(usersMapper.updateByPrimaryKey(any())).thenReturn(0);
+        ResultVo resultVo = adminService.editUserInfo(users);
+        Assert.assertEquals(0,resultVo.getTotal());
     }
 
 

@@ -78,6 +78,16 @@ public class AddressServiceTest {
     }
 
     @Test
+    public void setAddressTest2(){
+        AddressVo addressVo = new AddressVo(116,"admin",null,null,null,null,"0");
+        List<Useraddress> useraddresses = new ArrayList<>();
+        Mockito.when(addressMapper.selectDeaultAddress(anyInt())).thenReturn(useraddresses);
+        Mockito.when(addressMapper.insert(any())).thenReturn(1);
+        ResultVo resultVo = addressService.setAddress(addressVo);
+        Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
     public void editAddressTest(){
         Useraddress useraddress = new Useraddress(1,116,"admin",null,null,null,null,null,"1",new Date(),new Date());
         List<Useraddress> list = new ArrayList<>();
@@ -89,6 +99,17 @@ public class AddressServiceTest {
         Useraddress useraddress2 = new Useraddress(1,116,"admin",null,null,null,null,null,"0",new Date(),new Date());
         ResultVo resultVo2 = addressService.editAddress(useraddress2);
         Assert.assertEquals(1,resultVo2.getTotal());
+    }
+
+    @Test
+    public void editAddressTest2(){
+        Useraddress useraddress = new Useraddress(1,116,"admin",null,null,null,null,null,"0",new Date(),new Date());
+        List<Useraddress> list = new ArrayList<>();
+        EntityHelper.initEntityNameMap(Useraddress.class, new Config());
+        Mockito.when(addressMapper.selectByExample(any())).thenReturn(list);
+        Mockito.when(addressMapper.updateByPrimaryKey(any())).thenReturn(1);
+        ResultVo resultVo = addressService.editAddress(useraddress);
+        Assert.assertEquals(1,resultVo.getTotal());
     }
 
     @Test

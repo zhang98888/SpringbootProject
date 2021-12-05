@@ -4,6 +4,7 @@ import com.lendSys.dao.UsersMapper;
 import com.lendSys.entity.Users;
 import com.lendSys.service.AdminService;
 import com.lendSys.service.UserService;
+import com.lendSys.utils.Sha1Utils;
 import com.lendSys.vo.ResultVo;
 import org.junit.Assert;
 import org.junit.Test;
@@ -44,7 +45,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void loginTest() throws Exception {
+    public void loginTest1() throws Exception {
         String username = "admin";
         String pwd = "111111";
         List<Users> usersList = new ArrayList<>();
@@ -52,6 +53,23 @@ public class UserServiceTest {
         Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
         ResultVo resultVo = userService.checkLogin(username,pwd);
         Assert.assertEquals(1001,resultVo.getStatus());
+    }
+
+    @Test
+    public void loginTest2() throws Exception {
+        String username = "admin";
+        String pwd = "111111";
+        String sha1Pwd = Sha1Utils.shaEncode(pwd);
+        List<Users> usersList = new ArrayList<>();
+        Users users = new Users();
+        users.setUserpwd(sha1Pwd);
+        users.setUserid(100);
+        users.setUsername(username);
+        usersList.add(users);
+        EntityHelper.initEntityNameMap(Users.class, new Config());
+        Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
+        ResultVo resultVo = userService.checkLogin(username,pwd);
+        Assert.assertEquals(1000,resultVo.getStatus());
     }
 
     @Test

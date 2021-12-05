@@ -74,7 +74,6 @@ public class goodPicServiceImpl implements goodPicService {
             } else {
                 return new ResultVo(1001, "Fail to register", 0, null);
             }
-
         }
     }
 

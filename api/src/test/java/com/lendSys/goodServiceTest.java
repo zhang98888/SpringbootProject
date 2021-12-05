@@ -66,6 +66,13 @@ public class goodServiceTest {
     }
 
     @Test
+    public void removeGoodsTest2(){
+        Mockito.when(productMapper.deleteByPrimaryKey(any())).thenReturn(0);
+        ResultVo resultVo = service.removeGoods("1");
+        Assert.assertEquals(1001,resultVo.getStatus());
+    }
+
+    @Test
     public void addGoodsTest(){
         Product product = new Product(1,1,"product",100,1,null,null);
         List<Product> goodsList = new ArrayList<>();
@@ -77,10 +84,55 @@ public class goodServiceTest {
     }
 
     @Test
+    public void addGoodsTest2(){
+        Product product = new Product(1,1,"product",100,1,null,null);
+        List<Product> goodsList = new ArrayList<>();
+        EntityHelper.initEntityNameMap(Product.class, new Config());
+        Mockito.when(productMapper.selectByExample(any())).thenReturn(goodsList);
+        Mockito.when(productMapper.insert(product)).thenReturn(0);
+        ResultVo resultVo = service.addGoods(product);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+    @Test
+    public void addGoodsTest3(){
+        Product product = new Product(1,0,"product",100,1,null,null);
+        List<Product> goodsList = new ArrayList<>();
+        goodsList.add(product);
+        EntityHelper.initEntityNameMap(Product.class, new Config());
+        Mockito.when(productMapper.selectByExample(any())).thenReturn(goodsList);
+        Mockito.when(productMapper.insert(product)).thenReturn(0);
+        ResultVo resultVo = service.addGoods(product);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+    @Test
+    public void addGoodsTest4(){
+        Product product = new Product(1,1,"product",100,1,null,null);
+        List<Product> goodsList = new ArrayList<>();
+        goodsList.add(product);
+        EntityHelper.initEntityNameMap(Product.class, new Config());
+        Mockito.when(productMapper.selectByExample(any())).thenReturn(goodsList);
+        Mockito.when(productMapper.insert(product)).thenReturn(0);
+        ResultVo resultVo = service.addGoods(product);
+        Assert.assertEquals(0,resultVo.getTotal());
+    }
+
+
+
+    @Test
     public void editGoodsTest(){
         Product product = new Product(1,1,"product",100,1,null,null);
         Mockito.when(productMapper.updateByPrimaryKey(product)).thenReturn(1);
         ResultVo resultVo = service.editGoods(product);
         Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
+    public void editGoodsTest2(){
+        Product product = new Product(1,1,"product",100,1,null,null);
+        Mockito.when(productMapper.updateByPrimaryKey(product)).thenReturn(0);
+        ResultVo resultVo = service.editGoods(product);
+        Assert.assertEquals(0,resultVo.getTotal());
     }
 }

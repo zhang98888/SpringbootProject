@@ -4,7 +4,9 @@ import com.lendSys.dao.ProductMapper;
 import com.lendSys.dao.ProductPictureMapper;
 import com.lendSys.dao.UseraddressMapper;
 import com.lendSys.dao.UsersMapper;
+import com.lendSys.entity.Product;
 import com.lendSys.entity.ProductPicture;
+import com.lendSys.entity.Users;
 import com.lendSys.service.AddressService;
 import com.lendSys.service.goodPicService;
 import com.lendSys.vo.ResultVo;
@@ -20,6 +22,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Config;
+import tk.mybatis.mapper.mapperhelper.EntityHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -110,4 +114,7 @@ public class goodPicServiceTest {
         ResultVo resultVo = picService.getAdvanceGoodPic(1);
         Assert.assertEquals(1000,resultVo.getStatus());
     }
+
+
+
 }

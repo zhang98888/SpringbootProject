@@ -47,7 +47,7 @@ public class CartServiceTest {
         usersMapper = mock(UsersMapper.class);
     }
     @Test
-    public void removeCartTest(){
+    public void removeCartTest1(){
         Cart cart = new Cart(1,1,116,2,new Date());
         List<Cart> cartList = new ArrayList<>();
         cartList.add(cart);
@@ -56,6 +56,18 @@ public class CartServiceTest {
         Mockito.when(cartMapper.deleteByPrimaryKey(anyInt())).thenReturn(1);
         ResultVo resultVo = carts.removeCart(ids);
         Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
+    public void removeCartTest2(){
+        Cart cart = new Cart(1,1,116,2,new Date());
+        List<Cart> cartList = new ArrayList<>();
+        cartList.add(cart);
+        List<String> ids = new ArrayList<>();
+        ids.add("1");
+        Mockito.when(cartMapper.deleteByPrimaryKey(anyInt())).thenReturn(0);
+        ResultVo resultVo = carts.removeCart(ids);
+        Assert.assertEquals(1001,resultVo.getStatus());
     }
 
     @Test
@@ -84,6 +96,43 @@ public class CartServiceTest {
         Mockito.when(cartMapper.insert(any())).thenReturn(1);
         ResultVo resultVo = carts.addCart(cart,"admin");
         Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
+    public void addCartTest2(){
+        Cart cart = new Cart(1,1,116,2,new Date());
+        List<Cart> cartList = new ArrayList<>();
+        Users users = new Users(116,"admin",1,null,"123456",null,null,null,null,null,null,new Date(),new Date());
+//        cartList.add(cart);
+        List<Users> usersList = new ArrayList<>();
+        usersList.add(users);
+        EntityHelper.initEntityNameMap(Users.class, new Config());
+        Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
+        Mockito.when(cartMapper.selectByProductAndName(anyInt(),any())).thenReturn(cartList);
+        Mockito.when(cartMapper.insert(any())).thenReturn(1);
+        ResultVo resultVo = carts.addCart(cart,"admin");
+        Assert.assertEquals(1,resultVo.getTotal());
+    }
+
+    @Test
+    public void addCartTest3(){
+        Cart cart = new Cart(1,1,116,2,new Date());
+        List<Cart> cartList = new ArrayList<>();
+        Users users = new Users(116,"admin",1,null,"123456",null,null,null,null,null,null,new Date(),new Date());
+        List<Users> usersList = new ArrayList<>();
+        usersList.add(users);
+        EntityHelper.initEntityNameMap(Users.class, new Config());
+        Mockito.when(usersMapper.selectByExample(any())).thenReturn(usersList);
+        Mockito.when(cartMapper.selectByProductAndName(anyInt(),any())).thenReturn(cartList);
+        Mockito.when(cartMapper.insert(any())).thenReturn(0);
+        ResultVo resultVo = carts.addCart(cart,"admin");
+        Assert.assertEquals(1001,resultVo.getStatus());
+    }
+
+    @Test
+    public void editCartTest(){
+        ResultVo resultVo = carts.editCart(new Cart());
+        Assert.assertEquals(null,resultVo);
     }
 
 

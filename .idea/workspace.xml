@@ -5,48 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8f6d2f4-1577-4364-b2fc-482ffe46cec4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/AddressServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/AdminServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/CartServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/CategoryServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/OrderServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/UserServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/goodPicServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/goodServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/homeImgServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/ApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/ApiApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/HomeImg.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/HomeImg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Useraddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Useraddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/com/lendSys/entity/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/HomeImg.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/HomeImg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Useraddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Useraddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/beans/target/classes/com/lendSys/entity/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/lendSys/vo/PicInfoVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/lendSys/vo/PicInfoVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/com/lendSys/dao/OrdersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/com/lendSys/dao/OrdersMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapper/target/classes/mappers/OrdersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/target/classes/mappers/OrdersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/AddressServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/goodPicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/goodPicService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/AddressServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/AddressServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/goodPicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/lendSys/service/impl/goodPicServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/AddressServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/AddressServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/AdminServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/CartServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/CartServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/CategoryServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/CategoryServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/goodPicServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/goodPicServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/lendSys/goodServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/lendSys/goodServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/goodPicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/lendSys/service/impl/goodPicServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Wenting Zhang\Desktop" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,7 +67,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../projectSpring" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.18396847" />
@@ -128,20 +104,18 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.com.lendSys in api">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminServiceTest.addUserInfo2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api" />
       <extension name="coverage">
         <pattern>
@@ -150,8 +124,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.lendSys" />
-      <option name="MAIN_CLASS_NAME" value="com.lendSys.OrderServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.lendSys.AdminServiceTest" />
+      <option name="METHOD_NAME" value="addUserInfo2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminServiceTest.addUserInfo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lendSys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lendSys" />
+      <option name="MAIN_CLASS_NAME" value="com.lendSys.AdminServiceTest" />
+      <option name="METHOD_NAME" value="addUserInfo3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminServiceTest.addUserInfo4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lendSys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lendSys" />
+      <option name="MAIN_CLASS_NAME" value="com.lendSys.AdminServiceTest" />
+      <option name="METHOD_NAME" value="addUserInfo4" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,20 +172,6 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.lendSys" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.lendSys.service.impl in service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lendSys.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lendSys.service.impl" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -199,22 +192,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="homeImgServiceTest.getHomeImgTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lendSys.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lendSys" />
-      <option name="MAIN_CLASS_NAME" value="com.lendSys.homeImgServiceTest" />
-      <option name="METHOD_NAME" value="getHomeImgTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lendSys.ApiApplication" />
@@ -225,10 +202,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.com.lendSys in api" />
-        <item itemvalue="JUnit.OrderServiceTest" />
-        <item itemvalue="JUnit.com.lendSys.service.impl in service" />
         <item itemvalue="JUnit.goodPicServiceTest" />
-        <item itemvalue="JUnit.homeImgServiceTest.getHomeImgTest" />
+        <item itemvalue="JUnit.AdminServiceTest.addUserInfo4" />
+        <item itemvalue="JUnit.AdminServiceTest.addUserInfo3" />
+        <item itemvalue="JUnit.AdminServiceTest.addUserInfo2" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +279,8 @@
       <workItem from="1638456510109" duration="2746000" />
       <workItem from="1638467604573" duration="7611000" />
       <workItem from="1638565335346" duration="4104000" />
-      <workItem from="1638627889195" duration="20751000" />
+      <workItem from="1638627889195" duration="21181000" />
+      <workItem from="1638736189540" duration="3346000" />
     </task>
     <servers />
   </component>
@@ -332,11 +310,14 @@
     <SUITE FILE_PATH="coverage/lendSys$AddressControllerTest.ic" NAME="AddressControllerTest Coverage Results" MODIFIED="1638469214808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lendSys.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/lendSys$CartControllerTest.ic" NAME="CartControllerTest Coverage Results" MODIFIED="1638568779536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/lendSys$CartServiceTest_editCartTest.ic" NAME="CartServiceTest.editCartTest Coverage Results" MODIFIED="1638736567905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lendSys.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/lendSys$com_lendSys_service_impl_in_service.ic" NAME="com.lendSys.service.impl in service Coverage Results" MODIFIED="1638659822859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.lendSys.service.impl.*</FILTER>
+    <SUITE FILE_PATH="coverage/lendSys$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1638737780817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$CartServiceTest_removeCartTest2.ic" NAME="CartServiceTest.removeCartTest2 Coverage Results" MODIFIED="1638736659354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/lendSys$UserControllerTest_getUserInfoTest.ic" NAME="UserControllerTest.getUserInfoTest Coverage Results" MODIFIED="1638467863685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lendSys.*</FILTER>
@@ -344,10 +325,64 @@
     <SUITE FILE_PATH="coverage/lendSys$goodServiceTest.ic" NAME="goodServiceTest Coverage Results" MODIFIED="1638649124110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lendSys.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$AdminServiceTest_userRemoveTest2.ic" NAME="AdminServiceTest.userRemoveTest2 Coverage Results" MODIFIED="1638739274664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$AdminServiceTest_addUserInfo3.ic" NAME="AdminServiceTest.addUserInfo3 Coverage Results" MODIFIED="1638739368721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$CartServiceTest_addCartTest2.ic" NAME="CartServiceTest.addCartTest2 Coverage Results" MODIFIED="1638736776438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/lendSys$AddressServiceTest.ic" NAME="AddressServiceTest Coverage Results" MODIFIED="1638631319059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lendSys.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/lendSys$com_lendSys_in_api.ic" NAME="com.lendSys in api Coverage Results" MODIFIED="1638659836778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/lendSys$goodServiceTest_addGoodsTest2.ic" NAME="goodServiceTest.addGoodsTest2 Coverage Results" MODIFIED="1638738013172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$com_lendSys_in_api.ic" NAME="com.lendSys in api Coverage Results" MODIFIED="1638737814187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$AdminServiceTest_editUserInfoTest2.ic" NAME="AdminServiceTest.editUserInfoTest2 Coverage Results" MODIFIED="1638739233503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$CartControllerTest.ic" NAME="CartControllerTest Coverage Results" MODIFIED="1638568779536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$goodServiceTest_editGoodsTest2.ic" NAME="goodServiceTest.editGoodsTest2 Coverage Results" MODIFIED="1638737958935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$goodServiceTest_addGoodsTest4.ic" NAME="goodServiceTest.addGoodsTest4 Coverage Results" MODIFIED="1638738421268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$goodPicServiceTest_getAdvanceGoodPicTest2.ic" NAME="goodPicServiceTest.getAdvanceGoodPicTest2 Coverage Results" MODIFIED="1638738769799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$goodServiceTest_removeGoodsTest2.ic" NAME="goodServiceTest.removeGoodsTest2 Coverage Results" MODIFIED="1638738106483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$com_lendSys_service_impl_in_service.ic" NAME="com.lendSys.service.impl in service Coverage Results" MODIFIED="1638659822859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$CategoryServiceTest.ic" NAME="CategoryServiceTest Coverage Results" MODIFIED="1638736986618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$AdminServiceTest_addUserInfo4.ic" NAME="AdminServiceTest.addUserInfo4 Coverage Results" MODIFIED="1638739387865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$CartServiceTest_addCartTest3.ic" NAME="CartServiceTest.addCartTest3 Coverage Results" MODIFIED="1638736797920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$AdminServiceTest_addUserInfo2.ic" NAME="AdminServiceTest.addUserInfo2 Coverage Results" MODIFIED="1638739317047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$goodServiceTest_addGoodsTest3.ic" NAME="goodServiceTest.addGoodsTest3 Coverage Results" MODIFIED="1638738395308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$goodPicServiceTest.ic" NAME="goodPicServiceTest Coverage Results" MODIFIED="1638739439446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.lendSys.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lendSys$AddressServiceTest_setAddressTest2.ic" NAME="AddressServiceTest.setAddressTest2 Coverage Results" MODIFIED="1638737758367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.lendSys.*</FILTER>
     </SUITE>
   </component>
