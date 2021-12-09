@@ -6,6 +6,7 @@ import com.lendSys.service.UserService;
 import com.lendSys.service.cartService;
 import com.lendSys.vo.ResultVo;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -20,6 +21,9 @@ import java.util.Map;
 public class CartController {
     @Resource
     private cartService carts;
+
+    @ApiOperation(value  = "get usr cart",
+            tags = "get usr cart", notes = "get usr cart by pages")
     @GetMapping(value = "/{current}/{size}")
     public ResultVo getCartProduct(@PathVariable String current,
                                    @PathVariable String size,
@@ -29,6 +33,8 @@ public class CartController {
         return carts.getAllCart(curr,s,username);
     }
 
+    @ApiOperation(value  = "add usr cart",
+            tags = "add usr cart", notes = "add usr cart")
     @PostMapping(value = "/add")
     public ResultVo addCart(@RequestBody Map<String,String> map){
         int productid = Integer.parseInt(map.get("productid"));
@@ -41,11 +47,15 @@ public class CartController {
         return carts.addCart(cart,userName);
     }
 
+    @ApiOperation(value  = "delete usr cart",
+            tags = "delete usr cart", notes = "delete usr cart")
     @PostMapping(value = "/remove")
     public ResultVo removeCart(@RequestBody List<String> ids){
         return carts.removeCart(ids);
     }
 
+    @ApiOperation(value  = "get usr cart",
+            tags = "get usr cart", notes = "get usr cart")
     @GetMapping(value = "/")
     public ResultVo getCartProduct(@RequestParam("username") String username) {
         return carts.getAll(username);

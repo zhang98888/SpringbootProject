@@ -9,6 +9,7 @@ import com.lendSys.vo.ResultVo;
 import com.lendSys.vo.UserVo;
 import com.lendSys.vo.productVo;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -21,6 +22,8 @@ public class productController {
     @Resource
     private goodService productService;
 
+    @ApiOperation(value  = "get products",
+            tags = "get products", notes = "get products and shown in pages")
     @GetMapping(value = "/pageProduct/{current}/{size}")
     public ResultVo getPageProduct(@PathVariable String current,
                                    @PathVariable String size) {
@@ -29,26 +32,35 @@ public class productController {
         return productService.getAllGoods(curr, s);
     }
 
+    @ApiOperation(value  = "get product information",
+            tags = "get product information", notes = "get product information")
     @GetMapping(value = "/{productId}")
     public ResultVo getDetailProduct(@PathVariable String productId) {
         return productService.getDetailGoods(productId);
     }
 
+    @ApiOperation(value  = "add products",
+            tags = "add products", notes = "add products")
     @PostMapping(value = "/addProductInfo")
     public ResultVo addProductInfo(@RequestBody Product product) {
         return productService.addGoods(product);
     }
-
+    @ApiOperation(value  = "edit products",
+            tags = "edit products", notes = "edit products")
     @PostMapping(value = "/editProductInfo")
     public ResultVo editProductInfo(@RequestBody Product product) {
         return productService.editGoods(product);
     }
 
+    @ApiOperation(value  = "delete products",
+            tags = "delete products", notes = "delete products")
     @DeleteMapping(value = "/delete/{id}")
     public ResultVo deleteProduct(@PathVariable String id) {
         return productService.removeGoods(id);
     }
 
+    @ApiOperation(value  = "search products",
+            tags = "search products", notes = "search products")
     @PostMapping(value = "/searchProduct/{current}/{size}")
     public ResultVo searchProduct(@PathVariable String current,
                                         @PathVariable String size,
