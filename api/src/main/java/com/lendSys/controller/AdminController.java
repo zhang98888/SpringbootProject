@@ -28,8 +28,8 @@ public class AdminController {
         return adminService.userInfo();
     }
 
-    @ApiOperation(value = "get user information",
-            tags = "get user information", notes = "get user information")
+    @ApiOperation(value = "add user information",
+            tags = "add user information", notes = "add user information")
     @PostMapping(value="/addUserInfo")
     public ResultVo addUserInfo(@RequestBody Users users) throws Exception {
         return adminService.addUserInfo(users);
@@ -37,7 +37,6 @@ public class AdminController {
 
     @ApiOperation(value = "delete user",
             tags = "delete user", notes = "delete user")
-    @PostMapping(value="/addUserInfo")
     @DeleteMapping(value = "/delete/{id}")
     public ResultVo deleteUser(@PathVariable String id){
         return adminService.userRemove(id);
