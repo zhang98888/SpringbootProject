@@ -17,8 +17,7 @@ public class CategoryController {
     @Resource
     private categoryService cateService;
 
-    @ApiOperation(value  = "get category",
-            tags = "get category", notes = "get category by pages")
+    @ApiOperation(value  = "get category", notes = "get category by pages")
     @GetMapping(value = "/getAllCategory/{current}/{size}")
     public ResultVo getAllCategory(@PathVariable String current,
                                    @PathVariable String size) {
@@ -27,29 +26,25 @@ public class CategoryController {
         return cateService.getAllCategory(curr, s);
     }
 
-    @ApiOperation(value  = "add category",
-            tags = "add category", notes = "add category")
+    @ApiOperation(value  = "add category", notes = "add category")
     @PostMapping(value = "/addCategoryInfo")
     public ResultVo addCategoryInfo(@RequestBody Category category) {
         return cateService.addCategory(category);
     }
 
-    @ApiOperation(value  = "edit category",
-            tags = "edit category", notes = "edit category")
+    @ApiOperation(value  = "edit category", notes = "edit category")
     @PostMapping(value = "/editCategoryInfo")
     public ResultVo editCategoryInfo(@RequestBody Category category) {
         return cateService.editCategory(category);
     }
 
-    @ApiOperation(value  = "delete category",
-            tags = "delete category", notes = "delete category")
+    @ApiOperation(value  = "delete category", notes = "delete category")
     @DeleteMapping(value = "/delete/{id}")
     public ResultVo deleteProduct(@PathVariable String id) {
         return cateService.removeCategory(id);
     }
 
-    @ApiOperation(value  = "search category",
-            tags = "search category", notes = "search category by pages")
+    @ApiOperation(value  = "search category", notes = "search category by pages")
     @PostMapping(value = "/searchCategory/{current}/{size}")
     public ResultVo searchCategory(@PathVariable String current,
                                         @PathVariable String size,

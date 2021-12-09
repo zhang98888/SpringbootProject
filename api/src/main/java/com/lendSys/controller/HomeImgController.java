@@ -16,8 +16,7 @@ public class HomeImgController {
     @Resource
     private homeImgService homeImg;
 
-    @ApiOperation(value  = "get home images",
-            tags = "get home images", notes = "home images shown on main pages")
+    @ApiOperation(value  = "get home images", notes = "home images shown on main pages")
     @GetMapping(value = "")
     public ResultVo getHomeImg() {
         return homeImg.getHomeImg();

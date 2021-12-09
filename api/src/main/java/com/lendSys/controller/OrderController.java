@@ -24,8 +24,7 @@ public class OrderController {
     @Resource
     private OrderService orderService;
 
-    @ApiOperation(value  = "get orders",
-            tags = "get orders", notes = "get orders by name")
+    @ApiOperation(value  = "get orders", notes = "get orders by name")
     @GetMapping(value="/{current}/{size}")
     public ResultVo getAllByName(@PathVariable String current,
                                  @PathVariable String size,
@@ -35,8 +34,7 @@ public class OrderController {
         return orderService.getAllOrder(username,curr,s);
     }
 
-    @ApiOperation(value  = "add orders",
-            tags = "add orders", notes = "add orders")
+    @ApiOperation(value  = "add orders", notes = "add orders")
     @PostMapping(value = "/add")
     public ResultVo addToOrder(@RequestBody cartsOrderVo cartsordervo){
         CartVo[] carts = cartsordervo.getCarts();
@@ -46,15 +44,13 @@ public class OrderController {
         return orderService.addToOrder(carts,orderVO);
     }
 
-    @ApiOperation(value  = "get return orders",
-            tags = "get return orders", notes = "get return orders")
+    @ApiOperation(value  = "get return orders", notes = "get return orders")
     @GetMapping(value="/getReturn")
     public ResultVo getReturnOrder(@RequestParam String username){
         return orderService.getReturnOrder(username);
     }
 
-    @ApiOperation(value  = "get approval orders",
-            tags = "get approval orders", notes = "get approval orders and shown by pages")
+    @ApiOperation(value  = "get approval orders", notes = "get approval orders and shown by pages")
     @GetMapping(value="/approvalOrder/{current}/{size}")
     public ResultVo getApprovalOrder(@PathVariable String current,
                                    @PathVariable String size){
@@ -63,36 +59,31 @@ public class OrderController {
         return orderService.getApprovalOrder(curr,s);
     }
 
-    @ApiOperation(value  = "set return date",
-            tags = "set return date", notes = "set return date for orders")
+    @ApiOperation(value  = "set return date", notes = "set return date for orders")
     @PostMapping(value = "/endDate/")
     public ResultVo setRentOrder(@RequestBody Orders orders){
         return orderService.setRentOrder(orders);
     }
 
-    @ApiOperation(value  = "approve orders by name",
-            tags = "approve orders by name", notes = "department leader needs to approve orders")
+    @ApiOperation(value  = "approve orders by name", notes = "department leader needs to approve orders")
     @GetMapping(value = "/approveRentOrder/")
     public ResultVo approveRentOrder(@RequestParam("username") String username){
         return orderService.approveRentOrder(username);
     }
 
-    @ApiOperation(value  = "approve orders",
-            tags = "approve orders", notes = "get all approve orders")
+    @ApiOperation(value  = "approve orders", notes = "get all approve orders")
     @PostMapping(value = "/approve/")
     public ResultVo approveOrder(@RequestBody Orders orders){
         return orderService.approveOrder(orders);
     }
 
-    @ApiOperation(value  = "return orders",
-            tags = "return orders", notes = "return orders")
+    @ApiOperation(value  = "return orders", notes = "return orders")
     @PostMapping(value = "/returnOrder/")
     public ResultVo returnOrder(@RequestBody Orders orders){
         return orderService.returnOrder(orders);
     }
 
-    @ApiOperation(value  = "select orders by status",
-            tags = "select orders by status", notes = "select orders by different status")
+    @ApiOperation(value  = "select orders by status", notes = "select orders by different status")
     @GetMapping(value = "/selectByStatus/{current}/{size}")
     public ResultVo selectByStatus(@RequestParam("username") String username,
                                    @RequestParam("status") String status,
