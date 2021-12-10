@@ -1,5 +1,6 @@
 package com.lendSys.service.impl;
 
+import com.alibaba.druid.util.StringUtils;
 import com.github.pagehelper.PageHelper;
 import com.lendSys.dao.ProductMapper;
 import com.lendSys.entity.Product;
@@ -86,13 +87,13 @@ public class goodServiceImpl implements goodService {
     public ResultVo searchGoods(int current, int size, productVo productVo){
         String productId = productVo.getProductId();
         String productName = productVo.getProductName();
-        if(productId != null){
+        if(!StringUtils.isEmpty(productId)){
             int id = Integer.parseInt(productId);
             Product product = productMapper.selectByPrimaryKey(id);
             List<Product> lists = new ArrayList<>();
             lists.add(product);
             return new ResultVo(1000, "Success!", 1, lists);
-        }else if(productName != null){
+        }else if(!StringUtils.isEmpty(productName)){
             PageHelper.startPage(current, size);
             List<Product> productList = null;
             Example example = new Example(Product.class);
@@ -102,6 +103,6 @@ public class goodServiceImpl implements goodService {
             com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) productList;
             return new ResultVo(1000, "Success", productList.size(), productList);
         }
-        return new ResultVo(1000,"success",0,null);
+        return new ResultVo(1001,"The search Form is empty",0,null);
     }
 }

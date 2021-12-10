@@ -87,7 +87,7 @@ public class AdminServiceImpl implements AdminService {
         }
         String username = userVo.getUsername();
         String userlevel = userVo.getUserlevel();
-        if (userVo.getUserid() != null) {
+        if (!StringUtils.isEmpty(userVo.getUserid())) {
             int userId = Integer.parseInt(userVo.getUserid());
             Users users = usersMapper.selectByPrimaryKey(userId);
             List<Users> usersList = new ArrayList<>();
@@ -107,11 +107,10 @@ public class AdminServiceImpl implements AdminService {
                 criteria.andEqualTo("userLevel", userlevel);
                 usersList = usersMapper.selectByExample(example);
             }
-
             com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) usersList;
             return new ResultVo(1000, "Success", usersList.size(), usersList);
         } else
-            return new ResultVo(1000, "Success", 0, null);
+            return new ResultVo(1001,"The search Form is empty", 0, null);
     }
 
     @Override

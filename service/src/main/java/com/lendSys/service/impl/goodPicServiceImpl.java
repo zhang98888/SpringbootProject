@@ -88,10 +88,13 @@ public class goodPicServiceImpl implements goodPicService {
 
     @Override
     public ResultVo searchGoodPic(int current, int size, int id) {
-        ProductPicture picture = pictureMapper.selectByPrimaryKey(id);
-        List<ProductPicture> lists = new ArrayList<>();
-        lists.add(picture);
-        return new ResultVo(1000, "Success!", 1, lists);
+        if(id != 0){
+            ProductPicture picture = pictureMapper.selectByPrimaryKey(id);
+            List<ProductPicture> lists = new ArrayList<>();
+            lists.add(picture);
+            return new ResultVo(1000, "Success!", 1, lists);
+        }else
+            return new ResultVo(1001, "The search Form is empty", 0, null);
     }
 
     @Override

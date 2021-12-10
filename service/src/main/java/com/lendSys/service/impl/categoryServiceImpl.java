@@ -89,6 +89,6 @@ public class categoryServiceImpl implements categoryService {
             com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) lists;
             return new ResultVo(1000, "Success", lists.size(), lists);
         }
-        return new ResultVo(1000,"success",0,null);
+        return new ResultVo(1001,"The search Form is empty",0,null);
     }
 }
