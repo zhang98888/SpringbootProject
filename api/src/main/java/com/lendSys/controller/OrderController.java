@@ -8,6 +8,7 @@ import com.lendSys.vo.OrderVO;
 import com.lendSys.vo.ResultVo;
 import com.lendSys.vo.cartsOrderVo;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
@@ -95,6 +96,10 @@ public class OrderController {
         return orderService.selectByStatus(username,orderStatus,curr,s);
     }
 
-
+    @ApiOperation(value  = "delete orders", notes = "delete orders")
+    @PostMapping(value = "/delete/")
+    public ResultVo deleteOrder(@RequestBody Orders orders){
+        return orderService.deleteOrder(orders);
+    }
 
 }

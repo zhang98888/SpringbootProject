@@ -17,5 +17,6 @@ public interface OrderService {
     public ResultVo returnOrder(Orders orders);
     public ResultVo approveOrder(Orders orders);
     public ResultVo selectByStatus(String username,int status,int current, int size);
+    public ResultVo deleteOrder(Orders orders);
 
 }

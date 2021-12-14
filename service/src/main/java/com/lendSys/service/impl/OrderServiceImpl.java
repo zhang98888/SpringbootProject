@@ -122,4 +122,9 @@ public class OrderServiceImpl implements OrderService {
         return new ResultVo(1000,"Success",list.size(),list);
     };
 
+    @Override
+    public ResultVo deleteOrder(Orders orders){
+        int result = ordersMapper.delete(orders);
+        return new ResultVo(1000,"Success",1,result);
+    }
 }
