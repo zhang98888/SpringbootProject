@@ -58,7 +58,7 @@ public class CartController {
     }
 
     @ApiOperation(value  = "edit usr cart", notes = "edit usr cart")
-    @PosrMapping(value = "/edit")
+    @PostMapping(value = "/edit")
     public ResultVo editCart(@RequestBody Cart cart){
         return carts.editCart(cart);
     }
