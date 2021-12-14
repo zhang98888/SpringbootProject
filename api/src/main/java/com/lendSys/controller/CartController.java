@@ -57,4 +57,10 @@ public class CartController {
         return carts.getAll(username);
     }
 
+    @ApiOperation(value  = "edit usr cart", notes = "edit usr cart")
+    @PosrMapping(value = "/edit")
+    public ResultVo editCart(@RequestBody Cart cart){
+        return carts.editCart(cart);
+    }
+
 }

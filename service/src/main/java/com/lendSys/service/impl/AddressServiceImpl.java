@@ -22,7 +22,10 @@ public class AddressServiceImpl implements AddressService {
     private UseraddressMapper useraddressMapper;
     @Autowired
     private UsersMapper usersMapper;
-
+    /*
+    get address by usernames
+    the list will be shown by different pages
+     */
     @Override
     public ResultVo getAddressByName(String username) {
         Example example = new Example(Users.class);
@@ -35,7 +38,10 @@ public class AddressServiceImpl implements AddressService {
         List list = useraddressMapper.selectByExample(exampleAddr);
         return new ResultVo(1000, "Success", list.size(), list);
     }
-
+    /*
+    add address for users
+    There is only one default address or it will shown as fail
+     */
     @Override
     public ResultVo setAddress(AddressVo addressVo) {
         Useraddress useraddress = new Useraddress();
@@ -62,7 +68,9 @@ public class AddressServiceImpl implements AddressService {
             return new ResultVo(1000, "Success", 1, useraddress);
         }
     }
-
+    /*
+    Edit address for users and the default address code is 1
+     */
     @Override
     public ResultVo editAddress(Useraddress useraddress) {
         if (useraddress.getDefaultAddress() == "1") {
@@ -84,7 +92,9 @@ public class AddressServiceImpl implements AddressService {
             return new ResultVo(1000, "Success", 1, useraddress);
         }
     }
-
+    /*
+    delete users address
+     */
     @Override
     public ResultVo deleteAddress(int addrid) {
         useraddressMapper.deleteByPrimaryKey(addrid);

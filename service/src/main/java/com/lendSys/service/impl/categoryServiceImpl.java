@@ -19,7 +19,9 @@ import java.util.List;
 public class categoryServiceImpl implements categoryService {
     @Autowired
     private CategoryMapper categoryMapper;
-
+    /*
+    get all category
+     */
     @Override
     public ResultVo getAllCategory(int current, int size) {
         PageHelper.startPage(current, size);
@@ -28,7 +30,9 @@ public class categoryServiceImpl implements categoryService {
         int total = categoryList.size();
         return new ResultVo(1000, "Success!", total, categoryList);
     }
-
+    /*
+    delete category
+     */
     @Override
     public ResultVo removeCategory(String id) {
         Integer productId = Integer.parseInt(id);
@@ -38,7 +42,9 @@ public class categoryServiceImpl implements categoryService {
         } else
             return new ResultVo(1001, "Fail to delete!", 0, null);
     }
-
+    /*
+    add category to system. If the category exist, it will fail
+     */
     @Transactional
     public ResultVo addCategory(Category category) {
         synchronized (this) {
@@ -59,7 +65,9 @@ public class categoryServiceImpl implements categoryService {
                 return new ResultVo(1001, "User has been register", 0, null);
         }
     }
-
+    /*
+    edit category
+     */
     @Override
     public ResultVo editCategory(Category category) {
         int check = categoryMapper.updateByPrimaryKey(category);
@@ -68,7 +76,11 @@ public class categoryServiceImpl implements categoryService {
         }else
             return new ResultVo(1000, "Success", 1, category);
     }
-
+    /*
+    search categoty by id and name.
+    Search id firstly and then search name.
+    if id and name are all null, it will alert
+     */
     @Override
     public ResultVo searchCategory(int current, int size, CategoryVo categoryVo) {
         String categoryId = categoryVo.getCategoryId();

@@ -27,7 +27,9 @@ public class goodPicServiceImpl implements goodPicService {
     private ProductPictureMapper pictureMapper;
     @Autowired
     private ProductMapper productMapper;
-
+    /*
+    get all good pictures
+     */
     @Override
     public ResultVo getGoodPic(int current, int size) {
         PageHelper.startPage(current, size);
@@ -36,7 +38,9 @@ public class goodPicServiceImpl implements goodPicService {
         int total = list.size();
         return new ResultVo(1000, "Success!", total, list);
     }
-
+    /*
+    get pictures by category
+     */
     @Override
     public ResultVo getProductPic(int current, int size) {
         PageHelper.startPage(current, size);
@@ -45,7 +49,9 @@ public class goodPicServiceImpl implements goodPicService {
         int total = list.size();
         return new ResultVo(1000, "Success!", total, list);
     }
-
+    /*
+    delete good pictures
+     */
     @Override
     public ResultVo removeGoodPic(String id) {
         Integer pictureId = Integer.parseInt(id);
@@ -56,7 +62,9 @@ public class goodPicServiceImpl implements goodPicService {
             return new ResultVo(1001, "Fail to delete!", 0, null);
 
     }
-
+    /*
+    add goods pictures
+     */
     @Transactional
     public ResultVo addGoodPic(ProductPicture productPicture) {
         synchronized (this) {
@@ -76,7 +84,9 @@ public class goodPicServiceImpl implements goodPicService {
             }
         }
     }
-
+    /*
+    edit goods pictures
+     */
     @Override
     public ResultVo editGoodPic(ProductPicture productPicture) {
         int check = pictureMapper.updateByPrimaryKey(productPicture);
@@ -85,7 +95,10 @@ public class goodPicServiceImpl implements goodPicService {
         } else
             return new ResultVo(1000, "Success", 1, productPicture);
     }
-
+    /*
+    search good picture by id
+    if id is null, it will alert
+     */
     @Override
     public ResultVo searchGoodPic(int current, int size, int id) {
         if(id != 0){

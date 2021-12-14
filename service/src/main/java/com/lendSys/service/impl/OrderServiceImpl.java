@@ -26,7 +26,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private UsersMapper usersMapper;
-
+    /*
+    get all orders by user name
+     */
     @Override
     public ResultVo getAllOrder(String username, int current, int size) {
         PageHelper.startPage(current, size);
@@ -34,7 +36,9 @@ public class OrderServiceImpl implements OrderService {
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
         return new ResultVo(1000, "success!", list.size(), list);
     }
-
+    /*
+    add order
+     */
     @Override
     public ResultVo addToOrder(CartVo[] carts, OrderVO orderVO) {
         for (CartVo cart : carts) {
@@ -51,7 +55,9 @@ public class OrderServiceImpl implements OrderService {
         }
         return new ResultVo(1000, "Success!", 1, null);
     }
-
+    /*
+    get order the status if 3
+     */
     @Override
     public ResultVo getReturnOrder(String username){
         List<Orders> list = ordersMapper.selectbyUserName(username);
@@ -63,7 +69,9 @@ public class OrderServiceImpl implements OrderService {
         }
         return new ResultVo(1000,"success",newList.size(),newList);
     }
-
+    /*
+    get order the status is 2
+     */
     @Override
     public ResultVo getApprovalOrder(int current, int size){
         PageHelper.startPage(current, size,true);
@@ -71,7 +79,9 @@ public class OrderServiceImpl implements OrderService {
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
         return new ResultVo(1000,"Success",list.size(),list);
     }
-
+    /*
+    add rent order
+     */
     @Override
     public ResultVo setRentOrder(Orders orders){
         int len = orders.getLength();
@@ -101,19 +111,31 @@ public class OrderServiceImpl implements OrderService {
             return new ResultVo(1000,"Success",list.size(),list);
         }
     }
+    /*
+    return order
+     */
     @Override
     public ResultVo returnOrder(Orders orders){
         orders.setOrderStatus(4);
         ordersMapper.updateByPrimaryKey(orders);
         return new ResultVo(1000,"Success",1,orders);
     }
+    /*
+    approve order and change status
+     */
     @Override
     public ResultVo approveOrder(Orders orders){
         orders.setOrderStatus(2);
         ordersMapper.updateByPrimaryKey(orders);
         return new ResultVo(1000,"Success",1,orders);
     }
-
+    /*
+    search by different status
+    "1" wait for leader to approve
+    "2" wait for collection
+    "3" wait to return
+    "4" return order
+     */
     @Override
     public ResultVo selectByStatus(String username,int status,int current, int size){
         PageHelper.startPage(current, size);
@@ -121,7 +143,9 @@ public class OrderServiceImpl implements OrderService {
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) list;
         return new ResultVo(1000,"Success",list.size(),list);
     };
-
+    /*
+    delete order
+     */
     @Override
     public ResultVo deleteOrder(Orders orders){
         int result = ordersMapper.delete(orders);

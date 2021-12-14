@@ -2,6 +2,7 @@ package com.lendSys.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.lendSys.dao.CartMapper;
+import com.lendSys.dao.ProductMapper;
 import com.lendSys.dao.UsersMapper;
 import com.lendSys.entity.Cart;
 import com.lendSys.entity.Product;
@@ -23,6 +24,12 @@ public class cartServiceImpl implements cartService {
     private CartMapper cartMapper;
     @Autowired
     private UsersMapper usersMapper;
+    @Autowired
+    private ProductMapper productMapper;
+    /*
+    get all cart information by username and it will shown by different pages
+     */
+
     @Override
     public ResultVo getAllCart(int current, int size , String username) {
         PageHelper.startPage(current, size);
@@ -30,7 +37,9 @@ public class cartServiceImpl implements cartService {
         com.github.pagehelper.Page listWithPage = (com.github.pagehelper.Page) carts;
         return new ResultVo(1000, "success", carts.size(), carts);
     }
-
+    /*
+    delete the cart by all ids
+     */
     @Override
     public ResultVo removeCart(List<String> ids) {
         int num = 0;
@@ -43,7 +52,11 @@ public class cartServiceImpl implements cartService {
         } else
             return new ResultVo(1001, "Fail to delete!", 0, null);
     }
-
+    /*
+    add information to cart
+    if the resources have been exist, it will add the quantity
+    or it will add the lines to the table
+     */
     @Transactional
     public ResultVo addCart(Cart cart,String username) {
         synchronized (this) {
@@ -71,12 +84,23 @@ public class cartServiceImpl implements cartService {
 
         }
     }
-
+    /*
+     the quantity could be changed based on the cart information.
+     */
     @Override
     public ResultVo editCart(Cart cart) {
-        return null;
+        Product product = productMapper.selectByPrimaryKey(cart.getProductid());
+        int count = product.getRentNum();
+        if(count < cart.getCartNum()){
+            return new ResultVo(1001,"The quantity is more than allowed",0,null);
+        }else{
+            int num = cartMapper.updateByPrimaryKey(cart);
+            return new ResultVo(1000,"Success",num,cart);
+        }
     }
-
+    /*
+    get all cart by username
+     */
     @Override
     public ResultVo getAll(String username){
         List list = cartMapper.selectByName(username);

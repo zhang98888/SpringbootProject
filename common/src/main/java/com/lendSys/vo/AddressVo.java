@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.Date;
-
+/*
+it is used for get users' address.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

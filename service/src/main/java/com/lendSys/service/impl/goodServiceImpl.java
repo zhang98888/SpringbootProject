@@ -23,7 +23,9 @@ import java.util.List;
 public class goodServiceImpl implements goodService {
     @Autowired
     private ProductMapper productMapper;
-
+    /*
+    get all goods and shown by pages
+     */
     @Override
     public ResultVo getAllGoods(int current, int size) {
         PageHelper.startPage(current, size);
@@ -32,7 +34,9 @@ public class goodServiceImpl implements goodService {
         int total = goodsList.size();
         return new ResultVo(1000, "Success!", total, goodsList);
     }
-
+    /*
+    get good detail information
+     */
     @Override
     public ResultVo getDetailGoods( String id) {
         int productId = Integer.parseInt(id);
@@ -40,7 +44,9 @@ public class goodServiceImpl implements goodService {
         int total = goodsList.size();
         return new ResultVo(1000, "Success!", total, goodsList);
     }
-
+    /*
+    remove goods
+     */
     @Override
     public ResultVo removeGoods(String id) {
         Integer productId = Integer.parseInt(id);
@@ -50,7 +56,10 @@ public class goodServiceImpl implements goodService {
         } else
             return new ResultVo(1001, "Fail to delete!", 0, null);
     }
-
+    /*
+    add goods
+    it should have the category number
+     */
     @Transactional
     public ResultVo addGoods(Product product) {
         synchronized (this) {
@@ -73,7 +82,9 @@ public class goodServiceImpl implements goodService {
                 return new ResultVo(1001, "User has been register", 0, null);
         }
     }
-
+    /*
+    eidt goods
+     */
     @Override
     public ResultVo editGoods(Product product) {
         int check = productMapper.updateByPrimaryKey(product);
@@ -82,7 +93,9 @@ public class goodServiceImpl implements goodService {
         }else
             return new ResultVo(1000, "Success", 1, product);
     }
-
+    /*
+    search goods
+     */
     @Override
     public ResultVo searchGoods(int current, int size, productVo productVo){
         String productId = productVo.getProductId();

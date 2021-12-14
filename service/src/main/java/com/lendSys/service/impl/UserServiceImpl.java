@@ -18,7 +18,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UsersMapper usersMapper;
-
+    /*
+    check user log in
+     */
     @Override
     public ResultVo checkLogin(String username, String pwd) throws Exception {
         // based on the User to get the user info
@@ -56,7 +58,9 @@ public class UserServiceImpl implements UserService {
         }
         return str.chars().allMatch(Character::isDigit);
     }
-
+    /*
+    get user information
+     */
     @Override
     public ResultVo getUsrInfo(String token){
         String username = token;

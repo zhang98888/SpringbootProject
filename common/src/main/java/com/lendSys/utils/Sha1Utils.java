@@ -3,7 +3,9 @@ package com.lendSys.utils;
 import java.security.MessageDigest;
 
 public class Sha1Utils {
-
+    /*
+    it is used for password
+     */
     public static String shaEncode(String inStr) throws Exception {
         MessageDigest sha = null;
         try {

@@ -21,7 +21,9 @@ import java.util.*;
 public class AdminServiceImpl implements AdminService {
     @Autowired
     private UsersMapper usersMapper;
-
+    /*
+    get all users information and shown by pages
+     */
     @Override
     public ResultVo userInfo() {
         Example example = new Example(Users.class);
@@ -29,7 +31,9 @@ public class AdminServiceImpl implements AdminService {
         List<Users> usersList = usersMapper.selectAll();
         return new ResultVo(1000, "Success!", usersList.size(), usersList);
     }
-
+    /*
+    add users information
+     */
     @Transactional
     public ResultVo addUserInfo(Users users) throws Exception {
         synchronized (this) {
@@ -59,6 +63,9 @@ public class AdminServiceImpl implements AdminService {
         }
     }
 
+    /*
+    delete users
+     */
     @Override
     public ResultVo userRemove(String id) {
         Integer userid = Integer.parseInt(id);
@@ -69,7 +76,9 @@ public class AdminServiceImpl implements AdminService {
             return new ResultVo(1001, "Fail to delete!", 0, null);
 
     }
-
+    /*
+    get users information by different pages
+     */
     @Override
     public ResultVo pageUserInfo(int current, int size) {
         PageHelper.startPage(current, size);
@@ -79,6 +88,9 @@ public class AdminServiceImpl implements AdminService {
         return new ResultVo(1000, "Success!", total, usersList);
     }
 
+    /*
+    it is used to search users, if there is users id, it will search firstly or it will try username
+     */
     @Override
     public ResultVo pageUserDetailInfo(int current, int size, UserVo userVo) {
         if (userVo == null) {
@@ -112,7 +124,9 @@ public class AdminServiceImpl implements AdminService {
         } else
             return new ResultVo(1001,"The search Form is empty", 0, null);
     }
-
+    /*
+    edit user information
+     */
     @Override
     public ResultVo editUserInfo(Users users) throws Exception {
         Users preuser = usersMapper.selectByPrimaryKey(users.getUserid());
