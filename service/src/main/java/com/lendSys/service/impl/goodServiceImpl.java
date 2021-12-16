@@ -58,7 +58,7 @@ public class goodServiceImpl implements goodService {
     }
     /*
     add goods
-    it should have the category number
+    it should have the category number.
      */
     @Transactional
     public ResultVo addGoods(Product product) {
