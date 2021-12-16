@@ -24,7 +24,7 @@ public class goodServiceImpl implements goodService {
     @Autowired
     private ProductMapper productMapper;
     /*
-    get all goods and shown by pages
+    get all goods and shown by pages.
      */
     @Override
     public ResultVo getAllGoods(int current, int size) {
